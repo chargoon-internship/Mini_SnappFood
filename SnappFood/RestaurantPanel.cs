@@ -24,7 +24,8 @@ namespace SnappFood
 
         private void ViewInvoices_Click(object sender, EventArgs e)
         {
-
+            RestaurantInvoice f = new RestaurantInvoice();
+            f.ShowDialog(); // Shows RestaurantInvoice form
         }
     }
 }
