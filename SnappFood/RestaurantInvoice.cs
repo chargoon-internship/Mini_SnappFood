@@ -40,5 +40,18 @@ namespace SnappFood
             resInvoiceDataGridView.Columns["CartItem"].Visible = false;
             resInvoiceDataGridView.Columns["Restaurant"].Visible = false;
         }
+
+        private void lblAmountsSum1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            RestaurantPanel f = new RestaurantPanel();
+            f.FormClosed += (s, args) => this.Close();
+            f.Show();
+            this.Hide();
+        }
     }
 }
