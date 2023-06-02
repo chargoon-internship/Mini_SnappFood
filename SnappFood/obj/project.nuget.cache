@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XVaRSjTdZKsqYWBFnTVZdVmXy83RNJKHUQx7PQ7eJGTX91KCsN0iiawGemWkPofGp+qqKmC6YbRI3p9aaHmD5A==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\SnappFood\\SnappFood.csproj",
+  "dgSpecHash": "eETaPBiMcCFkTBWbZSZKprxEzNa7KLsdz/3D7U+C9Xw0ppvVy0gdvac4PXpYBnHtsP3XxMp6qUXbH9rkqM/kLA==",
+  "success": false,
+  "projectFilePath": "E:\\FRBranch\\SnappFood\\SnappFood\\SnappFood.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhhh\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hhhh\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -72,5 +72,15 @@
     "C:\\Users\\hhhh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\hhhh\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
 }

@@ -1133,36 +1133,6 @@
           }
         }
       },
-      "BusinessLogicLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "DataAccessLayes": "1.0.0",
-          "Entities": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        }
-      },
-      "DataAccessLayes/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Entities": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
-        },
-        "compile": {
-          "bin/placeholder/DataAccessLayes.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DataAccessLayes.dll": {}
-        }
-      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3493,16 +3463,6 @@
         "version.txt"
       ]
     },
-    "BusinessLogicLayer/1.0.0": {
-      "type": "project",
-      "path": "../BusinessLogicLayer/BusinessLogicLayer.csproj",
-      "msbuildProject": "../BusinessLogicLayer/BusinessLogicLayer.csproj"
-    },
-    "DataAccessLayes/1.0.0": {
-      "type": "project",
-      "path": "../DataAccessLayes/DataAccessLayes.csproj",
-      "msbuildProject": "../DataAccessLayes/DataAccessLayes.csproj"
-    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -3511,7 +3471,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "BusinessLogicLayer >= 1.0.0",
+      "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
@@ -3527,11 +3487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\SnappFood\\SnappFood.csproj",
+      "projectUniqueName": "E:\\FRBranch\\SnappFood\\SnappFood\\SnappFood.csproj",
       "projectName": "SnappFood",
-      "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\SnappFood\\SnappFood.csproj",
+      "projectPath": "E:\\FRBranch\\SnappFood\\SnappFood\\SnappFood.csproj",
       "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\SnappFood\\obj\\",
+      "outputPath": "E:\\FRBranch\\SnappFood\\SnappFood\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3553,11 +3513,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj"
+            "E:\\FRBranch\\SnappFood\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\FRBranch\\SnappFood\\Entities\\Entities.csproj"
             }
           }
         }
@@ -3619,5 +3579,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
 }
