@@ -26,9 +26,9 @@ namespace Entities
         [Required]
         [StringLength(100)]
         public string NameOfRestaurant { get; set; }=""  ;
-        public DateTime BeginDate { set; get; }
+        public TimeSpan BeginDate { set; get; }
 
-        public DateTime EndDate { set; get; }
+        public TimeSpan EndDate { set; get; }
 
         public List<Food> Foods { get; set; }
 
