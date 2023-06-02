@@ -130,3 +130,4 @@ C:\Users\mohaddesse\Source\Repos\OrderFood\SnappFood\obj\Debug\net7.0-windows\re
 C:\Users\mohaddesse\Source\Repos\OrderFood\SnappFood\obj\Debug\net7.0-windows\SnappFood.pdb
 C:\Users\mohaddesse\Source\Repos\OrderFood\SnappFood\obj\Debug\net7.0-windows\SnappFood.genruntimeconfig.cache
 C:\Users\mohaddesse\Source\Repos\OrderFood\SnappFood\obj\Debug\net7.0-windows\ref\SnappFood.dll
+C:\Users\mohaddesse\Source\Repos\OrderFood\SnappFood\obj\Debug\net7.0-windows\SnappFood.EditandAddMenu.resources
