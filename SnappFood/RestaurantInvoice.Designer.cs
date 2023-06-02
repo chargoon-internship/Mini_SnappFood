@@ -39,19 +39,20 @@
             this.resInvoiceDataGridView.AllowUserToAddRows = false;
             this.resInvoiceDataGridView.AllowUserToDeleteRows = false;
             this.resInvoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resInvoiceDataGridView.Location = new System.Drawing.Point(106, 59);
+            this.resInvoiceDataGridView.Location = new System.Drawing.Point(94, 42);
+            this.resInvoiceDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.resInvoiceDataGridView.Name = "resInvoiceDataGridView";
             this.resInvoiceDataGridView.ReadOnly = true;
             this.resInvoiceDataGridView.RowHeadersWidth = 51;
             this.resInvoiceDataGridView.RowTemplate.Height = 24;
-            this.resInvoiceDataGridView.Size = new System.Drawing.Size(1189, 558);
+            this.resInvoiceDataGridView.Size = new System.Drawing.Size(1188, 633);
             this.resInvoiceDataGridView.TabIndex = 0;
             // 
             // lblAmountsSum1
             // 
             this.lblAmountsSum1.AutoSize = true;
-            this.lblAmountsSum1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblAmountsSum1.Location = new System.Drawing.Point(100, 649);
+            this.lblAmountsSum1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAmountsSum1.Location = new System.Drawing.Point(94, 679);
             this.lblAmountsSum1.Name = "lblAmountsSum1";
             this.lblAmountsSum1.Size = new System.Drawing.Size(187, 33);
             this.lblAmountsSum1.TabIndex = 1;
@@ -60,8 +61,8 @@
             // lblAmountsSum2
             // 
             this.lblAmountsSum2.AutoSize = true;
-            this.lblAmountsSum2.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblAmountsSum2.Location = new System.Drawing.Point(333, 649);
+            this.lblAmountsSum2.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAmountsSum2.Location = new System.Drawing.Point(315, 679);
             this.lblAmountsSum2.Name = "lblAmountsSum2";
             this.lblAmountsSum2.Size = new System.Drawing.Size(71, 33);
             this.lblAmountsSum2.TabIndex = 2;
@@ -69,13 +70,14 @@
             // 
             // RestaurantInvoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(164)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.lblAmountsSum2);
             this.Controls.Add(this.lblAmountsSum1);
             this.Controls.Add(this.resInvoiceDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RestaurantInvoice";
             this.Text = "RestaurantInvoice";
             this.Load += new System.EventHandler(this.RestaurantInvoice_Load);
