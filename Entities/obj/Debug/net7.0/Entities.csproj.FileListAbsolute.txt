@@ -22,3 +22,15 @@ C:\Users\mohaddesse\Source\Repos\OrderFood\Entities\obj\Debug\net7.0\Entities.dl
 C:\Users\mohaddesse\Source\Repos\OrderFood\Entities\obj\Debug\net7.0\refint\Entities.dll
 C:\Users\mohaddesse\Source\Repos\OrderFood\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\mohaddesse\Source\Repos\OrderFood\Entities\obj\Debug\net7.0\ref\Entities.dll
+G:\Chargoon\Projects\snappfood\My Branch\Entities\bin\Debug\net7.0\Entities.deps.json
+G:\Chargoon\Projects\snappfood\My Branch\Entities\bin\Debug\net7.0\Entities.dll
+G:\Chargoon\Projects\snappfood\My Branch\Entities\bin\Debug\net7.0\Entities.pdb
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.dll
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\refint\Entities.dll
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\Entities.pdb
+G:\Chargoon\Projects\snappfood\My Branch\Entities\obj\Debug\net7.0\ref\Entities.dll

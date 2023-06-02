@@ -28,10 +28,10 @@ namespace Entities
         [StringLength(150)]
         public string NameOfRestaurant { get; set; } = "";
 
-        [Column(TypeName ="datetime(7)")]
+        //[Column(TypeName ="datetime(7)")]
         public TimeSpan BeginDate { set; get; }
 
-        [Column(TypeName = "datetime(7)")]
+        //[Column(TypeName = "datetime(7)")]
         public TimeSpan EndDate { set; get; }
 
         public List<Food> Foods { get; set; }

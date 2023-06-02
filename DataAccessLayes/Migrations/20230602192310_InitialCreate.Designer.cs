@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayes.Migrations
 {
     [DbContext(typeof(DB))]
-    [Migration("20230602054744_create")]
-    partial class create
+    [Migration("20230602192310_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -154,11 +154,16 @@ namespace DataAccessLayes.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<DateTime>("BeginDate")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("BeginDate")
+                        .HasColumnType("time");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("EndDate")
+                        .HasColumnType("time");
+
+                    b.Property<string>("NameOfRestaurant")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasKey("Id");
 

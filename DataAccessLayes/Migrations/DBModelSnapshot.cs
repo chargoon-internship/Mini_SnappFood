@@ -151,11 +151,16 @@ namespace DataAccessLayes.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<DateTime>("BeginDate")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("BeginDate")
+                        .HasColumnType("time");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("EndDate")
+                        .HasColumnType("time");
+
+                    b.Property<string>("NameOfRestaurant")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasKey("Id");
 

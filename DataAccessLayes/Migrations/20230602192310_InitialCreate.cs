@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccessLayes.Migrations
 {
     /// <inheritdoc />
-    public partial class create : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,8 +52,9 @@ namespace DataAccessLayes.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    BeginDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    NameOfRestaurant = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    BeginDate = table.Column<TimeSpan>(type: "time", nullable: false),
+                    EndDate = table.Column<TimeSpan>(type: "time", nullable: false)
                 },
                 constraints: table =>
                 {
