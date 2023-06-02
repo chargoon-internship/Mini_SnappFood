@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj": {}
+    "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\obj\\",
+        "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj": {
-                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj"
+              "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj": {
+                "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj"
               },
-              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
+              "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
+                "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
               }
             }
           }
@@ -62,21 +62,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj": {
+    "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj",
+        "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj",
         "projectName": "DataAccessLayes",
-        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj",
-        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\obj\\",
+        "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,8 +90,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
+              "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
+                "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
               }
             }
           }
@@ -147,21 +147,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
+    "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj",
+        "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\obj\\",
+        "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -202,21 +202,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj": {
+    "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
+        "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj",
         "projectName": "SnappFood",
-        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
-        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\obj\\",
+        "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -230,11 +230,11 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               },
-              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
+              "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
+                "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
               }
             }
           }
@@ -293,7 +293,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
