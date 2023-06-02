@@ -3471,7 +3471,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
@@ -3481,24 +3481,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hhhh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mohaddesse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FRBranch\\SnappFood\\SnappFood\\SnappFood.csproj",
+      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
       "projectName": "SnappFood",
-      "projectPath": "E:\\FRBranch\\SnappFood\\SnappFood\\SnappFood.csproj",
-      "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-      "outputPath": "E:\\FRBranch\\SnappFood\\SnappFood\\obj\\",
+      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
+      "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3506,18 +3501,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "E:\\FRBranch\\SnappFood\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\FRBranch\\SnappFood\\Entities\\Entities.csproj"
+            "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
             }
           }
         }
@@ -3576,7 +3570,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -3584,8 +3578,8 @@
     {
       "code": "NU1105",
       "level": "Error",
-      "message": "Unable to find project information for 'E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "E:\\FRBranch\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "message": "Unable to find project information for 'C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

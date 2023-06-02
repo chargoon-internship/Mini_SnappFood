@@ -23,6 +23,9 @@ namespace Entities
         [StringLength(150)]
         public string Address { get; set; } = "";
 
+        [Required]
+        [StringLength(100)]
+        public string NameOfRestaurant { get; set; }=""  ;
         public DateTime BeginDate { set; get; }
 
         public DateTime EndDate { set; get; }

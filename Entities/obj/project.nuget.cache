@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gLslQ1UkhnuD8g9FGYYn4IDsnuGHaXN5EOXRLPzOL2NNV3p85fJaDsUppXyZzb6eeNXksRm8EBmLui3AlCgEUg==",
+  "dgSpecHash": "YksZUh05KlAdNF7pTT+YHLNW3X9Lh1trKFZNnOtNpfzB1QiCWzKl/E0GIFOC+L6WdqNowNvfAKpoLEyrBQAKKg==",
   "success": true,
-  "projectFilePath": "E:\\FRBranch\\SnappFood\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
