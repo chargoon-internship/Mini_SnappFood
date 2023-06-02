@@ -77,9 +77,10 @@
             this.Controls.Add(this.lblAmountsSum2);
             this.Controls.Add(this.lblAmountsSum1);
             this.Controls.Add(this.resInvoiceDataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RestaurantInvoice";
-            this.Text = "RestaurantInvoice";
+            this.Text = "فاکتورها";
             this.Load += new System.EventHandler(this.RestaurantInvoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.resInvoiceDataGridView)).EndInit();
             this.ResumeLayout(false);

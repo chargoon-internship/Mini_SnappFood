@@ -24,11 +24,11 @@ namespace SnappFood
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            //var orders = _db.GetOrders();  //متد GetOrders  نوشته شود در کلاس DB
-            //resInvoiceDataGridView.DataSource = orders;
+            var orders = _db.GetOrders();
+            resInvoiceDataGridView.DataSource = orders;
 
-            //var totalAmount = _db.GetOrders().Sum(o => o.FinalPrice);
-            //lblAmountsSum2.Text = totalAmount;
+            var totalAmount = _db.GetOrders().Sum(o => o.FinalPrice);
+            lblAmountsSum2.Text = totalAmount.ToString();
         }
     }
 }

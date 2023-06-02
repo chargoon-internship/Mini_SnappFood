@@ -75,11 +75,11 @@
             this.Controls.Add(this.btnEditMenu);
             this.Controls.Add(this.btnRegisterMenu);
             this.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RestaurantPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RestaurantPanel";
+            this.Text = "پنل رستوران";
             this.Load += new System.EventHandler(this.RestaurantPanel_Load);
             this.ResumeLayout(false);
 
