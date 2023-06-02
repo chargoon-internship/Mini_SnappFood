@@ -197,3 +197,4 @@ G:\Chargoon\Projects\snappfood\My Branch\SnappFood\obj\Debug\net7.0-windows\Snap
 G:\Chargoon\Projects\snappfood\My Branch\SnappFood\obj\Debug\net7.0-windows\SnappFood.genruntimeconfig.cache
 G:\Chargoon\Projects\snappfood\My Branch\SnappFood\obj\Debug\net7.0-windows\ref\SnappFood.dll
 G:\Chargoon\Projects\snappfood\My Branch\SnappFood\obj\Debug\net7.0-windows\SnappFood.RestaurantPanel.resources
+G:\Chargoon\Projects\snappfood\My Branch\SnappFood\obj\Debug\net7.0-windows\SnappFood.RestaurantInvoice.resources
