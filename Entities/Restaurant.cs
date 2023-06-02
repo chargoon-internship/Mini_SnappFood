@@ -20,7 +20,8 @@ namespace Entities
         public int Id { get; set; }
 
         [Required]
-        public string Address { get; set; }
+        [StringLength(150)]
+        public string Address { get; set; } = "";
 
         public DateTime BeginDate { set; get; }
 
@@ -28,7 +29,7 @@ namespace Entities
 
         public List<Food> Foods { get; set; }
 
-        public User User { get; set; }
+        public User? User { get; set; }
 
         public List<Invoice> Invoices { get; set; }
 

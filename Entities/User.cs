@@ -15,21 +15,26 @@ namespace Entities
         public int Id { get; set; }
 
         [Required]
-        public string FirstName { get; set; }
+        [StringLength(50)]
+        public string FirstName { get; set; } = "";
 
         [Required]
-        public string LastName { get; set; }
+        [StringLength(50)]
+        public string LastName { get; set; } = "";
 
         [Required]
-        public string UserName { get; set; }
+        [StringLength(50)]
+        public string UserName { get; set; } = "";
 
         [Required]
-        public string Password { get; set; }
+        [StringLength(20)]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = "";
 
 
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
-        public Restaurant Restaurant { get; set; }
+        public Restaurant? Restaurant { get; set; }
 
 
 

@@ -13,10 +13,12 @@ namespace Entities
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(10)]
+        public string Number { get; set; } = "";
 
-        public string Number { get; set; } 
-
-        public string Description { get; set; }
+        [StringLength(200)]
+        public string Description { get; set; } = "";
 
         public DateTime Time { get; set; }
 
@@ -32,12 +34,12 @@ namespace Entities
         [ForeignKey("Restaurant")]
         public int Restaurant_Id { get; set; }
 
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
-        public CartItem CartItem { get; set; }
+        public CartItem? CartItem { get; set; }
         
 
-        public Restaurant Restaurant { get; set; }
+        public Restaurant? Restaurant { get; set; }
 
 
     }

@@ -25,7 +25,7 @@ namespace Entities
         [ForeignKey("Customer")]
         public int Customer_Id { get; set; }
 
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
         public Double GetTotal()
         {

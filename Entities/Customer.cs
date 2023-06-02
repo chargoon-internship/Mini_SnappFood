@@ -19,16 +19,19 @@ namespace Entities
         [Key,ForeignKey("User")]
         public int Id { get; set; }
 
-        public string NatioalCode { get; set; }
+        [StringLength(10)]
+        [Required]
+        public string NatioalCode { get; set; } = "";
 
         [Required]
-        public string HomeAddress { get; set; }
+        [StringLength(150)]
+        public string HomeAddress { get; set; } = "";
 
         public List<CartItem> CartItems { get; set; }
 
         public List<Invoice> Invoices { get; set; }
 
-        public User User { get; set; }
+        public User? User { get; set; }
 
     }
 }

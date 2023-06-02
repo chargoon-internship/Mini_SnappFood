@@ -13,7 +13,9 @@ namespace Entities
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        [StringLength(50)]
+        [Required]
+        public string Name { get; set; } = "";
 
         public bool Exist { get; set; }
 
@@ -25,8 +27,8 @@ namespace Entities
         [ForeignKey("CartItem")]
         public int CartItem_Id { get; set; }
 
-        public Restaurant Restaurant { get; set; }
+        public Restaurant? Restaurant { get; set; }
 
-        public CartItem CartItem { get; set; }
+        public CartItem? CartItem { get; set; }
     }
 }
