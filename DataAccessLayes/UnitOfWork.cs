@@ -23,6 +23,32 @@ namespace DataAccessLayes
                 return _customerRepository;
             }
         }
+        private FoodRepository? _foodRepository;
+
+        public FoodRepository FoodRepository
+        {
+            get
+            {
+                if (_foodRepository == null)
+                {
+                    _foodRepository = new FoodRepository(dB);
+                }
+                return _foodRepository;
+            }
+        }
+        private RestaurantRepository? _restaurantRepository;
+
+        public RestaurantRepository RestaurantRepository
+        {
+            get
+            {
+                if (_restaurantRepository == null)
+                {
+                    _restaurantRepository = new RestaurantRepository(dB);
+                }
+                return _restaurantRepository;
+            }
+        }
 
         public void Dispose()
         {

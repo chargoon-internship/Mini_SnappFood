@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj": {}
+    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj": {
+    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj",
+        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj",
         "projectName": "DataAccessLayes",
-        "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj",
-        "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\DataAccessLayes\\obj\\",
+        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\DataAccessLayes.csproj",
+        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\DataAccessLayes\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj"
+              "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
               }
             }
           }
@@ -90,25 +85,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj": {
+    "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhhh\\source\\Shop\\SnappFood\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,7 +107,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

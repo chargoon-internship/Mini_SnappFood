@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Entities
 {
     public class Restaurant
@@ -22,6 +23,10 @@ namespace Entities
         [Required]
         [StringLength(150)]
         public string Address { get; set; } = "";
+
+        [Required]
+        [StringLength(150)]
+        public string NameOfRestaurant { get; set; } = "";
 
         [Column(TypeName ="datetime(7)")]
         public TimeSpan BeginDate { set; get; }
