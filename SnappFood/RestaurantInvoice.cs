@@ -29,6 +29,16 @@ namespace SnappFood
 
             var totalAmount = _db.GetOrders().Sum(o => o.FinalPrice);
             lblAmountsSum2.Text = totalAmount.ToString();
+
+            resInvoiceDataGridView.Columns["Id"].Visible = false;
+
+            resInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
+            resInvoiceDataGridView.Columns["CartItem_Id"].Visible = false;
+            resInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
+
+            resInvoiceDataGridView.Columns["Customer"].Visible = false;
+            resInvoiceDataGridView.Columns["CartItem"].Visible = false;
+            resInvoiceDataGridView.Columns["Restaurant"].Visible = false;
         }
     }
 }
