@@ -21,7 +21,9 @@ namespace DataAccessLayes
         {
             try
             {
-                _db.Foods.Add(food); return true;
+                _db.Foods.Add(food);
+                _db.SaveChanges();
+                return true;
             }
             catch
             {
@@ -65,10 +67,14 @@ namespace DataAccessLayes
         }
         public bool Update(Food food)
         {
-            var local = _db.Restaurants.FirstOrDefault(f => f.Id == food.Id);
+            var local = _db.Foods.FirstOrDefault(f => f.Id == food.Id);
             if (local != null)
             {
-                _db.Entry(food).State = EntityState.Modified;
+
+                local.Name = food.Name;
+                local.Price = food.Price;
+                local.Exist = food.Exist;
+
                 _db.SaveChanges();
 
                 return true;
