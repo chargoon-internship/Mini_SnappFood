@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label4 = new Label();
+            txtID = new TextBox();
             chBoxExistence = new CheckBox();
             label3 = new Label();
             btnSubmit = new Button();
@@ -36,7 +38,7 @@
             label2 = new Label();
             txtFood = new TextBox();
             label1 = new Label();
-            groupBox2 = new GroupBox();
+            gbMenu = new GroupBox();
             dgMenu = new DataGridView();
             FoodID = new DataGridViewTextBoxColumn();
             NameOfFood = new DataGridViewTextBoxColumn();
@@ -45,12 +47,14 @@
             btnEditMenu = new Button();
             btnDeletMenu = new Button();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            gbMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgMenu).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(txtID);
             groupBox1.Controls.Add(chBoxExistence);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(btnSubmit);
@@ -65,6 +69,24 @@
             groupBox1.Size = new Size(899, 147);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(748, 112);
+            label4.Name = "label4";
+            label4.Size = new Size(113, 18);
+            label4.TabIndex = 8;
+            label4.Text = "شماره شناسایی رستوران";
+            label4.Visible = false;
+            // 
+            // txtID
+            // 
+            txtID.Location = new Point(627, 104);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(100, 26);
+            txtID.TabIndex = 7;
+            txtID.Visible = false;
             // 
             // chBoxExistence
             // 
@@ -140,17 +162,17 @@
             label1.TabIndex = 0;
             label1.Text = "نام غذا";
             // 
-            // groupBox2
+            // gbMenu
             // 
-            groupBox2.Controls.Add(dgMenu);
-            groupBox2.Font = new Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(18, 188);
-            groupBox2.Margin = new Padding(4);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4);
-            groupBox2.Size = new Size(901, 418);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
+            gbMenu.Controls.Add(dgMenu);
+            gbMenu.Font = new Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            gbMenu.Location = new Point(18, 188);
+            gbMenu.Margin = new Padding(4);
+            gbMenu.Name = "gbMenu";
+            gbMenu.Padding = new Padding(4);
+            gbMenu.Size = new Size(901, 500);
+            gbMenu.TabIndex = 1;
+            gbMenu.TabStop = false;
             // 
             // dgMenu
             // 
@@ -161,7 +183,7 @@
             dgMenu.Location = new Point(4, 18);
             dgMenu.Margin = new Padding(4);
             dgMenu.Name = "dgMenu";
-            dgMenu.Size = new Size(893, 396);
+            dgMenu.Size = new Size(893, 478);
             dgMenu.TabIndex = 0;
             // 
             // FoodID
@@ -186,7 +208,7 @@
             // ExistenceOfFood
             // 
             ExistenceOfFood.DataPropertyName = "Exist";
-            ExistenceOfFood.HeaderText = "موجود";
+            ExistenceOfFood.HeaderText = "موجودی";
             ExistenceOfFood.Name = "ExistenceOfFood";
             // 
             // btnEditMenu
@@ -198,6 +220,7 @@
             btnEditMenu.TabIndex = 2;
             btnEditMenu.Text = "ویرایش";
             btnEditMenu.UseVisualStyleBackColor = true;
+            btnEditMenu.Visible = false;
             btnEditMenu.Click += btnEditMenu_Click;
             // 
             // btnDeletMenu
@@ -209,6 +232,7 @@
             btnDeletMenu.TabIndex = 3;
             btnDeletMenu.Text = "حذف";
             btnDeletMenu.UseVisualStyleBackColor = true;
+            btnDeletMenu.Visible = false;
             btnDeletMenu.Click += btnDeletMenu_Click;
             // 
             // EditandAddMenu
@@ -219,7 +243,7 @@
             ClientSize = new Size(925, 700);
             Controls.Add(btnDeletMenu);
             Controls.Add(btnEditMenu);
-            Controls.Add(groupBox2);
+            Controls.Add(gbMenu);
             Controls.Add(groupBox1);
             Font = new Font("IRANSansWeb(FaNum)", 8.249999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -231,7 +255,7 @@
             Load += EditandAddMenu_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
+            gbMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgMenu).EndInit();
             ResumeLayout(false);
         }
@@ -242,7 +266,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFood;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbMenu;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.MaskedTextBox txtPrice;
         private System.Windows.Forms.CheckBox chBoxExistence;
@@ -250,6 +274,8 @@
         private System.Windows.Forms.DataGridView dgMenu;
         private System.Windows.Forms.Button btnEditMenu;
         private System.Windows.Forms.Button btnDeletMenu;
+        private Label label4;
+        private TextBox txtID;
         private DataGridViewTextBoxColumn FoodID;
         private DataGridViewTextBoxColumn NameOfFood;
         private DataGridViewTextBoxColumn PriceOfFood;
