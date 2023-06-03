@@ -18,6 +18,11 @@ namespace DataAccessLayes
             _db = db;
         }
 
-        public List<Invoice> GetOrders() => _db.Invoices.ToList();
+        //public List<Invoice> GetOrders() => _db.Invoices.ToList();
+
+        public IEnumerable<Invoice> GetOrders()
+        {
+            return _db.Invoices;
+        }
     }
 }
