@@ -19,6 +19,8 @@ namespace SnappFood
             InitializeComponent();
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
             HideLoginPage(false);
@@ -174,8 +176,8 @@ namespace SnappFood
                     Id = user.Id,
                     NameOfRestaurant = txtCode.Text,
                     Address = txtAddress.Text,
-                    BeginDate = Convert.ToDateTime(TimeBegin.Text),
-                    EndDate= Convert.ToDateTime(TimeEnd.Text),
+                    BeginDate=TimeSpan.Parse(TimeBegin.Text),
+                    EndDate=TimeSpan.Parse(TimeEnd.Text)
                 };
                 UserValidation db = new UserValidation();
                 if (db.Create(user))

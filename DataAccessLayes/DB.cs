@@ -19,13 +19,11 @@ namespace DataAccessLayes
 
         public DbSet<Invoice> Invoices { get; set; }
 
-        public DbSet<CartItem> CartItems { get; set; }
-
         public DbSet<Food> Foods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Server=.\SQL2016;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
