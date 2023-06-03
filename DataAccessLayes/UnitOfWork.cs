@@ -50,6 +50,20 @@ namespace DataAccessLayes
             }
         }
 
+        private UserRepository? _userRepository;
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = new UserRepository(dB);
+                }
+                return _userRepository;
+            }
+        }
+
         public void Dispose()
         {
             dB.Dispose();
