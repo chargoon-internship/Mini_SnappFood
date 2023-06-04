@@ -1,23 +1,33 @@
-﻿using DataAccessLayes;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using BusinessLogicLayer;
+using DataAccessLayes;
+using Entities;
 
 namespace SnappFood
 {
     public partial class RestaurantInvoice : Form
     {
-        private readonly DB _db;
+        ViewInvoice v = new ViewInvoice();
 
         public RestaurantInvoice()
         {
             InitializeComponent();
-            _db = new DB();
         }
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            var orders = _db.GetOrders();
+            var orders = v.PrintInvoices(2);
             resInvoiceDataGridView.DataSource = orders;
 
-            var totalAmount = _db.GetOrders().Sum(o => o.FinalPrice);
+            var totalAmount = v.PrintInvoices(2).Sum(o => o.FinalPrice);
             lblAmountsSum2.Text = totalAmount.ToString();
 
             resInvoiceDataGridView.Columns["Id"].Visible = false;

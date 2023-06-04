@@ -11,18 +11,13 @@ namespace DataAccessLayes
 {
     public class InvoiceRepository
     {
-        private DB _db;
+        private DB db;
 
         public InvoiceRepository(DB db)
         {
-            _db = db;
+            this.db = db;
         }
 
-        //public List<Invoice> GetOrders() => _db.Invoices.ToList();
-
-        public IEnumerable<Invoice> GetOrders()
-        {
-            return _db.Invoices;
-        }
+        public List<Invoice> GetOrders() => db.Invoices.ToList();
     }
 }

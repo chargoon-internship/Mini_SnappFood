@@ -10,8 +10,6 @@ namespace DataAccessLayes
 {
     public class DB : DbContext
     {
-        //private object _db;
-
         public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Restaurant> Restaurants { get; set; }
@@ -35,7 +33,5 @@ namespace DataAccessLayes
             modelBuilder.Entity<Invoice>().HasOne(n => n.Customer).WithMany(n => n.Invoices).HasForeignKey(n => n.Customer_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
         }
-
-        //public IEnumerable<Invoice> GetOrders() => _db.Invoices;
     }
 }
