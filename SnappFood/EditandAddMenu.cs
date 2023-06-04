@@ -16,7 +16,8 @@ namespace SnappFood
     public partial class EditandAddMenu : Form
     {
         EditMenu menu = new EditMenu();
-        public bool isEdit = true;
+        public bool isEdit { get; set; }
+        public User user { get; set; }
         public EditandAddMenu()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace SnappFood
             {
                 btnDeletMenu.Visible = true;
                 btnEditMenu.Visible = true;
-                gbMenu.Size = new Size(901, 430);
             }
         }
 
@@ -32,7 +32,7 @@ namespace SnappFood
         {
             BindGrid();
         }
-        private void BindGrid()     
+        private void BindGrid()
         {
             var foods = menu.PrintAllMenu(2);
             dgMenu.AutoGenerateColumns = false;
@@ -110,6 +110,11 @@ namespace SnappFood
 
             }
 
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

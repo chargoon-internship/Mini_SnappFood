@@ -46,6 +46,7 @@
             ExistenceOfFood = new DataGridViewTextBoxColumn();
             btnEditMenu = new Button();
             btnDeletMenu = new Button();
+            btnReturn = new Button();
             groupBox1.SuspendLayout();
             gbMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgMenu).BeginInit();
@@ -170,7 +171,7 @@
             gbMenu.Margin = new Padding(4);
             gbMenu.Name = "gbMenu";
             gbMenu.Padding = new Padding(4);
-            gbMenu.Size = new Size(901, 500);
+            gbMenu.Size = new Size(901, 430);
             gbMenu.TabIndex = 1;
             gbMenu.TabStop = false;
             // 
@@ -183,7 +184,7 @@
             dgMenu.Location = new Point(4, 18);
             dgMenu.Margin = new Padding(4);
             dgMenu.Name = "dgMenu";
-            dgMenu.Size = new Size(893, 478);
+            dgMenu.Size = new Size(893, 408);
             dgMenu.TabIndex = 0;
             // 
             // FoodID
@@ -235,12 +236,24 @@
             btnDeletMenu.Visible = false;
             btnDeletMenu.Click += btnDeletMenu_Click;
             // 
+            // btnReturn
+            // 
+            btnReturn.Location = new Point(810, 626);
+            btnReturn.Margin = new Padding(4);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(88, 32);
+            btnReturn.TabIndex = 4;
+            btnReturn.Text = "بازگشت";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
+            // 
             // EditandAddMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(925, 700);
+            ClientSize = new Size(929, 666);
+            Controls.Add(btnReturn);
             Controls.Add(btnDeletMenu);
             Controls.Add(btnEditMenu);
             Controls.Add(gbMenu);
@@ -280,6 +293,7 @@
         private DataGridViewTextBoxColumn NameOfFood;
         private DataGridViewTextBoxColumn PriceOfFood;
         private DataGridViewTextBoxColumn ExistenceOfFood;
+        private Button btnReturn;
     }
 }
 
