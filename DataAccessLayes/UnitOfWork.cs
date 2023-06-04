@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes
 {
-    public class UnitOfWork:IDisposable
+    public class UnitOfWork : IDisposable
     {
         private DB dB = new DB();
 
@@ -47,6 +47,20 @@ namespace DataAccessLayes
                     _restaurantRepository = new RestaurantRepository(dB);
                 }
                 return _restaurantRepository;
+            }
+        }
+
+        private InvoiceRepository? _invoiceRepository;
+
+        public InvoiceRepository InvoiceRepository
+        {
+            get
+            {
+                if (_invoiceRepository == null)
+                {
+                    _invoiceRepository = new InvoiceRepository(dB);
+                }
+                return _invoiceRepository;
             }
         }
 
