@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {}
   },
   "projects": {
@@ -12,9 +13,30 @@
         "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
         "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\obj\\",
+=======
+    "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {}
+  },
+  "projects": {
+    "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectName": "BusinessLogicLayer",
+        "projectPath": "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
+        "outputPath": "E:\\OOO\\SnappFood\\BusinessLogicLayer\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +44,26 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj": {
                 "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj"
               },
               "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
                 "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
+=======
+              "E:\\OOO\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj": {
+                "projectPath": "E:\\OOO\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj"
+              },
+              "E:\\OOO\\SnappFood\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj"
+>>>>>>> main
               }
             }
           }
@@ -62,6 +93,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
@@ -74,9 +106,31 @@
         "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\DataAccessLayes.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
         "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\DataAccessLayes\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\OOO\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\OOO\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj",
+        "projectName": "DataAccessLayes",
+        "projectPath": "E:\\OOO\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj",
+        "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
+        "outputPath": "E:\\OOO\\SnappFood\\DataAccessLayes\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,14 +138,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
                 "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
+=======
+              "E:\\OOO\\SnappFood\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj"
+>>>>>>> main
               }
             }
           }
@@ -147,6 +207,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
@@ -159,9 +220,31 @@
         "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
         "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\OOO\\SnappFood\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
+        "outputPath": "E:\\OOO\\SnappFood\\Entities\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,6 +252,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -202,7 +286,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+>>>>>>> main
         }
       }
     }

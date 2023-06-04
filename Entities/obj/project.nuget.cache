@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "QVg3TSwxnowXN9gFuYGt8gHWSbHiSsuEHaNaJFw272DGL2Snbg7SZiofliWEt9toezmUzeeXS+OuOxBsh3KonA==",
   "success": true,
   "projectFilePath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj",
+=======
+  "dgSpecHash": "V1M3Wm0tbptCDqhygGAwkNoFm/F0B6NsBwVh5m7DBZempx57IwjZ3Umc0xqSQYS4GLGlhdWoRif+msk/14eY/Q==",
+  "success": true,
+  "projectFilePath": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj",
+>>>>>>> main
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DataAccessLayes;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace BusinessLogicLayer
 {
     public class CustomerValidation
     {
-
+        UnitOfWork db=new UnitOfWork();
 
         //public IEnumerable<Customer> GetAll()
         //{

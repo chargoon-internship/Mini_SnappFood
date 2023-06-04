@@ -61,6 +61,17 @@ namespace DataAccessLayes
                     _invoiceRepository = new InvoiceRepository(dB);
                 }
                 return _invoiceRepository;
+        private UserRepository? _userRepository;
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = new UserRepository(dB);
+                }
+                return _userRepository;
             }
         }
 

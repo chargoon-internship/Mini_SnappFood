@@ -32,6 +32,7 @@ C:\Users\mohaddesse\Source\Repos\OrderFood\BusinessLogicLayer\obj\Debug\net7.0\B
 C:\Users\mohaddesse\Source\Repos\OrderFood\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
 C:\Users\mohaddesse\Source\Repos\OrderFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
 C:\Users\mohaddesse\Source\Repos\OrderFood\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+<<<<<<< HEAD
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.deps.json
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.dll
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.pdb
@@ -49,3 +50,22 @@ G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\obj\Debug\net7.0\Bus
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
 G:\Chargoon\Projects\snappfood\My Branch\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+=======
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.deps.json
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.dll
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.pdb
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\DataAccessLayes.dll
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\Entities.dll
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\DataAccessLayes.pdb
+E:\OOO\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\Entities.pdb
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.AssemblyInfo.cs
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.CopyComplete
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.dll
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
+E:\OOO\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+>>>>>>> main
