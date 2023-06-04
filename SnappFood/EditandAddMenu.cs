@@ -20,6 +20,7 @@ namespace SnappFood
         public User user { get; set; }
         public EditandAddMenu()
         {
+            //this.user = _user;
             InitializeComponent();
             if (isEdit)
             {

@@ -69,10 +69,10 @@
             // 
             // RestaurantPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleDimensions = new SizeF(6F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1400, 800);
+            ClientSize = new Size(1356, 629);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
             Controls.Add(btnRegisterMenu);

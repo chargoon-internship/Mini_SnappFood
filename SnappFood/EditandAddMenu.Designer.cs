@@ -40,13 +40,13 @@
             label1 = new Label();
             gbMenu = new GroupBox();
             dgMenu = new DataGridView();
-            btnEditMenu = new Button();
-            btnDeletMenu = new Button();
-            btnReturn = new Button();
             FoodID = new DataGridViewTextBoxColumn();
             NameOfFood = new DataGridViewTextBoxColumn();
             PriceOfFood = new DataGridViewTextBoxColumn();
             ExistenceOfFood = new DataGridViewTextBoxColumn();
+            btnEditMenu = new Button();
+            btnDeletMenu = new Button();
+            btnReturn = new Button();
             groupBox1.SuspendLayout();
             gbMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgMenu).BeginInit();
@@ -187,6 +187,31 @@
             dgMenu.Size = new Size(893, 408);
             dgMenu.TabIndex = 0;
             // 
+            // FoodID
+            // 
+            FoodID.DataPropertyName = "Id";
+            FoodID.HeaderText = "FoodID";
+            FoodID.Name = "FoodID";
+            FoodID.Visible = false;
+            // 
+            // NameOfFood
+            // 
+            NameOfFood.DataPropertyName = "Name";
+            NameOfFood.HeaderText = "نام غذا";
+            NameOfFood.Name = "NameOfFood";
+            // 
+            // PriceOfFood
+            // 
+            PriceOfFood.DataPropertyName = "Price";
+            PriceOfFood.HeaderText = "قیمت غذا";
+            PriceOfFood.Name = "PriceOfFood";
+            // 
+            // ExistenceOfFood
+            // 
+            ExistenceOfFood.DataPropertyName = "ExistText";
+            ExistenceOfFood.HeaderText = "موجودی";
+            ExistenceOfFood.Name = "ExistenceOfFood";
+            // 
             // btnEditMenu
             // 
             btnEditMenu.Location = new Point(173, 626);
@@ -222,37 +247,12 @@
             btnReturn.UseVisualStyleBackColor = true;
             btnReturn.Click += btnReturn_Click;
             // 
-            // FoodID
-            // 
-            FoodID.DataPropertyName = "Id";
-            FoodID.HeaderText = "FoodID";
-            FoodID.Name = "FoodID";
-            FoodID.Visible = false;
-            // 
-            // NameOfFood
-            // 
-            NameOfFood.DataPropertyName = "Name";
-            NameOfFood.HeaderText = "نام غذا";
-            NameOfFood.Name = "NameOfFood";
-            // 
-            // PriceOfFood
-            // 
-            PriceOfFood.DataPropertyName = "Price";
-            PriceOfFood.HeaderText = "قیمت غذا";
-            PriceOfFood.Name = "PriceOfFood";
-            // 
-            // ExistenceOfFood
-            // 
-            ExistenceOfFood.DataPropertyName = "ExistText";
-            ExistenceOfFood.HeaderText = "موجودی";
-            ExistenceOfFood.Name = "ExistenceOfFood";
-            // 
             // EditandAddMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(934, 629);
+            ClientSize = new Size(942, 629);
             Controls.Add(btnReturn);
             Controls.Add(btnDeletMenu);
             Controls.Add(btnEditMenu);
