@@ -12,8 +12,6 @@ namespace Entities
     {
         public Customer()
         {
-            CartItems= new List<CartItem>();
-
             Invoices = new List<Invoice>();
         }
         [Key,ForeignKey("User")]
@@ -26,8 +24,6 @@ namespace Entities
         [Required]
         [StringLength(150)]
         public string HomeAddress { get; set; } = "";
-
-        public List<CartItem> CartItems { get; set; }
 
         public List<Invoice> Invoices { get; set; }
 

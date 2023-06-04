@@ -24,11 +24,6 @@ namespace Entities
         [ForeignKey("Restaurant")]
         public int Restaurant_Id { get; set; }
 
-        [ForeignKey("CartItem")]
-        public int CartItem_Id { get; set; }
-
         public Restaurant? Restaurant { get; set; }
-
-        public CartItem? CartItem { get; set; }
     }
 }
