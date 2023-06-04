@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccessLayes.Migrations
 {
     /// <inheritdoc />
-    public partial class create : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,8 +52,9 @@ namespace DataAccessLayes.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    BeginDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    NameOfRestaurant = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    BeginDate = table.Column<TimeSpan>(type: "time", nullable: false),
+                    EndDate = table.Column<TimeSpan>(type: "time", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,26 +68,6 @@ namespace DataAccessLayes.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CartItems",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    TotalPrice = table.Column<double>(type: "float", nullable: false),
-                    Customer_Id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CartItems", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CartItems_Customers_Customer_Id",
-                        column: x => x.Customer_Id,
-                        principalTable: "Customers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Foods",
                 columns: table => new
                 {
@@ -95,18 +76,11 @@ namespace DataAccessLayes.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Exist = table.Column<bool>(type: "bit", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    Restaurant_Id = table.Column<int>(type: "int", nullable: false),
-                    CartItem_Id = table.Column<int>(type: "int", nullable: false)
+                    Restaurant_Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Foods", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Foods_CartItems_CartItem_Id",
-                        column: x => x.CartItem_Id,
-                        principalTable: "CartItems",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Foods_Restaurants_Restaurant_Id",
                         column: x => x.Restaurant_Id,
@@ -125,18 +99,11 @@ namespace DataAccessLayes.Migrations
                     Time = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FinalPrice = table.Column<double>(type: "float", nullable: false),
                     Customer_Id = table.Column<int>(type: "int", nullable: false),
-                    CartItem_Id = table.Column<int>(type: "int", nullable: false),
                     Restaurant_Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Invoices", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Invoices_CartItems_CartItem_Id",
-                        column: x => x.CartItem_Id,
-                        principalTable: "CartItems",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Invoices_Customers_Customer_Id",
                         column: x => x.Customer_Id,
@@ -150,24 +117,9 @@ namespace DataAccessLayes.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CartItems_Customer_Id",
-                table: "CartItems",
-                column: "Customer_Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Foods_CartItem_Id",
-                table: "Foods",
-                column: "CartItem_Id");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Foods_Restaurant_Id",
                 table: "Foods",
                 column: "Restaurant_Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Invoices_CartItem_Id",
-                table: "Invoices",
-                column: "CartItem_Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Invoices_Customer_Id",
@@ -178,6 +130,12 @@ namespace DataAccessLayes.Migrations
                 name: "IX_Invoices_Restaurant_Id",
                 table: "Invoices",
                 column: "Restaurant_Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_UserName",
+                table: "Users",
+                column: "UserName",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -190,13 +148,10 @@ namespace DataAccessLayes.Migrations
                 name: "Invoices");
 
             migrationBuilder.DropTable(
-                name: "CartItems");
+                name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "Restaurants");
-
-            migrationBuilder.DropTable(
-                name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "Users");

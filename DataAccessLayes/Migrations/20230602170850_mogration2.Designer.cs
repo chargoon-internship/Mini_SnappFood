@@ -12,8 +12,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayes.Migrations
 {
     [DbContext(typeof(DB))]
+<<<<<<<< HEAD:DataAccessLayes/Migrations/20230602192310_InitialCreate.Designer.cs
+    [Migration("20230602192310_InitialCreate")]
+    partial class InitialCreate
+========
     [Migration("20230602170850_mogration2")]
     partial class mogration2
+>>>>>>>> main:DataAccessLayes/Migrations/20230602170850_mogration2.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

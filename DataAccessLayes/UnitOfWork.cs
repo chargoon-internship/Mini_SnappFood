@@ -50,6 +50,31 @@ namespace DataAccessLayes
             }
         }
 
+        private InvoiceRepository? _invoiceRepository;
+
+        public InvoiceRepository InvoiceRepository
+        {
+            get
+            {
+                if (_invoiceRepository == null)
+                {
+                    _invoiceRepository = new InvoiceRepository(dB);
+                }
+                return _invoiceRepository;
+        private UserRepository? _userRepository;
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = new UserRepository(dB);
+                }
+                return _userRepository;
+            }
+        }
+
         public void Dispose()
         {
             dB.Dispose();

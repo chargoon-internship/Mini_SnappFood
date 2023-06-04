@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayes
 {
-    public class DB:DbContext
+    public class DB : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
 
@@ -18,13 +19,15 @@ namespace DataAccessLayes
 
         public DbSet<Invoice> Invoices { get; set; }
 
-        public DbSet<CartItem> CartItems { get; set; }
-
         public DbSet<Food> Foods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+<<<<<<< HEAD
+            optionsBuilder.UseSqlServer(@"Server=.\SQL2019;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+=======
+            optionsBuilder.UseSqlServer(@"Server=.\SQL2016;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+>>>>>>> main
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,6 +35,7 @@ namespace DataAccessLayes
             modelBuilder.Entity<Food>().HasOne(n => n.Restaurant).WithMany(n => n.Foods).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Customer).WithMany(n => n.Invoices).HasForeignKey(n => n.Customer_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<User>().HasIndex(b => b.UserName).IsUnique(true);
         }
     }
 }

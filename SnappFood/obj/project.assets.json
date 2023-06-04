@@ -3537,19 +3537,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mohaddesse\\.nuget\\packages\\": {}
+<<<<<<< HEAD
+    "C:\\Users\\1\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\hhhh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\SnappFood.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj",
       "projectName": "SnappFood",
-      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\SnappFood.csproj",
-      "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\obj\\",
+      "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\SnappFood.csproj",
+      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+      "outputPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\SnappFood\\obj\\",
+=======
+      "projectUniqueName": "E:\\OOO\\SnappFood\\SnappFood\\SnappFood.csproj",
+      "projectName": "SnappFood",
+      "projectPath": "E:\\OOO\\SnappFood\\SnappFood\\SnappFood.csproj",
+      "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
+      "outputPath": "E:\\OOO\\SnappFood\\SnappFood\\obj\\",
+>>>>>>> main
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3557,17 +3578,26 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+<<<<<<< HEAD
+            "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj"
+            "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj": {
+              "projectPath": "G:\\Chargoon\\Projects\\snappfood\\My Branch\\Entities\\Entities.csproj"
+=======
+            "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "E:\\OOO\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            },
+            "E:\\OOO\\SnappFood\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\OOO\\SnappFood\\Entities\\Entities.csproj"
+>>>>>>> main
             }
           }
         }
@@ -3626,7 +3656,11 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+>>>>>>> main
       }
     }
   }

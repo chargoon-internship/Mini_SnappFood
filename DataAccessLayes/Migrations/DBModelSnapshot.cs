@@ -22,27 +22,6 @@ namespace DataAccessLayes.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.CartItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Customer_Id")
-                        .HasColumnType("int");
-
-                    b.Property<double>("TotalPrice")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Customer_Id");
-
-                    b.ToTable("CartItems");
-                });
-
             modelBuilder.Entity("Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -71,9 +50,6 @@ namespace DataAccessLayes.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CartItem_Id")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Exist")
                         .HasColumnType("bit");
 
@@ -90,8 +66,6 @@ namespace DataAccessLayes.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CartItem_Id");
-
                     b.HasIndex("Restaurant_Id");
 
                     b.ToTable("Foods");
@@ -104,9 +78,6 @@ namespace DataAccessLayes.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CartItem_Id")
-                        .HasColumnType("int");
 
                     b.Property<int>("Customer_Id")
                         .HasColumnType("int");
@@ -131,8 +102,6 @@ namespace DataAccessLayes.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CartItem_Id");
 
                     b.HasIndex("Customer_Id");
 
@@ -197,18 +166,10 @@ namespace DataAccessLayes.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Entities.CartItem", b =>
-                {
-                    b.HasOne("Entities.Customer", "Customer")
-                        .WithMany("CartItems")
-                        .HasForeignKey("Customer_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("Entities.Customer", b =>
@@ -224,31 +185,17 @@ namespace DataAccessLayes.Migrations
 
             modelBuilder.Entity("Entities.Food", b =>
                 {
-                    b.HasOne("Entities.CartItem", "CartItem")
-                        .WithMany("Foods")
-                        .HasForeignKey("CartItem_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Entities.Restaurant", "Restaurant")
                         .WithMany("Foods")
                         .HasForeignKey("Restaurant_Id")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.Navigation("CartItem");
-
                     b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("Entities.Invoice", b =>
                 {
-                    b.HasOne("Entities.CartItem", "CartItem")
-                        .WithMany()
-                        .HasForeignKey("CartItem_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Entities.Customer", "Customer")
                         .WithMany("Invoices")
                         .HasForeignKey("Customer_Id")
@@ -260,8 +207,6 @@ namespace DataAccessLayes.Migrations
                         .HasForeignKey("Restaurant_Id")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("CartItem");
 
                     b.Navigation("Customer");
 
@@ -279,15 +224,8 @@ namespace DataAccessLayes.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Entities.CartItem", b =>
-                {
-                    b.Navigation("Foods");
-                });
-
             modelBuilder.Entity("Entities.Customer", b =>
                 {
-                    b.Navigation("CartItems");
-
                     b.Navigation("Invoices");
                 });
 
