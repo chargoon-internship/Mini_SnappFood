@@ -22,13 +22,21 @@ namespace BusinessLogicLayer
             db.FoodRepository.Insert(food);
             
         }
-        public void UpdateMenu(Food food)
+        public string UpdateMenu(Food food)
         {
-            db.FoodRepository.Update(food);
+            var result=db.FoodRepository.Update(food);
+            string message=result ? "با موفقیت ویرایش شد":"غذا مورد نظر ویرایش نشد";
+            return message;
         }
         public Food FindMenuById(int id)
         {
            return db.FoodRepository.GetById(id);
+        }
+        public string DeleteMenuById(int id)
+        {
+            var result= db.FoodRepository.Delete(id);
+            string message = result ? "با موفقیت حذف شد" : "غذا مورد نظر حذف نشد";
+            return message;
         }
     }
 }

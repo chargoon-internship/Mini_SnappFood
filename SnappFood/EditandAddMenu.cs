@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+
 using Entities;
 
 namespace SnappFood
@@ -15,21 +16,36 @@ namespace SnappFood
     public partial class EditandAddMenu : Form
     {
         EditMenu menu = new EditMenu();
+        public bool isEdit = true;
         public EditandAddMenu()
         {
             InitializeComponent();
+            if (isEdit)
+            {
+                btnDeletMenu.Visible = true;
+                btnEditMenu.Visible = true;
+                gbMenu.Size = new Size(901, 430);
+            }
         }
 
         private void EditandAddMenu_Load(object sender, EventArgs e)
         {
             BindGrid();
         }
-        private void BindGrid()
+        private void BindGrid()     
         {
             var foods = menu.PrintAllMenu(2);
             dgMenu.AutoGenerateColumns = false;
             dgMenu.DataSource = foods;
         }
+        private void SetEmpty()
+        {
+            txtFood.Text = "";
+            txtID.Text = "";
+            txtPrice.Text = "";
+            chBoxExistence.Checked = false;
+        }
+
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
@@ -37,18 +53,25 @@ namespace SnappFood
             var price = txtPrice.Text.Replace("ریال", "").Replace(",", "").Replace("\"", "").Trim();
             double.TryParse(price, out double priceOfFood);
             bool isExist = chBoxExistence.Checked;
-            var food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+            Food food;
             if (btnSubmit.Text == "ویرایش")
             {
-                var food1 = new Food { Id = (int)dgMenu.CurrentRow.Cells[0].Value, Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+                food = new Food { Id = int.Parse(txtID.Text), Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+                var result = menu.UpdateMenu(food);
 
-                menu.UpdateMenu(food1);
+
+                MessageBox.Show(result, "اعلام", MessageBoxButtons.OK);
+
+
             }
             else
             {
+                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+
                 menu.AddMenu(food);
             }
             BindGrid();
+            SetEmpty();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
@@ -61,6 +84,7 @@ namespace SnappFood
                 txtPrice.Text = food.Price.ToString();
                 txtFood.Text = food.Name.ToString();
                 chBoxExistence.Checked = food.Exist;
+                txtID.Text = IdOfFood.ToString();
 
                 btnSubmit.Text = "ویرایش";
 
@@ -73,16 +97,15 @@ namespace SnappFood
         {
             if (dgMenu.CurrentRow != null)
             {
-                /* int numberOfInvoice = (int)dgShowResult.CurrentRow.Cells[0].Value;
-                 string name = dgShowResult.CurrentRow.Cells[2].Value.ToString();
-                 if (MessageBox.Show($"Are u sure to delete {name}", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                 {
-                     var result = createMenu.Delete(numberOfInvoice);
-                     if (!result)
-                     {
-                         MessageBox.Show("فاکتور مورد نظر حذف نشد", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     }
-                 }*/
+                int IdOfFood = (int)dgMenu.CurrentRow.Cells[0].Value;
+
+                string name = dgMenu.CurrentRow.Cells[1].Value.ToString();
+                if (MessageBox.Show($"اطمینان دارید؟ {name} ایا از حذف ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var result = menu.DeleteMenuById(IdOfFood);
+                    MessageBox.Show(result, "اعلام", MessageBoxButtons.OK);
+
+                }
                 BindGrid();
 
             }
