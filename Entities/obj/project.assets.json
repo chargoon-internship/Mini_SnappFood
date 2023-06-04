@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",

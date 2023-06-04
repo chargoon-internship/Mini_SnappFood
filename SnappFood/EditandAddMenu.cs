@@ -16,7 +16,7 @@ namespace SnappFood
     public partial class EditandAddMenu : Form
     {
         EditMenu menu = new EditMenu();
-        public bool isEdit { get; set; }
+        public bool isEdit  { get; set; }
         public User user { get; set; }
         public EditandAddMenu()
         {
@@ -24,7 +24,8 @@ namespace SnappFood
             if (isEdit)
             {
                 btnDeletMenu.Visible = true;
-                btnEditMenu.Visible = true;
+                btnEditMenu.Visible = true; 
+                btnSubmit.Text = "ویرایش";
             }
         }
 
@@ -85,9 +86,6 @@ namespace SnappFood
                 txtFood.Text = food.Name.ToString();
                 chBoxExistence.Checked = food.Exist;
                 txtID.Text = IdOfFood.ToString();
-
-                btnSubmit.Text = "ویرایش";
-
             }
 
             BindGrid();

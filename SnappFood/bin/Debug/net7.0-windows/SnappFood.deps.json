@@ -595,7 +595,8 @@
       "BusinessLogicLayer/1.0.0": {
         "dependencies": {
           "DataAccessLayes": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "ViewModel": "1.0.0"
         },
         "runtime": {
           "BusinessLogicLayer.dll": {}
@@ -615,6 +616,11 @@
       "Entities/1.0.0": {
         "runtime": {
           "Entities.dll": {}
+        }
+      },
+      "ViewModel/1.0.0": {
+        "runtime": {
+          "ViewModel.dll": {}
         }
       }
     }
@@ -1105,6 +1111,11 @@
       "sha512": ""
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ViewModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

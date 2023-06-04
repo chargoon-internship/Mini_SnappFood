@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qh3Et1e4ZMxBXxk29A+97t+H0hGppR7AGiFPMjOheU7LFBAq3/XrwXBLNJIT4lNDGEU0jBaLnP62vSlo8Mf2/Q==",
+  "dgSpecHash": "X/4kWD7SKLnVXxo47vRcID2C+/GvmUqQuW/tF2ZH3GgLcORuPn/6toVd/hWkglTPeOgZCQOw6bcTSNJYvmyy5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\SnappFood.csproj",
+  "projectFilePath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\SnappFood\\SnappFood.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohaddesse\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mohaddesse\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
