@@ -49,3 +49,5 @@ C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\B
 C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
 C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
 C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\ViewModel.dll
+C:\Users\mohaddesse\Source\Repos\SnappFood\BusinessLogicLayer\bin\Debug\net7.0\ViewModel.pdb

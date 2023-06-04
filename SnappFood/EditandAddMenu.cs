@@ -25,6 +25,7 @@ namespace SnappFood
             {
                 btnDeletMenu.Visible = true;
                 btnEditMenu.Visible = true;
+                btnSubmit.Text = "ویرایش";
             }
         }
 
@@ -85,9 +86,6 @@ namespace SnappFood
                 txtFood.Text = food.Name.ToString();
                 chBoxExistence.Checked = food.Exist;
                 txtID.Text = IdOfFood.ToString();
-
-                btnSubmit.Text = "ویرایش";
-
             }
 
             BindGrid();
