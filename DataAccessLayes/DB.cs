@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes
 {
-    public class DB:DbContext
+    public class DB : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
 
@@ -23,7 +23,11 @@ namespace DataAccessLayes
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+<<<<<<< HEAD
+            optionsBuilder.UseSqlServer(@"Server=.\SQL2019;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+=======
             optionsBuilder.UseSqlServer(@"Server=.\SQL2016;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+>>>>>>> main
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

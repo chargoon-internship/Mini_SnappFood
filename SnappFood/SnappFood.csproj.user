@@ -10,5 +10,11 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RestaurantInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RestaurantPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
