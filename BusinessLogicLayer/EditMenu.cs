@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayes;
 using Entities;
+using ViewModel;
+using ViewModel.Food;
 
 namespace BusinessLogicLayer
 {
@@ -14,9 +16,21 @@ namespace BusinessLogicLayer
 
         UnitOfWork db = new UnitOfWork();
 
-        public List<Food> PrintAllMenu(int id)
+        public List<FoodViewModel> PrintAllMenu(int id)
         {
-            return db.FoodRepository.GetByRestaurantID(id);
+            List<FoodViewModel> foodViewModels = new List<FoodViewModel>();
+            var foods = db.FoodRepository.GetByRestaurantID(id);
+            foreach (var food in foods)
+            {
+                foodViewModels.Add(new FoodViewModel
+                {
+                    Id = food.Id,
+                    Exist = food.Exist,
+                    Name = food.Name,
+                    Price = food.Price
+                });
+            }
+            return foodViewModels;
         }
         public void AddMenu(Food food)
         {
