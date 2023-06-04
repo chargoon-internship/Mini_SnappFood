@@ -1053,6 +1053,16 @@
         "runtime": {
           "bin/placeholder/Entities.dll": {}
         }
+      },
+      "ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModel.dll": {}
+        }
       }
     }
   },
@@ -3207,12 +3217,18 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../ViewModel/ViewModel.csproj",
+      "msbuildProject": "../ViewModel/ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "DataAccessLayes >= 1.0.0",
-      "Entities >= 1.0.0"
+      "Entities >= 1.0.0",
+      "ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3247,6 +3263,9 @@
             },
             "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\ViewModel\\ViewModel.csproj"
             }
           }
         }
