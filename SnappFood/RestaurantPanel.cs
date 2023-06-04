@@ -40,6 +40,7 @@ namespace SnappFood
             newForm.FormClosed += (s, args) => this.Close();
             newForm.Show();
             this.Hide();
+            ////
         }
     }
 }
