@@ -50,19 +50,19 @@ namespace DataAccessLayes
             }
         }
 
-        private InvoiceRepository? _invoiceRepository;
+        //private InvoiceRepository? _invoiceRepository;
 
-        public InvoiceRepository InvoiceRepository
-        {
-            get
-            {
-                if (_invoiceRepository == null)
-                {
-                    _invoiceRepository = new InvoiceRepository(dB);
-                }
-                return _invoiceRepository;
-            }
-        }
+        //public InvoiceRepository InvoiceRepository
+        //{
+        //    get
+        //    {
+        //        if (_invoiceRepository == null)
+        //        {
+        //            _invoiceRepository = new InvoiceRepository(dB);
+        //        }
+        //        return _invoiceRepository;
+        //    }
+        //}
 
         public void Dispose()
         {
