@@ -133,3 +133,8 @@ $RECYCLE.BIN/
 _NCrunch*
 
 .vs/
+
+# Visual Studio / .NET
+
+**/bin/
+**/obj/
