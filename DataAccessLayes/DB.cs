@@ -18,8 +18,6 @@ namespace DataAccessLayes
 
         public DbSet<Invoice> Invoices { get; set; }
 
-        public DbSet<CartItem> CartItems { get; set; }
-
         public DbSet<Food> Foods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

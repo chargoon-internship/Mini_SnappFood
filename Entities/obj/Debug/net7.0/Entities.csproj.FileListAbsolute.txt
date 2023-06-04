@@ -10,3 +10,15 @@ G:\Chargoon\Projects\snappfood\UIAfterPush\Entities\obj\Debug\net7.0\Entities.dl
 G:\Chargoon\Projects\snappfood\UIAfterPush\Entities\obj\Debug\net7.0\refint\Entities.dll
 G:\Chargoon\Projects\snappfood\UIAfterPush\Entities\obj\Debug\net7.0\Entities.pdb
 G:\Chargoon\Projects\snappfood\UIAfterPush\Entities\obj\Debug\net7.0\ref\Entities.dll
+E:\New folder\OrderFood\Entities\bin\Debug\net7.0\Entities.deps.json
+E:\New folder\OrderFood\Entities\bin\Debug\net7.0\Entities.dll
+E:\New folder\OrderFood\Entities\bin\Debug\net7.0\Entities.pdb
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.dll
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\refint\Entities.dll
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\Entities.pdb
+E:\New folder\OrderFood\Entities\obj\Debug\net7.0\ref\Entities.dll

@@ -28,10 +28,8 @@ namespace Entities
         [StringLength(150)]
         public string NameOfRestaurant { get; set; } = "";
 
-    
         public TimeSpan BeginDate { set; get; }
 
-       
         public TimeSpan EndDate { set; get; }
 
         public List<Food> Foods { get; set; }

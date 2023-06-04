@@ -56,7 +56,7 @@ namespace SnappFood
             Food food;
             if (btnSubmit.Text == "ویرایش")
             {
-                food = new Food { Id = int.Parse(txtID.Text), Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+                food = new Food { Id = int.Parse(txtID.Text), Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
                 var result = menu.UpdateMenu(food);
 
 
@@ -66,7 +66,7 @@ namespace SnappFood
             }
             else
             {
-                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, CartItem_Id = 2, Exist = isExist };
+                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
 
                 menu.AddMenu(food);
             }
