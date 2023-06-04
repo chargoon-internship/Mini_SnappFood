@@ -53,6 +53,7 @@
             // 
             lblAmountsSum1.AutoSize = true;
             lblAmountsSum1.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAmountsSum1.ForeColor = Color.White;
             lblAmountsSum1.Location = new Point(381, 679);
             lblAmountsSum1.Name = "lblAmountsSum1";
             lblAmountsSum1.Size = new Size(187, 33);
@@ -64,6 +65,7 @@
             // 
             lblAmountsSum2.AutoSize = true;
             lblAmountsSum2.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAmountsSum2.ForeColor = Color.White;
             lblAmountsSum2.Location = new Point(603, 679);
             lblAmountsSum2.Name = "lblAmountsSum2";
             lblAmountsSum2.Size = new Size(71, 33);
@@ -73,6 +75,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.ForeColor = Color.Black;
             btnBack.Location = new Point(1012, 679);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(241, 39);
