@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace SnappFood
 {
     public partial class RestaurantPanel : Form
     {
+        public User user { get; set; }
         public RestaurantPanel()
         {
+           // this.user = user;
             InitializeComponent();
         }
 
@@ -24,14 +27,17 @@ namespace SnappFood
 
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
-            //EditandAddMenu newForm = new EditandAddMenu();
-            //newForm.ShowDialog();
+            EditandAddMenu newForm = new EditandAddMenu();
+
+            newForm.isEdit = false;
+            newForm.ShowDialog();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-            //EditandAddMenu newForm = new EditandAddMenu();
-            //newForm.ShowDialog();
+            EditandAddMenu newForm = new EditandAddMenu();
+            newForm.isEdit = true;
+            newForm.ShowDialog();
         }
 
         private void btnViewInvoices_Click(object sender, EventArgs e)

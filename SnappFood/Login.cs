@@ -19,7 +19,7 @@ namespace SnappFood
             InitializeComponent();
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -97,8 +97,8 @@ namespace SnappFood
                 }
 
             }
-            TimeBegin.Text= string.Empty;
-            TimeEnd.Text= string.Empty;
+            TimeBegin.Text = string.Empty;
+            TimeEnd.Text = string.Empty;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -176,8 +176,8 @@ namespace SnappFood
                     Id = user.Id,
                     NameOfRestaurant = txtCode.Text,
                     Address = txtAddress.Text,
-                    BeginDate=TimeSpan.Parse(TimeBegin.Text),
-                    EndDate=TimeSpan.Parse(TimeEnd.Text)
+                    BeginDate = TimeSpan.Parse(TimeBegin.Text),
+                    EndDate = TimeSpan.Parse(TimeEnd.Text)
                 };
                 UserValidation db = new UserValidation();
                 if (db.Create(user))
@@ -196,23 +196,23 @@ namespace SnappFood
         {
             if (txt_userLogin.Text != "" && txt_userPass.Text != "")
             {
-                UserValidation db=new UserValidation();
+                UserValidation db = new UserValidation();
                 if (db.Login(txt_userLogin.Text, txt_userPass.Text))
                 {
                     MessageBox.Show("شما با موفقیت وارد شددید");
-                    User myUser=db.GetUser(txt_userLogin.Text);
+                    User myUser = db.GetUser(txt_userLogin.Text);
                     if (myUser.Customer != null)
                     {
                         //صفحه مربوط به مشتری باز شود
                     }
-                    else if(myUser.Restaurant!= null)
+                    else if (myUser.Restaurant != null)
                     {
                         //صفحه مربوط به صاحب رستوران باز شود
                     }
                 }
                 else
                 {
-                    MessageBox.Show("نام کاربری و رمز عبور وارد شده، اشتباه است","خطا",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("نام کاربری و رمز عبور وارد شده، اشتباه است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
