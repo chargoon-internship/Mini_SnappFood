@@ -40,13 +40,13 @@
             resInvoiceDataGridView.AllowUserToAddRows = false;
             resInvoiceDataGridView.AllowUserToDeleteRows = false;
             resInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resInvoiceDataGridView.Location = new Point(381, 23);
+            resInvoiceDataGridView.Location = new Point(407, 23);
             resInvoiceDataGridView.Margin = new Padding(3, 4, 3, 4);
             resInvoiceDataGridView.Name = "resInvoiceDataGridView";
             resInvoiceDataGridView.ReadOnly = true;
             resInvoiceDataGridView.RowHeadersWidth = 51;
             resInvoiceDataGridView.RowTemplate.Height = 24;
-            resInvoiceDataGridView.Size = new Size(539, 652);
+            resInvoiceDataGridView.Size = new Size(540, 652);
             resInvoiceDataGridView.TabIndex = 0;
             // 
             // lblAmountsSum1
@@ -54,7 +54,7 @@
             lblAmountsSum1.AutoSize = true;
             lblAmountsSum1.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAmountsSum1.ForeColor = Color.White;
-            lblAmountsSum1.Location = new Point(381, 679);
+            lblAmountsSum1.Location = new Point(417, 679);
             lblAmountsSum1.Name = "lblAmountsSum1";
             lblAmountsSum1.Size = new Size(187, 33);
             lblAmountsSum1.TabIndex = 1;
@@ -65,7 +65,7 @@
             lblAmountsSum2.AutoSize = true;
             lblAmountsSum2.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAmountsSum2.ForeColor = Color.White;
-            lblAmountsSum2.Location = new Point(603, 679);
+            lblAmountsSum2.Location = new Point(647, 679);
             lblAmountsSum2.Name = "lblAmountsSum2";
             lblAmountsSum2.Size = new Size(71, 33);
             lblAmountsSum2.TabIndex = 2;
