@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4dJ9q8z0bwQhEelVLkpCOQoLX0bipnpvH7K3grHwzE+QsWKSsZWFFBzLYBFuiDoJToOraPlPiDF7YbjU1jGbhw==",
+  "dgSpecHash": "/h43nINNRQ8QSf1/dG3lwwajO5W/AsbhcRJ6fp3f38yO5Rnf2qvUlYdycIqLQHL3wP8pGBc4Qg45sUdjUCYcPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+  "projectFilePath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohaddesse\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mohaddesse\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

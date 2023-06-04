@@ -14,8 +14,7 @@ namespace BusinessLogicLayer
 
         public List<Food> PrintAllMenu(int id)
         {
-           var foods=db.FoodRepository.GetAll();
-            return foods.Where(f=>f.Restaurant_Id==id).ToList();
+            return db.FoodRepository.GetByRestaurantID(id);
         }
         public void AddMenu(Food food)
         {

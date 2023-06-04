@@ -3526,11 +3526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
+      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\SnappFood.csproj",
       "projectName": "SnappFood",
-      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\SnappFood.csproj",
+      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\SnappFood.csproj",
       "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\SnappFood\\obj\\",
+      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\SnappFood\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3547,11 +3547,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\OrderFood\\Entities\\Entities.csproj"
+            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj"
             }
           }
         }

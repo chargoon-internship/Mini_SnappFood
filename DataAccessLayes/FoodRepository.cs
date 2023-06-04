@@ -31,9 +31,9 @@ namespace DataAccessLayes
             }
         }
 
-        public List<Food> GetAll()
+        public List<Food> GetByRestaurantID(int RestaurantID)
         {
-            return _db.Foods.ToList();
+            return _db.Foods.Where(f => f.Restaurant_Id == RestaurantID).ToList();
         }
         public Food GetById(int FoodID)
         {
