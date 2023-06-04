@@ -68,7 +68,7 @@ namespace DataAccessLayes
             var local = _db.Restaurants.FirstOrDefault(f => f.Id==restaurant.Id);
             if (local != null)
             {
-                _db.Entry(restaurant).State =EntityState.Modified;
+                //_db.Entry(restaurant).State =EntityState.Modified;
                 _db.SaveChanges();
 
                 return true;
