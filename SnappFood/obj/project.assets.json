@@ -3537,19 +3537,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mohaddesse\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\SnappFood\\SnappFood.csproj",
+      "projectUniqueName": "F:\\new\\OrderFood\\SnappFood\\SnappFood.csproj",
       "projectName": "SnappFood",
-      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\SnappFood\\SnappFood.csproj",
-      "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\SnappFood\\obj\\",
+      "projectPath": "F:\\new\\OrderFood\\SnappFood\\SnappFood.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "F:\\new\\OrderFood\\SnappFood\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3563,11 +3568,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+            "F:\\new\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+              "projectPath": "F:\\new\\OrderFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
             },
-            "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\snappfolder\\1\\Entities\\Entities.csproj"
+            "F:\\new\\OrderFood\\Entities\\Entities.csproj": {
+              "projectPath": "F:\\new\\OrderFood\\Entities\\Entities.csproj"
             }
           }
         }
@@ -3626,7 +3631,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
