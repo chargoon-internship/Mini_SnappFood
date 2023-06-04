@@ -24,17 +24,22 @@ namespace SnappFood
 
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
-
+            //EditandAddMenu newForm = new EditandAddMenu();
+            //newForm.ShowDialog();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-
+            //EditandAddMenu newForm = new EditandAddMenu();
+            //newForm.ShowDialog();
         }
 
         private void btnViewInvoices_Click(object sender, EventArgs e)
         {
-
+            RestaurantInvoice newForm = new RestaurantInvoice();
+            newForm.FormClosed += (s, args) => this.Close();
+            newForm.Show();
+            this.Hide();
         }
     }
 }
