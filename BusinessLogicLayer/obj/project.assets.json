@@ -3216,19 +3216,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mohaddesse\\.nuget\\packages\\": {}
+    "C:\\Users\\1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectUniqueName": "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "projectName": "BusinessLogicLayer",
-      "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-      "packagesPath": "C:\\Users\\mohaddesse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\BusinessLogicLayer\\obj\\",
+      "projectPath": "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+      "outputPath": "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\BusinessLogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mohaddesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3242,11 +3242,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\DataAccessLayes\\DataAccessLayes.csproj"
+            "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\DataAccessLayes\\DataAccessLayes.csproj": {
+              "projectPath": "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\DataAccessLayes\\DataAccessLayes.csproj"
             },
-            "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\mohaddesse\\Source\\Repos\\SnappFood\\Entities\\Entities.csproj"
+            "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\Entities\\Entities.csproj": {
+              "projectPath": "G:\\Chargoon\\Projects\\snappfood\\UIAfterPush\\Entities\\Entities.csproj"
             }
           }
         }
@@ -3276,7 +3276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
