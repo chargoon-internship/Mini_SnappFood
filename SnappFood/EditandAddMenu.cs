@@ -18,13 +18,16 @@ namespace SnappFood
         EditMenu menu = new EditMenu();
         public bool isEdit { get; set; }
         public User user { get; set; }
-        public EditandAddMenu()
+        public EditandAddMenu(bool isEdit)
         {
+            this.isEdit=isEdit;
+            //this.user=_user
             InitializeComponent();
             if (isEdit)
             {
                 btnDeletMenu.Visible = true;
                 btnEditMenu.Visible = true;
+                btnSubmit.Text = "ویرایش";
             }
         }
 
@@ -66,6 +69,7 @@ namespace SnappFood
             }
             else
             {
+                
                 food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
 
                 menu.AddMenu(food);
@@ -86,7 +90,7 @@ namespace SnappFood
                 chBoxExistence.Checked = food.Exist;
                 txtID.Text = IdOfFood.ToString();
 
-                btnSubmit.Text = "ویرایش";
+
 
             }
 
@@ -115,6 +119,11 @@ namespace SnappFood
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
