@@ -21,6 +21,7 @@ namespace BusinessLogicLayer
             db.FoodRepository.Insert(food);
             
         }
+        //test
         public string UpdateMenu(Food food)
         {
             var result=db.FoodRepository.Update(food);
