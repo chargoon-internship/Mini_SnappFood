@@ -32,7 +32,8 @@
             groupBox1 = new GroupBox();
             lblAmount = new Label();
             lblSum = new Label();
-            button1 = new Button();
+            btnPayment = new Button();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -84,15 +85,25 @@
             lblSum.TabIndex = 2;
             lblSum.Text = "label1";
             // 
-            // button1
+            // btnPayment
             // 
-            button1.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(933, 603);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 38);
-            button1.TabIndex = 2;
-            button1.Text = "پرداخت";
-            button1.UseVisualStyleBackColor = true;
+            btnPayment.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPayment.Location = new Point(702, 595);
+            btnPayment.Name = "btnPayment";
+            btnPayment.Size = new Size(112, 38);
+            btnPayment.TabIndex = 2;
+            btnPayment.Text = "پرداخت";
+            btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.Location = new Point(820, 595);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(225, 38);
+            btnBack.TabIndex = 3;
+            btnBack.Text = "بازگشت به منوی رستوران";
+            btnBack.UseVisualStyleBackColor = true;
             // 
             // CustomerInvoice
             // 
@@ -100,7 +111,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
             ClientSize = new Size(1082, 653);
-            Controls.Add(button1);
+            Controls.Add(btnBack);
+            Controls.Add(btnPayment);
             Controls.Add(groupBox1);
             Font = new Font("IRANSansWeb(FaNum)", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -120,6 +132,7 @@
         private GroupBox groupBox1;
         private Label lblSum;
         private Label lblAmount;
-        private Button button1;
+        private Button btnPayment;
+        private Button btnBack;
     }
 }

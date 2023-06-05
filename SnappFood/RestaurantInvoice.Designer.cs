@@ -74,6 +74,7 @@
             lblAmountsSum2.Size = new Size(71, 33);
             lblAmountsSum2.TabIndex = 2;
             lblAmountsSum2.Text = "label2";
+            lblAmountsSum2.Click += lblAmountsSum2_Click;
             // 
             // btnBack
             // 

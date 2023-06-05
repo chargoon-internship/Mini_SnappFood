@@ -52,5 +52,10 @@ namespace SnappFood
         {
 
         }
+
+        private void lblAmountsSum2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
