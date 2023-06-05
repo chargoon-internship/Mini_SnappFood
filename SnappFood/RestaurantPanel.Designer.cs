@@ -31,6 +31,7 @@
             btnRegisterMenu = new Button();
             btnEditMenu = new Button();
             btnViewInvoices = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnRegisterMenu
@@ -67,12 +68,24 @@
             btnViewInvoices.UseVisualStyleBackColor = true;
             btnViewInvoices.Click += btnViewInvoices_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.RightToLeft = RightToLeft.Yes;
+            button1.Size = new Size(153, 45);
+            button1.TabIndex = 3;
+            button1.Text = "مشاهده پروفایل";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // RestaurantPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
             ClientSize = new Size(1400, 800);
+            Controls.Add(button1);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
             Controls.Add(btnRegisterMenu);
@@ -92,5 +105,6 @@
         private Button btnRegisterMenu;
         private Button btnEditMenu;
         private Button btnViewInvoices;
+        private Button button1;
     }
 }

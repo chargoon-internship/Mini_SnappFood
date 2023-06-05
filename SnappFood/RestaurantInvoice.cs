@@ -31,7 +31,7 @@ namespace SnappFood
             resInvoiceDataGridView.Columns["Id"].Visible = false;
 
             resInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
-            resInvoiceDataGridView.Columns["CartItem_Id"].Visible = false;
+            //resInvoiceDataGridView.Columns["CartItem_Id"].Visible = false;
             resInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
         }
 
