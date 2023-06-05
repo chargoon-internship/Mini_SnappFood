@@ -42,5 +42,15 @@ namespace SnappFood
             f.Show();
             this.Hide();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resInvoiceDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

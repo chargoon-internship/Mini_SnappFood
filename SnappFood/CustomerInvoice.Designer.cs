@@ -40,11 +40,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(41, 40);
+            dataGridView1.Location = new Point(41, 51);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(921, 384);
+            dataGridView1.Size = new Size(921, 470);
             dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -54,9 +54,9 @@
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(29, 31);
+            groupBox1.Location = new Point(35, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1001, 528);
+            groupBox1.Size = new Size(1010, 577);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "صورتحساب";
@@ -66,18 +66,19 @@
             // 
             lblAmount.AutoSize = true;
             lblAmount.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAmount.Location = new Point(41, 449);
+            lblAmount.Location = new Point(41, 524);
             lblAmount.Name = "lblAmount";
             lblAmount.RightToLeft = RightToLeft.No;
             lblAmount.Size = new Size(167, 33);
             lblAmount.TabIndex = 1;
             lblAmount.Text = "مبلغ قابل پرداخت :";
+            lblAmount.Click += lblAmount_Click;
             // 
             // lblSum
             // 
             lblSum.AutoSize = true;
             lblSum.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSum.Location = new Point(235, 449);
+            lblSum.Location = new Point(235, 524);
             lblSum.Name = "lblSum";
             lblSum.Size = new Size(66, 33);
             lblSum.TabIndex = 2;
@@ -86,7 +87,7 @@
             // button1
             // 
             button1.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(918, 572);
+            button1.Location = new Point(933, 603);
             button1.Name = "button1";
             button1.Size = new Size(112, 38);
             button1.TabIndex = 2;
@@ -98,7 +99,7 @@
             AutoScaleDimensions = new SizeF(9F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1063, 622);
+            ClientSize = new Size(1082, 653);
             Controls.Add(button1);
             Controls.Add(groupBox1);
             Font = new Font("IRANSansWeb(FaNum)", 9F, FontStyle.Regular, GraphicsUnit.Point);

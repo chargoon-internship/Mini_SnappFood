@@ -21,5 +21,10 @@ namespace SnappFood
         {
 
         }
+
+        private void lblAmount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
