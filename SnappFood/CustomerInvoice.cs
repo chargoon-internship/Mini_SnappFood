@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace SnappFood
 {
     public partial class CustomerInvoice : Form
     {
+        ViewInvoice v = new ViewInvoice();
+
         public CustomerInvoice()
         {
             InitializeComponent();
+        }
+
+        private void CustomerInvoice_Load(object sender, EventArgs e)
+        {
+            var orders = v.PrintCustomerInvoices(2);
+            userInvoiceDataGridView.DataSource = orders;
+
+            var totalAmount = v.PrintCustomerInvoices(2).Sum(o => o.FinalPrice);
+            lblSum.Text = totalAmount.ToString();
+
+            userInvoiceDataGridView.Columns["Id"].Visible = false;
+            userInvoiceDataGridView.Columns["FinalPrice"].Visible = false;
+            userInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
+            userInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -23,6 +40,11 @@ namespace SnappFood
         }
 
         private void lblAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
         {
 
         }
