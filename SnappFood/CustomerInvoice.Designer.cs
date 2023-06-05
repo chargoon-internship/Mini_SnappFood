@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            userInvoiceDataGridView = new DataGridView();
             groupBox1 = new GroupBox();
-            lblAmount = new Label();
             lblSum = new Label();
+            lblAmount = new Label();
             btnPayment = new Button();
             btnBack = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // userInvoiceDataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(41, 51);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(921, 470);
-            dataGridView1.TabIndex = 0;
+            userInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            userInvoiceDataGridView.Location = new Point(41, 51);
+            userInvoiceDataGridView.Name = "userInvoiceDataGridView";
+            userInvoiceDataGridView.RowHeadersWidth = 51;
+            userInvoiceDataGridView.RowTemplate.Height = 29;
+            userInvoiceDataGridView.Size = new Size(921, 470);
+            userInvoiceDataGridView.TabIndex = 0;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(lblSum);
             groupBox1.Controls.Add(lblAmount);
-            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Controls.Add(userInvoiceDataGridView);
             groupBox1.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(35, 12);
@@ -62,6 +62,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "صورتحساب";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // lblSum
+            // 
+            lblSum.AutoSize = true;
+            lblSum.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSum.Location = new Point(235, 524);
+            lblSum.Name = "lblSum";
+            lblSum.Size = new Size(66, 33);
+            lblSum.TabIndex = 2;
+            lblSum.Text = "label1";
             // 
             // lblAmount
             // 
@@ -75,16 +85,6 @@
             lblAmount.Text = "مبلغ قابل پرداخت :";
             lblAmount.Click += lblAmount_Click;
             // 
-            // lblSum
-            // 
-            lblSum.AutoSize = true;
-            lblSum.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSum.Location = new Point(235, 524);
-            lblSum.Name = "lblSum";
-            lblSum.Size = new Size(66, 33);
-            lblSum.TabIndex = 2;
-            lblSum.Text = "label1";
-            // 
             // btnPayment
             // 
             btnPayment.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
@@ -94,6 +94,7 @@
             btnPayment.TabIndex = 2;
             btnPayment.Text = "پرداخت";
             btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Click += btnPayment_Click;
             // 
             // btnBack
             // 
@@ -120,7 +121,8 @@
             Name = "CustomerInvoice";
             RightToLeft = RightToLeft.Yes;
             Text = "فاکتور مشتری";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += CustomerInvoice_Load;
+            ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -128,7 +130,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView userInvoiceDataGridView;
         private GroupBox groupBox1;
         private Label lblSum;
         private Label lblAmount;
