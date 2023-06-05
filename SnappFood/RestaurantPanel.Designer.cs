@@ -77,9 +77,10 @@
             Controls.Add(btnEditMenu);
             Controls.Add(btnRegisterMenu);
             Font = new Font("IRANSansWeb(FaNum)", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 4, 3, 4);
             Name = "RestaurantPanel";
+            RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "پنل رستوران";
             Load += RestaurantPanel_Load;
