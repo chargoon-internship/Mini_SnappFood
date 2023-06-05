@@ -12,10 +12,6 @@ namespace BusinessLogicLayer
 {
     public class EditMenu
     {
-        //edit
-
-
-
         public List<FoodViewModel> PrintAllMenu(int id)
         {
             using (UnitOfWork db = new UnitOfWork())
@@ -36,21 +32,39 @@ namespace BusinessLogicLayer
             }
 
         }
-        public void AddMenu(Food food)
+        public string  AddMenu(Food food)
         {
-            using (UnitOfWork db = new UnitOfWork())
+            string validation=FoodValidation.AddValidation(food);
+           
+            if (validation== "موفقیت")
             {
-                db.FoodRepository.Insert(food);
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    db.FoodRepository.Insert(food);
+                }
             }
+            return validation;
+
+          
         }
-        public string UpdateMenu(Food food)
+        public List<string> UpdateMenu(Food food)
         {
-            using (UnitOfWork db = new UnitOfWork())
+            var results = new List<string>();
+
+            string validation = FoodValidation.EditValidation(food);
+            results.Add(validation);
+            if (validation == "موفقیت")
             {
-                var result = db.FoodRepository.Update(food);
-                string message = result ? "با موفقیت ویرایش شد" : "غذا مورد نظر ویرایش نشد";
-                return message;
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var result = db.FoodRepository.Update(food);
+                    string message = result ? "با موفقیت ویرایش شد" : "غذا مورد نظر ویرایش نشد";
+                    results.Add(message);
+                    return results;
+                }
             }
+            results.Add("نا موفق");
+            return results;
 
 
         }

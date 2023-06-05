@@ -31,6 +31,10 @@ namespace DataAccessLayes
             }
         }
 
+        public bool IsExistFood(string FoodName)
+        {
+            return _db.Foods.Any(f=>f.Name==FoodName);
+        }
         public List<Food> GetByRestaurantID(int RestaurantID)
         {
             return _db.Foods.Where(f => f.Restaurant_Id == RestaurantID).ToList();
@@ -51,6 +55,11 @@ namespace DataAccessLayes
             {
                 return false;
             }
+        }
+        public bool IsExistUpdate(Food food)
+        {
+            return _db.Foods.Any(f => f.Id != food.Id && f.Name == food.Name);
+       
         }
         public bool Delete(Food food)
         {
