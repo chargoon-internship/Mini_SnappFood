@@ -22,7 +22,7 @@ namespace SnappFood
         public EditProfile()
         {
             //this.user = user;
-            UserId = 3;
+            UserId = 2;
             InitializeComponent();
 
         }
