@@ -28,7 +28,7 @@ namespace SnappFood
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
             EditandAddMenu newForm = new EditandAddMenu(false);
-            
+
             newForm.ShowDialog();
         }
 

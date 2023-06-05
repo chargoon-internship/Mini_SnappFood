@@ -93,9 +93,10 @@
             Controls.Add(lblAmountsSum2);
             Controls.Add(lblAmountsSum1);
             Controls.Add(resInvoiceDataGridView);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 4, 3, 4);
             Name = "RestaurantInvoice";
+            RightToLeft = RightToLeft.Yes;
             Text = "فاکتورها";
             Load += RestaurantInvoice_Load;
             ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).EndInit();
