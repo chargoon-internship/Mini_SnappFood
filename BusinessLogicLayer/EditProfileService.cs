@@ -33,6 +33,7 @@ namespace BusinessLogicLayer
                 return db.RestaurantRepository.GetById(id);
             }
         }
+
         public List<string> UpdateProfile(User user)
         {
             var results = new List<string>();
@@ -52,7 +53,15 @@ namespace BusinessLogicLayer
             }
             results.Add("نا موفق");
             return results;
-
+        }
+        public string DeleteUser(int id)
+        {
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                var result = db.UserRepository.Delete(id);
+                string message = result ? "حساب کاربری با موفقیت حذف شد" : "حساب کاربری حذف نشد";
+                return message;
+            }
 
         }
     }
