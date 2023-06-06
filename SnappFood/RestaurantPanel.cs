@@ -14,9 +14,9 @@ namespace SnappFood
     public partial class RestaurantPanel : Form
     {
         public User user { get; set; }
-        public RestaurantPanel()
+        public RestaurantPanel(User user)
         {
-            //this.user=_user
+            this.user = user;
             InitializeComponent();
         }
 
@@ -27,24 +27,30 @@ namespace SnappFood
 
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
-            EditandAddMenu newForm = new EditandAddMenu(false);
-
-            newForm.ShowDialog();
+            EditandAddMenu addMenu = new EditandAddMenu(false, user);
+            addMenu.ShowDialog();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-            EditandAddMenu newForm = new EditandAddMenu(true);
-            newForm.isEdit = true;
-            newForm.ShowDialog();
+            EditandAddMenu editMenu = new EditandAddMenu(true, user);
+            editMenu.ShowDialog();
         }
 
         private void btnViewInvoices_Click(object sender, EventArgs e)
         {
-            RestaurantInvoice newForm = new RestaurantInvoice();
-            newForm.FormClosed += (s, args) => this.Close();
+            RestaurantInvoice Invoice = new RestaurantInvoice(user);
+            Invoice.ShowDialog();
+/*            newForm.FormClosed += (s, args) => this.Close();
             newForm.Show();
-            this.Hide();
+            this.Hide();*/
+        }
+
+        private void btnViewProfile_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile = new EditProfile(user);
+            editProfile.ShowDialog();
+            
         }
     }
 }

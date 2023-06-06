@@ -19,17 +19,20 @@ namespace DataAccessLayes
         }
 
 
-        public bool IsExistFood(string FoodName)
+        public bool IsExistFood(Food food,int Id)
         {
-            return _db.Foods.Any(f => f.Name == FoodName);
+            var foods = GetByRestaurantID(Id);
+            return foods.Any(f =>f.Name == food.Name);
         }
         public List<Food> GetByRestaurantID(int RestaurantID)
         {
             return _db.Foods.Where(f => f.Restaurant_Id == RestaurantID).ToList();
         }
-        public bool IsExistUpdate(Food food)
+        public bool IsExistUpdate(Food food, int Id)
         {
-            return _db.Foods.Any(f => f.Id != food.Id && f.Name == food.Name);
+            var foods = GetByRestaurantID(Id);
+
+            return foods.Any(f => f.Id != food.Id && f.Name == food.Name);
 
         }
         public bool Update(Food food)

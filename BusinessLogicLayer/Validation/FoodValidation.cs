@@ -12,25 +12,25 @@ namespace BusinessLogicLayer
 {
     public static class FoodValidation
     {
-        public static string Validation(Food food, bool isEdit)
+        public static string Validation(Food food, bool isEdit, int Id)
         {
       
             var NameOfFood=food.Name;
             var PriceOfFood = food.Price;
-            bool chRegx= RegexValidation.CheckRegex("Name",NameOfFood);
+            bool chRegx= RegexValidation.CheckRegex("Name", NameOfFood);
             bool uniqFood;
             if (isEdit)
             {
                 using (UnitOfWork db = new UnitOfWork())
                 {
-                    uniqFood = db.FoodRepository.IsExistUpdate(food);
+                    uniqFood = db.FoodRepository.IsExistUpdate(food,Id);
                 }
             }
             else
             {
                 using (UnitOfWork db = new UnitOfWork())
                 {
-                    uniqFood = db.FoodRepository.IsExistFood(food.Name);
+                    uniqFood = db.FoodRepository.IsExistFood(food, Id);
                 }
             }
 

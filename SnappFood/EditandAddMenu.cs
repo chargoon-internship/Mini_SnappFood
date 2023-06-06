@@ -19,11 +19,12 @@ namespace SnappFood
         EditMenu menu = new EditMenu();
         public bool isEdit { get; set; }
         public User user { get; set; }
-        public EditandAddMenu(bool isEdit)
+        public EditandAddMenu(bool isEdit,User user)
         {
-            this.isEdit=isEdit;
-            //this.user=_user
             InitializeComponent();
+
+            this.isEdit=isEdit;
+            this.user = user;
             if (isEdit)
             {
                 ShowButtonForEdit();
@@ -44,7 +45,7 @@ namespace SnappFood
         }
         private void BindGrid()
         {
-            var foods = menu.PrintAllMenu(2);
+            var foods = menu.PrintAllMenu(user.Restaurant.Id);
             dgMenu.AutoGenerateColumns = false;
             dgMenu.DataSource = foods;
         }
@@ -70,8 +71,8 @@ namespace SnappFood
                 var IdOfFood = int.Parse(txtID.Text);
                 List<string> result = new List<string>();
 
-                    food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
-                    result = menu.UpdateMenu(food);
+                    food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
+                    result = menu.UpdateMenu(food,user.Restaurant.Id);
                     
                 if (result[0] != "موفقیت")
                 {
@@ -88,9 +89,8 @@ namespace SnappFood
             }
             else
             {
-                
-                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
-                string result=menu.AddMenu(food, isEdit);
+                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
+                string result=menu.AddMenu(food, isEdit, user.Restaurant.Id);
                 if (result!= "موفقیت")
                 {
                     MessageBox.Show(result, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -148,9 +148,6 @@ namespace SnappFood
             this.Close();
         }
 
-        private void dgMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+ 
     }
 }

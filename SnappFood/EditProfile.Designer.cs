@@ -345,6 +345,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "EditProfile";
             RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ویرایش پروفایل";
             Load += EditProfile_Load;
             ((System.ComponentModel.ISupportInitialize)pictureProfile).EndInit();

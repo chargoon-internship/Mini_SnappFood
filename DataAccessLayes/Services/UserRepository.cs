@@ -62,5 +62,29 @@ namespace DataAccessLayes.Services
                 return false;
             }
         }
+        public override bool Delete(User entity)
+        {
+            try
+            {
+                db.Entry(entity).State = EntityState.Deleted;
+                Save();
+              
+                if (entity.Customer != null)
+                {
+                    db.Entry(entity.Customer).State = EntityState.Deleted;
+                    Save();
+                }
+                else if (entity.Restaurant != null)
+                {
+                    db.Entry(entity.Restaurant).State = EntityState.Deleted;
+                    Save();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

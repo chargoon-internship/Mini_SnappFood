@@ -189,7 +189,7 @@ namespace SnappFood
                 {
                     MessageBox.Show("مشکلی پیش آمده است");
                 }
-            }
+            }   
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -199,7 +199,7 @@ namespace SnappFood
                 UserValidation db=new UserValidation();
                 if (db.Login(txt_userLogin.Text, txt_userPass.Text))
                 {
-                    MessageBox.Show("شما با موفقیت وارد شددید");
+                    MessageBox.Show("شما با موفقیت وارد شدید");
                     User myUser=db.GetUser(txt_userLogin.Text);
                     if (myUser.Customer != null)
                     {
@@ -207,7 +207,8 @@ namespace SnappFood
                     }
                     else if(myUser.Restaurant!= null)
                     {
-                        //صفحه مربوط به صاحب رستوران باز شود
+                        RestaurantPanel restaurantPanel = new RestaurantPanel(myUser);
+                        restaurantPanel.ShowDialog();
                     }
                 }
                 else

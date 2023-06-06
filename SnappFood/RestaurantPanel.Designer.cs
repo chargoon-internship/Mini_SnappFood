@@ -31,7 +31,7 @@
             btnRegisterMenu = new Button();
             btnEditMenu = new Button();
             btnViewInvoices = new Button();
-            button1 = new Button();
+            btnViewProfile = new Button();
             SuspendLayout();
             // 
             // btnRegisterMenu
@@ -68,24 +68,25 @@
             btnViewInvoices.UseVisualStyleBackColor = true;
             btnViewInvoices.Click += btnViewInvoices_Click;
             // 
-            // button1
+            // btnViewProfile
             // 
-            button1.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.RightToLeft = RightToLeft.Yes;
-            button1.Size = new Size(153, 45);
-            button1.TabIndex = 3;
-            button1.Text = "مشاهده پروفایل";
-            button1.UseVisualStyleBackColor = true;
+            btnViewProfile.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnViewProfile.Location = new Point(12, 12);
+            btnViewProfile.Name = "btnViewProfile";
+            btnViewProfile.RightToLeft = RightToLeft.Yes;
+            btnViewProfile.Size = new Size(153, 45);
+            btnViewProfile.TabIndex = 3;
+            btnViewProfile.Text = "مشاهده پروفایل";
+            btnViewProfile.UseVisualStyleBackColor = true;
+            btnViewProfile.Click += btnViewProfile_Click;
             // 
             // RestaurantPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleDimensions = new SizeF(6F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1400, 800);
-            Controls.Add(button1);
+            ClientSize = new Size(1370, 749);
+            Controls.Add(btnViewProfile);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
             Controls.Add(btnRegisterMenu);
@@ -105,6 +106,6 @@
         private Button btnRegisterMenu;
         private Button btnEditMenu;
         private Button btnViewInvoices;
-        private Button button1;
+        private Button btnViewProfile;
     }
 }
