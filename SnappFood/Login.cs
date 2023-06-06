@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+using BusinessLogicLayer.SignUpAndLoginService;
 using Entities;
 
 namespace SnappFood
@@ -153,9 +154,9 @@ namespace SnappFood
                     HomeAddress = txtAddress.Text,
 
                 };
+                SignUpService signUpService = new SignUpService();
+                MessageBox.Show(signUpService.SignUp(user));
 
-                UserCud db = new UserCud();
-                MessageBox.Show(db.Create(user));
             }
             else
             {
@@ -171,45 +172,26 @@ namespace SnappFood
                     BeginDate=TimeSpan.Parse(TimeBegin.Text),
                     EndDate=TimeSpan.Parse(TimeEnd.Text)
                 };
-                UserCud db = new UserCud();
-                MessageBox.Show(db.Create(user));
+
+                SignUpService signUpService = new SignUpService();
+                MessageBox.Show(signUpService.SignUp(user));
+
             }
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (txt_userLogin.Text != "" && txt_userPass.Text != "")
-            {
-                UserCud db=new UserCud();
-                if (db.Login(txt_userLogin.Text, txt_userPass.Text))
-                {
-                    User myUser=db.GetUser(txt_userLogin.Text);
-                    if (myUser.Customer != null)
-                    {
-                        CustomerPanel customerPanel = new CustomerPanel();
-                        customerPanel.MyUser = myUser;
-                        customerPanel.ShowDialog();
-                        //صفحه مربوط به مشتری باز شود
-                    }
-                    else if(myUser.Restaurant!= null)
-                    {
+            LoginService loginService = new LoginService();
+            (string Message, bool isCustomer) = loginService.Execute(txt_userLogin.Text, txt_userPass.Text);
 
-                        RestaurantPanel restaurantPanel = new RestaurantPanel();
-                        restaurantPanel.user = myUser;
-                        this.Hide();
-                        restaurantPanel.ShowDialog();
-                        this.Close();
-                        //صفحه مربوط به صاحب رستوران باز شود
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("نام کاربری و رمز عبور وارد شده، اشتباه است","خطا",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
+            MessageBox.Show(Message);
+            if(isCustomer)
+            {
+                //open customer panel
             }
             else
             {
-                MessageBox.Show("لطفا فیلد های خالی را پر نمائید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //open restaurant panel
             }
         }
     }

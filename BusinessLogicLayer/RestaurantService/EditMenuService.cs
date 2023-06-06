@@ -8,9 +8,9 @@ using Entities;
 using ViewModel;
 using ViewModel.Food;
 
-namespace BusinessLogicLayer
+namespace BusinessLogicLayer.RestaurantService
 {
-    public class EditMenu
+    public class EditMenuService
     {
         public List<FoodViewModel> PrintAllMenu(int id)
         {
@@ -32,11 +32,11 @@ namespace BusinessLogicLayer
             }
 
         }
-        public string  AddMenu(Food food, bool isEdit)
+        public string AddMenu(Food food, bool isEdit)
         {
-            string validation=FoodValidation.Validation(food, isEdit);
+            string validation = FoodValidation.Validation(food, isEdit);
 
-            if (validation== "موفقیت")
+            if (validation == "موفقیت")
             {
                 using (UnitOfWork db = new UnitOfWork())
                 {
@@ -45,13 +45,13 @@ namespace BusinessLogicLayer
             }
             return validation;
 
-          
+
         }
         public List<string> UpdateMenu(Food food)
         {
             var results = new List<string>();
             bool isEdit = true;
-            string validation = FoodValidation.Validation(food,isEdit);
+            string validation = FoodValidation.Validation(food, isEdit);
             results.Add(validation);
             if (validation == "موفقیت")
             {

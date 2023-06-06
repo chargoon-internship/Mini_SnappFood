@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ViewModel.CartItem
 {
-    public class CartItem
+    public class CartItemViewModel
     {
         public int RestaurantId { get; set; }
 

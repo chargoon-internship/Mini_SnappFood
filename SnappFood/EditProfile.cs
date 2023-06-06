@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;
+using BusinessLogicLayer.CustomerService;
 using Entities;
 
 namespace SnappFood
@@ -184,6 +184,7 @@ namespace SnappFood
                 else
                 {
                     MessageBox.Show(result[1], "اعلام", MessageBoxButtons.OK);
+                    ShowProfilePage();
                 }
 
             }

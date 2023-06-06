@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using BusinessLogicLayer.CustomerService;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace SnappFood
         public CustomerPanel()
         {
             InitializeComponent();
-            BusinessLogicLayer.CustomerPanel customerPanel = new BusinessLogicLayer.CustomerPanel();
+            CustomerPanelService customerPanel = new CustomerPanelService();
             List<Restaurant> restaurants = customerPanel.GetRestaurants();
             List<string> buttonInfo = customerPanel.RestaurantShowData();
 
