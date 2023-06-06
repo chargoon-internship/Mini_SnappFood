@@ -13,6 +13,7 @@ namespace DataAccessLayes
     {
 
         private DB _db;
+
         public RestaurantRepository(DB db)
         {
             _db=db;
