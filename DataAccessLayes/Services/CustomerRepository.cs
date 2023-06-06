@@ -20,5 +20,19 @@ namespace DataAccessLayes.Services
         {
             return DB.Customers;
         }
+
+        public Customer GetById(int id)
+        {
+            return DB.Customers.Find(id);
+        }
+        public bool IsExistUpdate(User user)
+        {
+            return DB.Users.Any(u => u.Id != user.Id && u.UserName == user.UserName);
+        }
+        public bool IsExistUser(User user)
+        {
+            return DB.Users.Any(u => u.UserName == user.UserName);
+        }
+
     }
-}
+    }
