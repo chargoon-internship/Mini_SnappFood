@@ -14,7 +14,7 @@ namespace BusinessLogicLayer
         UnitOfWork unitOfWork = new UnitOfWork();
         public List<Restaurant> GetRestaurants()
         {
-            List<Restaurant> allRestaurants = unitOfWork.RestaurantRepository.GetAll();
+            List<Restaurant> allRestaurants = unitOfWork.RestaurantRepository.GetAll().ToList();
             return allRestaurants;
         }
 
