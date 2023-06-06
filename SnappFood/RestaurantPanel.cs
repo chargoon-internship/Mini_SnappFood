@@ -27,13 +27,17 @@ namespace SnappFood
 
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
+            //EditandAddMenu newForm = new EditandAddMenu();
+            //newForm.ShowDialog();
             EditandAddMenu newForm = new EditandAddMenu(false);
-            
+
             newForm.ShowDialog();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
+            //EditandAddMenu newForm = new EditandAddMenu();
+            //newForm.ShowDialog();
             EditandAddMenu newForm = new EditandAddMenu(true);
             newForm.isEdit = true;
             newForm.ShowDialog();

@@ -19,18 +19,22 @@ namespace DataAccessLayes.Services
         }
 
 
-        public bool IsExistFood(string FoodName)
-        {
-            return _db.Foods.Any(f => f.Name == FoodName);
-        }
         public List<Food> GetByRestaurantID(int RestaurantID)
         {
             return _db.Foods.Where(f => f.Restaurant_Id == RestaurantID).ToList();
         }
+
+        public bool IsExistFood(string FoodName)
+        {
+            return _db.Foods.Any(f => f.Name == FoodName);
+        }
+
         public bool IsExistUpdate(Food food)
         {
             return _db.Foods.Any(f => f.Id != food.Id && f.Name == food.Name);
 
         }
+
+
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class UserCrud
+    public class UserValidation
     {
         public bool Create(User user)
         {

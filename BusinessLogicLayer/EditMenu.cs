@@ -32,11 +32,11 @@ namespace BusinessLogicLayer
             }
 
         }
-        public string  AddMenu(Food food)
+        public string AddMenu(Food food)
         {
-            string validation=FoodValidation.AddValidation(food);
-           
-            if (validation== "موفقیت")
+            string validation = FoodValidation.AddValidation(food);
+
+            if (validation == "موفقیت")
             {
                 using (UnitOfWork db = new UnitOfWork())
                 {
@@ -45,7 +45,7 @@ namespace BusinessLogicLayer
             }
             return validation;
 
-          
+
         }
         public List<string> UpdateMenu(Food food)
         {
