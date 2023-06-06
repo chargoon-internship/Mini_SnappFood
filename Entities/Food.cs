@@ -19,6 +19,9 @@ namespace Entities
 
         public bool Exist { get; set; }
 
+        [NotMapped]
+        public int Quantity { get; set; }
+
         public double Price { get; set; }
 
         [ForeignKey("Restaurant")]

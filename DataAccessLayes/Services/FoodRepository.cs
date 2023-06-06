@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DataAccessLayes.Repositories;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes
 {
-    public class FoodRepository
+    public class FoodRepository:GenericRepository<Food>
     {
         private DB _db;
 
-        public FoodRepository(DB dB)
+        public FoodRepository(DB dB):base(dB)
         {
             _db = dB;
         }
@@ -33,7 +34,7 @@ namespace DataAccessLayes
 
         public bool IsExistFood(string FoodName)
         {
-            return _db.Foods.Any(f=>f.Name==FoodName);
+            return _db.Foods.Any(f => f.Name == FoodName);
         }
         public List<Food> GetByRestaurantID(int RestaurantID)
         {
@@ -59,7 +60,7 @@ namespace DataAccessLayes
         public bool IsExistUpdate(Food food)
         {
             return _db.Foods.Any(f => f.Id != food.Id && f.Name == food.Name);
-       
+
         }
         public bool Delete(Food food)
         {

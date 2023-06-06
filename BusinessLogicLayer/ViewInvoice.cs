@@ -12,10 +12,17 @@ namespace BusinessLogicLayer
     {
         UnitOfWork db = new();
 
-        public List<Invoice> PrintInvoices(int id)
+        public List<Invoice> PrintRestaurantInvoices(int id)
         {
             var invoices = db.InvoiceRepository.GetOrders();
             return invoices.Where(i => i.Restaurant_Id == id).ToList();
         }
+
+        public List<Invoice> PrintCustomerInvoices(int id)
+        {
+            var invoices = db.InvoiceRepository.GetOrders();
+            return invoices.Where(i => i.Customer_Id == id).ToList();
+        }
     }
 }
+

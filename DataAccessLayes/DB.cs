@@ -30,6 +30,7 @@ namespace DataAccessLayes
             modelBuilder.Entity<Food>().HasOne(n => n.Restaurant).WithMany(n => n.Foods).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Customer).WithMany(n => n.Invoices).HasForeignKey(n => n.Customer_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<User>().HasIndex(n => n.UserName).IsUnique(true);
         }
     }
 }
