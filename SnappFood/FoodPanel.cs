@@ -39,6 +39,8 @@ namespace SnappFood
         {
             CartItemViewModel cartItem = new CartItemViewModel();
             cartItem.Foods = Foods;
+            Invoice invoice = new Invoice();
+
             cartItem.Customer = MyUser!.Customer;
             cartItem.RestaurantId = Restaurant_owner;
             MessageBox.Show(cartItem.GetPrice().ToString());

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -184,7 +184,7 @@ namespace SnappFood
             LoginService loginService = new LoginService();
             (string Message, bool isCustomer) = loginService.Execute(txt_userLogin.Text, txt_userPass.Text);
 
-            MessageBox.Show(Message;
+            MessageBox.Show(Message);
             if(isCustomer)
             {
                 //open customer panel

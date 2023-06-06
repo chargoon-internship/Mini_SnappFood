@@ -14,6 +14,7 @@ namespace SnappFood
 {
     public partial class CustomerPanel : Form
     {
+        public User? MyUser { get; set; }
         public CustomerPanel()
         {
             InitializeComponent();
