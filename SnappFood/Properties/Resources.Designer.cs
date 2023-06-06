@@ -63,6 +63,14 @@ namespace SnappFood.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rest_image
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("rest_image", resourceCulture);
+                return((System.Drawing.Bitmap)(obj));
+            }
+        }
         internal static System.Drawing.Bitmap dinner {
             get {
                 object obj = ResourceManager.GetObject("dinner", resourceCulture);

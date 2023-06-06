@@ -32,10 +32,10 @@ namespace BusinessLogicLayer
             }
 
         }
-        public string  AddMenu(Food food)
+        public string  AddMenu(Food food, bool isEdit)
         {
-            string validation=FoodValidation.AddValidation(food);
-           
+            string validation=FoodValidation.Validation(food, isEdit);
+
             if (validation== "موفقیت")
             {
                 using (UnitOfWork db = new UnitOfWork())
@@ -50,8 +50,8 @@ namespace BusinessLogicLayer
         public List<string> UpdateMenu(Food food)
         {
             var results = new List<string>();
-
-            string validation = FoodValidation.EditValidation(food);
+            bool isEdit = true;
+            string validation = FoodValidation.Validation(food,isEdit);
             results.Add(validation);
             if (validation == "موفقیت")
             {

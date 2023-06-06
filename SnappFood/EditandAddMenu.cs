@@ -90,7 +90,7 @@ namespace SnappFood
             {
                 
                 food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
-                string result=menu.AddMenu(food);
+                string result=menu.AddMenu(food, isEdit);
                 if (result!= "موفقیت")
                 {
                     MessageBox.Show(result, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
