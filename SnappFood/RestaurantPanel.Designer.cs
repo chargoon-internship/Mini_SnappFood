@@ -44,6 +44,7 @@
             this.btnRegisterMenu.TabIndex = 0;
             this.btnRegisterMenu.Text = "ثبت منوی جدید";
             this.btnRegisterMenu.UseVisualStyleBackColor = true;
+            this.btnRegisterMenu.Click += new System.EventHandler(this.btnRegisterMenu_Click);
             // 
             // btnEditMenu
             // 
@@ -54,6 +55,7 @@
             this.btnEditMenu.TabIndex = 1;
             this.btnEditMenu.Text = "ویرایش منو";
             this.btnEditMenu.UseVisualStyleBackColor = true;
+            this.btnEditMenu.Click += new System.EventHandler(this.btnEditMenu_Click);
             // 
             // btnViewInvoices
             // 

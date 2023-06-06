@@ -10,7 +10,7 @@ namespace BusinessLogicLayer.SignUpAndLoginService
 {
     public class LoginService
     {
-        public (string, bool) Execute(string username, string password)
+        public (string, bool,bool) Execute(string username, string password)
         {
             bool isCustomer = false;
             if (username != "" && password != "")
@@ -27,16 +27,16 @@ namespace BusinessLogicLayer.SignUpAndLoginService
                     {
                         isCustomer = false;
                     }
-                    return ("شما با موفقیت وارد شددید", isCustomer);
+                    return ("شما با موفقیت وارد شددید", isCustomer,true);
                 }
                 else
                 {
-                    return ("نام کاربری و رمز عبور وارد شده، اشتباه است", isCustomer);
+                    return ("نام کاربری و رمز عبور وارد شده، اشتباه است", isCustomer,false);
                 }
             }
             else
             {
-                return ("لطفا فیلد های خالی را پر نمائید", isCustomer);
+                return ("لطفا فیلد های خالی را پر نمائید", isCustomer,false);
             }
         }
         public bool Login(string username, string password)
