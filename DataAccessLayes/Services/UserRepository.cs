@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes.Services
 {
-    public class UserRepository:GenericRepository<User>
+    public class UserRepository : GenericRepository<User>
     {
         private DB db;
 
-        public UserRepository(DB db):base(db)
+        public UserRepository(DB db) : base(db)
         {
             this.db = db;
         }
@@ -39,7 +39,6 @@ namespace DataAccessLayes.Services
         {
             return db.Users.Include(n => n.Customer).Include(n => n.Restaurant).Single(n => n.UserName == userName);
         }
-
         public override bool Update(User entity)
         {
             try
@@ -48,18 +47,18 @@ namespace DataAccessLayes.Services
                 Save();
                 if (entity.Customer != null)
                 {
-                    db.Entry(entity.Customer).State= EntityState.Modified;
+                    db.Entry(entity.Customer).State = EntityState.Modified;
                     Save();
                 }
-                else if(entity.Restaurant!= null)
+                else if (entity.Restaurant != null)
                 {
                     db.Entry(entity.Restaurant).State = EntityState.Modified;
                     Save();
                 }
                 return true;
             }
-            catch 
-            { 
+            catch
+            {
                 return false;
             }
         }

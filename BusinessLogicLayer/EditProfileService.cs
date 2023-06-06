@@ -7,14 +7,14 @@ using DataAccessLayes;
 using Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
-namespace BusinessLogicLayer
+namespace BusinessLogicLayer.CustomerService
 {
 
     public class EditProfileService
     {
         public User FindUserById(int id)
         {
-            using(UnitOfWork db = new UnitOfWork())
+            using (UnitOfWork db = new UnitOfWork())
             {
                 return db.UserRepository.GetById(id);
             }
@@ -38,8 +38,8 @@ namespace BusinessLogicLayer
         {
             var results = new List<string>();
             bool isEdit = true;
-            string validation = UserValidation.Validation(user, isEdit);
-           
+            string validation = UserValidation2.Validation(user, isEdit);
+
             results.Add(validation);
             if (validation == "موفقیت")
             {
