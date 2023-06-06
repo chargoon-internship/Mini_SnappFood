@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;
+using BusinessLogicLayer.CustomerService;
 using Entities;
 
 namespace SnappFood
