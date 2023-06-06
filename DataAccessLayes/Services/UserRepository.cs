@@ -39,5 +39,28 @@ namespace DataAccessLayes.Services
         {
             return db.Users.Include(n => n.Customer).Include(n => n.Restaurant).Single(n => n.UserName == userName);
         }
+        public override bool Update(User entity)
+        {
+            try
+            {
+                db.Entry(entity).State = EntityState.Modified;
+                Save();
+                if (entity.Customer != null)
+                {
+                    db.Entry(entity.Customer).State = EntityState.Modified;
+                    Save();
+                }
+                else if (entity.Restaurant != null)
+                {
+                    db.Entry(entity.Restaurant).State = EntityState.Modified;
+                    Save();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

@@ -184,6 +184,7 @@ namespace SnappFood
                 else
                 {
                     MessageBox.Show(result[1], "اعلام", MessageBoxButtons.OK);
+                    ShowProfilePage();
                 }
 
             }
