@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace ViewModel.Rertaurant
 {
-    public class RestaurantDto
+    public class RestaurantViewModel
     {
         public string RestaurantName { get; set; }
 /*

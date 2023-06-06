@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;
-
+using BusinessLogicLayer.RestaurantService;
 using Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
@@ -16,7 +15,7 @@ namespace SnappFood
 {
     public partial class EditandAddMenu : Form
     {
-        EditMenu menu = new EditMenu();
+        EditMenuService menu = new EditMenuService();
         public bool isEdit { get; set; }
         public User user { get; set; }
         public EditandAddMenu(bool isEdit)

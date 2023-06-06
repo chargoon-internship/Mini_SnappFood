@@ -37,7 +37,7 @@ namespace SnappFood
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            CartItem cartItem = new CartItem();
+            CartItemViewModel cartItem = new CartItemViewModel();
             cartItem.Foods = Foods;
             cartItem.Customer = MyUser!.Customer;
             cartItem.RestaurantId = Restaurant_owner;
