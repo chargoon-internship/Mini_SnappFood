@@ -70,7 +70,7 @@ namespace SnappFood
                 var IdOfFood = int.Parse(txtID.Text);
                 List<string> result = new List<string>();
 
-                    food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
+                    food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = user.Id, Exist = isExist };
                     result = menu.UpdateMenu(food);
                     
                 if (result[0] != "موفقیت")

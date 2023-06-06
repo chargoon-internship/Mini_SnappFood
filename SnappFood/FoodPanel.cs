@@ -39,8 +39,10 @@ namespace SnappFood
         {
             CartItem cartItem = new CartItem();
             cartItem.Foods = Foods;
-            cartItem.Customer = MyUser!.Customer;
-            cartItem.RestaurantId = Restaurant_owner;
+            Invoice invoice = new Invoice();
+
+            //cartItem.Customer = MyUser!.Customer;
+            //cartItem.RestaurantId = Restaurant_owner;
             MessageBox.Show(cartItem.GetPrice().ToString());
             //صفحه نمایش فاکتور از این نمایش داده می شود
         }

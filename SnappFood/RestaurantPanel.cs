@@ -20,6 +20,8 @@ namespace SnappFood
             InitializeComponent();
         }
 
+
+
         private void RestaurantPanel_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +30,7 @@ namespace SnappFood
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
             EditandAddMenu newForm = new EditandAddMenu(false);
-
+            newForm.user= user;
             newForm.ShowDialog();
         }
 
@@ -43,8 +45,30 @@ namespace SnappFood
         {
             RestaurantInvoice newForm = new RestaurantInvoice();
             newForm.FormClosed += (s, args) => this.Close();
-            newForm.Show();
-            this.Hide();
+            newForm.ShowDialog();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            // Confirm user wants to close
+            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile=new EditProfile();
+            editProfile.ShowDialog();
+            
         }
     }
 }

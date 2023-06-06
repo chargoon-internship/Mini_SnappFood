@@ -8,6 +8,8 @@
 # Visual Studio / .NET
 **/bin/
 **/obj/
+**/.vs/
+/.vs*
 
 ss.txt
 

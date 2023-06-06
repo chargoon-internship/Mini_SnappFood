@@ -38,7 +38,7 @@ namespace BusinessLogicLayer
         {
             var results = new List<string>();
             bool isEdit = true;
-            string validation = UserValidation2.Validation(user, isEdit);
+            string validation = UserValidation.Validation(user, isEdit);
            
             results.Add(validation);
             if (validation == "موفقیت")

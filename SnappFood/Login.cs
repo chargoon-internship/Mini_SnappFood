@@ -154,16 +154,8 @@ namespace SnappFood
 
                 };
 
-                UserValidation db = new UserValidation();
-                if (db.Create(user))
-                {
-                    MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
-                    Clear();
-                }
-                else
-                {
-                    MessageBox.Show("مشکلی پیش آمده است");
-                }
+                UserCud db = new UserCud();
+                MessageBox.Show(db.Create(user));
             }
             else
             {
@@ -179,16 +171,8 @@ namespace SnappFood
                     BeginDate=TimeSpan.Parse(TimeBegin.Text),
                     EndDate=TimeSpan.Parse(TimeEnd.Text)
                 };
-                UserValidation db = new UserValidation();
-                if (db.Create(user))
-                {
-                    MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
-                    Clear();
-                }
-                else
-                {
-                    MessageBox.Show("مشکلی پیش آمده است");
-                }
+                UserCud db = new UserCud();
+                MessageBox.Show(db.Create(user));
             }
         }
 
@@ -196,17 +180,25 @@ namespace SnappFood
         {
             if (txt_userLogin.Text != "" && txt_userPass.Text != "")
             {
-                UserValidation db=new UserValidation();
+                UserCud db=new UserCud();
                 if (db.Login(txt_userLogin.Text, txt_userPass.Text))
                 {
-                    MessageBox.Show("شما با موفقیت وارد شددید");
                     User myUser=db.GetUser(txt_userLogin.Text);
                     if (myUser.Customer != null)
                     {
+                        CustomerPanel customerPanel = new CustomerPanel();
+                        customerPanel.MyUser = myUser;
+                        customerPanel.ShowDialog();
                         //صفحه مربوط به مشتری باز شود
                     }
                     else if(myUser.Restaurant!= null)
                     {
+
+                        RestaurantPanel restaurantPanel = new RestaurantPanel();
+                        restaurantPanel.user = myUser;
+                        this.Hide();
+                        restaurantPanel.ShowDialog();
+                        this.Close();
                         //صفحه مربوط به صاحب رستوران باز شود
                     }
                 }
