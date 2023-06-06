@@ -186,6 +186,7 @@
             dgMenu.Name = "dgMenu";
             dgMenu.Size = new Size(893, 408);
             dgMenu.TabIndex = 0;
+            dgMenu.CellContentClick += dgMenu_CellContentClick;
             // 
             // FoodID
             // 
@@ -208,7 +209,7 @@
             // 
             // ExistenceOfFood
             // 
-            ExistenceOfFood.DataPropertyName = "Exist";
+            ExistenceOfFood.DataPropertyName = "ExistText";
             ExistenceOfFood.HeaderText = "موجودی";
             ExistenceOfFood.Name = "ExistenceOfFood";
             // 
@@ -252,7 +253,7 @@
             AutoScaleDimensions = new SizeF(7F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(929, 666);
+            ClientSize = new Size(921, 664);
             Controls.Add(btnReturn);
             Controls.Add(btnDeletMenu);
             Controls.Add(btnEditMenu);
@@ -289,11 +290,11 @@
         private System.Windows.Forms.Button btnDeletMenu;
         private Label label4;
         private TextBox txtID;
+        private Button btnReturn;
         private DataGridViewTextBoxColumn FoodID;
         private DataGridViewTextBoxColumn NameOfFood;
         private DataGridViewTextBoxColumn PriceOfFood;
         private DataGridViewTextBoxColumn ExistenceOfFood;
-        private Button btnReturn;
     }
 }
 

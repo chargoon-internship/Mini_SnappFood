@@ -66,6 +66,29 @@ namespace SnappFood.Properties {
         internal static System.Drawing.Bitmap rest_image {
             get {
                 object obj = ResourceManager.GetObject("rest_image", resourceCulture);
+        internal static System.Drawing.Bitmap dinner {
+            get {
+                object obj = ResourceManager.GetObject("dinner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap negative {
+            get {
+                object obj = ResourceManager.GetObject("negative", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap positive {
+            get {
+                object obj = ResourceManager.GetObject("positive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

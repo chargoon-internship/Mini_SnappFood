@@ -1,17 +1,18 @@
-﻿using Entities;
+﻿using DataAccessLayes.Repositories;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayes
+namespace DataAccessLayes.Services
 {
-    public class InvoiceRepository
+    public class InvoiceRepository:GenericRepository<Invoice>
     {
         private DB db;
 
-        public InvoiceRepository(DB db)
+        public InvoiceRepository(DB db):base(db) 
         {
             this.db = db;
         }
