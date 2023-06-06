@@ -1,5 +1,6 @@
 ﻿using DataAccessLayes.Repositories;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,10 @@ namespace DataAccessLayes.Services
         }
 
         public List<Invoice> GetOrders() => db.Invoices.ToList();
+
+        public List<Invoice> GetInvoicesRestayrant(int id)
+        {
+            return db.Invoices.Include(n=>n.Restaurant!.Foods).Where(n=>n.Restaurant_Id==id).ToList();
+        }
     }
 }

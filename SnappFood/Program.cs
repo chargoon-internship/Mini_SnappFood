@@ -12,9 +12,8 @@ namespace SnappFood
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new EditandAddMenu());
-            Application.Run(new RestaurantPanel());
+            Application.Run(new CustomerPanel());
             //Application.Run(new CustomerInvoice());
-
         }
     }
 }
