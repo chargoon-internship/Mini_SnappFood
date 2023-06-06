@@ -50,6 +50,7 @@
             btnExit = new Button();
             txtNameRestaurant = new TextBox();
             lblNameRestaurant = new Label();
+            btnDeleteAccount = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureProfile).BeginInit();
             SuspendLayout();
             // 
@@ -108,6 +109,7 @@
             lblFirstName.Size = new Size(25, 22);
             lblFirstName.TabIndex = 12;
             lblFirstName.Text = "نام";
+            lblFirstName.Visible = false;
             // 
             // lblLastName
             // 
@@ -119,6 +121,7 @@
             lblLastName.Size = new Size(77, 22);
             lblLastName.TabIndex = 13;
             lblLastName.Text = "نام خانوادگی";
+            lblLastName.Visible = false;
             // 
             // lblCode
             // 
@@ -137,11 +140,12 @@
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("IRANSansWeb(FaNum)", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblAddress.ForeColor = Color.White;
-            lblAddress.Location = new Point(10, 318);
+            lblAddress.Location = new Point(50, 322);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(83, 22);
+            lblAddress.Size = new Size(39, 22);
             lblAddress.TabIndex = 16;
-            lblAddress.Text = "آدرس رستوران";
+            lblAddress.Text = "آدرس";
+            lblAddress.Visible = false;
             // 
             // txtUserName
             // 
@@ -166,6 +170,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(168, 29);
             txtFirstName.TabIndex = 29;
+            txtFirstName.Visible = false;
             // 
             // txtLastName
             // 
@@ -174,6 +179,7 @@
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(168, 29);
             txtLastName.TabIndex = 30;
+            txtLastName.Visible = false;
             // 
             // txtNationalCode
             // 
@@ -191,6 +197,7 @@
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(168, 29);
             txtAddress.TabIndex = 32;
+            txtAddress.Visible = false;
             // 
             // lblTime
             // 
@@ -244,11 +251,11 @@
             // 
             btnEdit.BackColor = Color.FromArgb(236, 12, 109);
             btnEdit.FlatStyle = FlatStyle.Popup;
-            btnEdit.Font = new Font("IRANSansWeb(FaNum)", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEdit.Location = new Point(41, 407);
+            btnEdit.Font = new Font("IRANSansWeb(FaNum)", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.Location = new Point(24, 407);
             btnEdit.Margin = new Padding(3, 2, 3, 2);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(118, 41);
+            btnEdit.Size = new Size(90, 49);
             btnEdit.TabIndex = 36;
             btnEdit.Text = "ویرایش اطلاعات";
             btnEdit.UseVisualStyleBackColor = false;
@@ -258,14 +265,15 @@
             // 
             btnExit.BackColor = Color.FromArgb(236, 12, 109);
             btnExit.FlatStyle = FlatStyle.Popup;
-            btnExit.Font = new Font("IRANSansWeb(FaNum)", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.Location = new Point(206, 407);
+            btnExit.Font = new Font("IRANSansWeb(FaNum)", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnExit.Location = new Point(239, 407);
             btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(118, 41);
+            btnExit.Size = new Size(91, 49);
             btnExit.TabIndex = 38;
-            btnExit.Text = "خروج";
+            btnExit.Text = "بازگشت";
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // txtNameRestaurant
             // 
@@ -281,12 +289,26 @@
             lblNameRestaurant.AutoSize = true;
             lblNameRestaurant.Font = new Font("IRANSansWeb(FaNum)", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblNameRestaurant.ForeColor = Color.White;
-            lblNameRestaurant.Location = new Point(24, 281);
+            lblNameRestaurant.Location = new Point(24, 285);
             lblNameRestaurant.Name = "lblNameRestaurant";
             lblNameRestaurant.Size = new Size(69, 22);
             lblNameRestaurant.TabIndex = 39;
             lblNameRestaurant.Text = "نام رستوران";
             lblNameRestaurant.Visible = false;
+            // 
+            // btnDeleteAccount
+            // 
+            btnDeleteAccount.BackColor = Color.FromArgb(236, 12, 109);
+            btnDeleteAccount.FlatStyle = FlatStyle.Popup;
+            btnDeleteAccount.Font = new Font("IRANSansWeb(FaNum)", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDeleteAccount.Location = new Point(131, 407);
+            btnDeleteAccount.Margin = new Padding(3, 2, 3, 2);
+            btnDeleteAccount.Name = "btnDeleteAccount";
+            btnDeleteAccount.Size = new Size(91, 49);
+            btnDeleteAccount.TabIndex = 41;
+            btnDeleteAccount.Text = "حذف حساب";
+            btnDeleteAccount.UseVisualStyleBackColor = false;
+            btnDeleteAccount.Click += btnDeleteAccount_Click;
             // 
             // EditProfile
             // 
@@ -294,6 +316,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
             ClientSize = new Size(366, 467);
+            Controls.Add(btnDeleteAccount);
             Controls.Add(txtNameRestaurant);
             Controls.Add(lblNameRestaurant);
             Controls.Add(btnExit);
@@ -353,5 +376,6 @@
         private Button btnExit;
         private TextBox txtNameRestaurant;
         private Label lblNameRestaurant;
+        private Button btnDeleteAccount;
     }
 }
