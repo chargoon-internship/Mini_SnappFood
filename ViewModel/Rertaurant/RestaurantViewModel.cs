@@ -9,7 +9,7 @@ namespace ViewModel.Rertaurant
 {
     public class RestaurantViewModel
     {
-        public string RestaurantName { get; set; }
+        public string? RestaurantName { get; set; }
 /*
         public string RestaurantType { get; set; }
 

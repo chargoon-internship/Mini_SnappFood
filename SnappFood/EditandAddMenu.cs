@@ -43,7 +43,7 @@ namespace SnappFood
         }
         private void BindGrid()
         {
-            var foods = menu.PrintAllMenu(2);
+            var foods = menu.PrintAllMenu(user.Id);
             dgMenu.AutoGenerateColumns = false;
             dgMenu.DataSource = foods;
         }
@@ -88,7 +88,7 @@ namespace SnappFood
             else
             {
                 
-                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = 2, Exist = isExist };
+                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = user.Id, Exist = isExist };
                 string result=menu.AddMenu(food, isEdit);
                 if (result!= "موفقیت")
                 {
@@ -130,7 +130,7 @@ namespace SnappFood
             {
                 int IdOfFood = (int)dgMenu.CurrentRow.Cells[0].Value;
 
-                string name = dgMenu.CurrentRow.Cells[1].Value.ToString();
+                string name = dgMenu.CurrentRow.Cells[1].Value.ToString()!;
                 if (MessageBox.Show($"اطمینان دارید؟ {name} ایا از حذف ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var result = menu.DeleteMenuById(IdOfFood);

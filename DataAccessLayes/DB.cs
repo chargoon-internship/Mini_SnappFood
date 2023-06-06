@@ -20,6 +20,8 @@ namespace DataAccessLayes
 
         public DbSet<Food> Foods { get; set; }
 
+        public DbSet<InvoicesFood> InvoicesFoods { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
@@ -31,6 +33,8 @@ namespace DataAccessLayes
             modelBuilder.Entity<Invoice>().HasOne(n => n.Customer).WithMany(n => n.Invoices).HasForeignKey(n => n.Customer_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<User>().HasIndex(n => n.UserName).IsUnique(true);
+            modelBuilder.Entity<InvoicesFood>().HasKey(n => n.Id);
+            modelBuilder.Entity<Invoice>().HasMany(n=>n.Foods).WithMany(n=>n.Invoices).UsingEntity<InvoicesFood>();
         }
     }
 }

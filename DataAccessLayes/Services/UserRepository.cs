@@ -23,7 +23,7 @@ namespace DataAccessLayes.Services
             var result = db.Users.SingleOrDefault(n => n.UserName == username);
             if (result == null)
             {
-                return true;
+                return false;
             }
             if (result!.Password == password)
             {

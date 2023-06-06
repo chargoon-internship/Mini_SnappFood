@@ -15,14 +15,13 @@ namespace SnappFood
     public partial class EditProfile : Form
     {
         EditProfileService profile = new EditProfileService();
-        public User user;
+
+        public User user { get; set; }
 
         bool isCustomer = true;
         public int UserId;
         public EditProfile()
         {
-            //this.user = user;
-            UserId = 2;
             InitializeComponent();
 
         }

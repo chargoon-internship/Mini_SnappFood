@@ -156,6 +156,8 @@ namespace SnappFood
                 };
                 SignUpService signUpService = new SignUpService();
                 MessageBox.Show(signUpService.SignUp(user));
+                HideCustomerRegister(false);
+                HideLoginPage(true);
 
             }
             else
@@ -175,6 +177,8 @@ namespace SnappFood
 
                 SignUpService signUpService = new SignUpService();
                 MessageBox.Show(signUpService.SignUp(user));
+                HideCustomerRegister(false);
+                HideLoginPage(true);
 
             }
         }
@@ -182,17 +186,28 @@ namespace SnappFood
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             LoginService loginService = new LoginService();
-            (string Message, bool isCustomer) = loginService.Execute(txt_userLogin.Text, txt_userPass.Text);
+            (string Message, bool isCustomer,bool enter) = loginService.Execute(txt_userLogin.Text, txt_userPass.Text);
 
             MessageBox.Show(Message);
-            if(isCustomer)
+            if (enter)
             {
-                //open customer panel
+                if (isCustomer)
+                {
+                    User user = loginService.GetUser(txt_userLogin.Text);
+
+                    //open customer panel
+                }
+                else
+                {
+                    User user = loginService.GetUser(txt_userLogin.Text);
+                    RestaurantPanel restaurantPanel = new RestaurantPanel();
+                    restaurantPanel.user = user;
+                    this.Hide();
+                    restaurantPanel.ShowDialog();
+                    this.Close();
+                }
             }
-            else
-            {
-                //open restaurant panel
-            }
+
         }
     }
 }
