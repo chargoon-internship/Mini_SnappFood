@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayes
+namespace DataAccessLayes.Services
 {
     public class CustomerRepository
     {
         public CustomerRepository(DB dB)
         {
-            DB= dB;
+            DB = dB;
         }
 
         private DB DB;

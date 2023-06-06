@@ -153,8 +153,7 @@ namespace SnappFood
                     HomeAddress = txtAddress.Text,
 
                 };
-
-                UserValidation db = new UserValidation();
+                UserCrud db=new UserCrud();
                 if (db.Create(user))
                 {
                     MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
@@ -179,7 +178,7 @@ namespace SnappFood
                     BeginDate=TimeSpan.Parse(TimeBegin.Text),
                     EndDate=TimeSpan.Parse(TimeEnd.Text)
                 };
-                UserValidation db = new UserValidation();
+                UserCrud db = new UserCrud();
                 if (db.Create(user))
                 {
                     MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
@@ -196,7 +195,7 @@ namespace SnappFood
         {
             if (txt_userLogin.Text != "" && txt_userPass.Text != "")
             {
-                UserValidation db=new UserValidation();
+                UserCrud db =new UserCrud();
                 if (db.Login(txt_userLogin.Text, txt_userPass.Text))
                 {
                     MessageBox.Show("شما با موفقیت وارد شددید");

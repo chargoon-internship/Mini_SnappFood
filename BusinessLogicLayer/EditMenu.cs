@@ -5,39 +5,86 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayes;
 using Entities;
+using ViewModel;
+using ViewModel.Food;
 
 namespace BusinessLogicLayer
 {
     public class EditMenu
     {
-       //edit
+        public List<FoodViewModel> PrintAllMenu(int id)
+        {
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                List<FoodViewModel> foodViewModels = new List<FoodViewModel>();
+                var foods = db.FoodRepository.GetByRestaurantID(id);
+                foreach (var food in foods)
+                {
+                    foodViewModels.Add(new FoodViewModel
+                    {
+                        Id = food.Id,
+                        Exist = food.Exist,
+                        Name = food.Name,
+                        Price = food.Price
+                    });
+                }
+                return foodViewModels;
+            }
 
-        UnitOfWork db = new UnitOfWork();
+        }
+        public string  AddMenu(Food food)
+        {
+            string validation=FoodValidation.AddValidation(food);
+           
+            if (validation== "موفقیت")
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    db.FoodRepository.Insert(food);
+                }
+            }
+            return validation;
 
-        public List<Food> PrintAllMenu(int id)
-        {
-            return db.FoodRepository.GetByRestaurantID(id);
+          
         }
-        public void AddMenu(Food food)
+        public List<string> UpdateMenu(Food food)
         {
-            db.FoodRepository.Insert(food);
-            
-        }
-        public string UpdateMenu(Food food)
-        {
-            var result=db.FoodRepository.Update(food);
-            string message=result ? "با موفقیت ویرایش شد":"غذا مورد نظر ویرایش نشد";
-            return message;
+            var results = new List<string>();
+
+            string validation = FoodValidation.EditValidation(food);
+            results.Add(validation);
+            if (validation == "موفقیت")
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    var result = db.FoodRepository.Update(food);
+                    string message = result ? "با موفقیت ویرایش شد" : "غذا مورد نظر ویرایش نشد";
+                    results.Add(message);
+                    return results;
+                }
+            }
+            results.Add("نا موفق");
+            return results;
+
+
         }
         public Food FindMenuById(int id)
         {
-           return db.FoodRepository.GetById(id);
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                return db.FoodRepository.GetById(id);
+            }
+
         }
         public string DeleteMenuById(int id)
         {
-            var result= db.FoodRepository.Delete(id);
-            string message = result ? "با موفقیت حذف شد" : "غذا مورد نظر حذف نشد";
-            return message;
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                var result = db.FoodRepository.Delete(id);
+                string message = result ? "با موفقیت حذف شد" : "غذا مورد نظر حذف نشد";
+                return message;
+            }
+
         }
     }
 }

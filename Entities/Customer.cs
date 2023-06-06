@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Customer
+    public class Customer:IEntity
     {
         public Customer()
         {

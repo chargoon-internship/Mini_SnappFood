@@ -4,6 +4,12 @@
     <Compile Update="EditandAddMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FoodPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

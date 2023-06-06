@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Food
+    public class Food:IEntity
     {
         [Key]
         public int Id { get; set; }
@@ -18,6 +18,9 @@ namespace Entities
         public string Name { get; set; } = "";
 
         public bool Exist { get; set; }
+
+        [NotMapped]
+        public int Quantity { get; set; }
 
         public double Price { get; set; }
 
