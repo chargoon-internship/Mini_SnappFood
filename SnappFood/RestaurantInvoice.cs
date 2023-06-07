@@ -35,12 +35,10 @@ namespace SnappFood
             resInvoiceDataGridView.Columns["Customer"].Visible = false;
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             RestaurantPanel f = new RestaurantPanel();
-            f.FormClosed += (s, args) => this.Close();
-            f.Show();
-            this.Hide();
+            f.ShowDialog();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -58,12 +56,6 @@ namespace SnappFood
 
         }
 
-        private void btnBack_Click_1(object sender, EventArgs e)
-        {
-            RestaurantPanel newForm = new RestaurantPanel();
-            newForm.ShowDialog();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -71,7 +63,6 @@ namespace SnappFood
 
         private void RestaurantInvoice_Load_1(object sender, EventArgs e)
         {
-
         }
     }
 }

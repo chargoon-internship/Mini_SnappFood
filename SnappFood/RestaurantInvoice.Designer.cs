@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             resInvoiceDataGridView = new DataGridView();
-            lblAmountsSum1 = new Label();
-            lblAmountsSum2 = new Label();
-            btnBack = new Button();
-            groupBox1 = new GroupBox();
-            label1 = new Label();
             FoodName = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            lblAmountsSum1 = new Label();
+            lblAmountsSum2 = new Label();
+            btnBack = new Button();
+            groupBox1 = new GroupBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -54,6 +54,46 @@
             resInvoiceDataGridView.RowTemplate.Height = 24;
             resInvoiceDataGridView.Size = new Size(732, 472);
             resInvoiceDataGridView.TabIndex = 0;
+            // 
+            // FoodName
+            // 
+            FoodName.DataPropertyName = "FoodName";
+            FoodName.HeaderText = "نام غذا";
+            FoodName.MinimumWidth = 6;
+            FoodName.Name = "FoodName";
+            FoodName.Width = 160;
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "Number";
+            Column2.HeaderText = "تعداد";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "Description";
+            Column3.HeaderText = "توضیحات";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 120;
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "Time";
+            Column4.HeaderText = "زمان ثبت سفارش";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 160;
+            // 
+            // Column5
+            // 
+            Column5.DataPropertyName = "FinalPrice";
+            Column5.HeaderText = "مبلغ";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.Width = 125;
             // 
             // lblAmountsSum1
             // 
@@ -114,46 +154,6 @@
             label1.TabIndex = 3;
             label1.Text = "تومان";
             label1.Click += label1_Click;
-            // 
-            // FoodName
-            // 
-            FoodName.DataPropertyName = "FoodName";
-            FoodName.HeaderText = "نام غذا";
-            FoodName.MinimumWidth = 6;
-            FoodName.Name = "FoodName";
-            FoodName.Width = 160;
-            // 
-            // Column2
-            // 
-            Column2.DataPropertyName = "Number";
-            Column2.HeaderText = "تعداد";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.DataPropertyName = "Description";
-            Column3.HeaderText = "توضیحات";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 120;
-            // 
-            // Column4
-            // 
-            Column4.DataPropertyName = "Time";
-            Column4.HeaderText = "زمان ثبت سفارش";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 160;
-            // 
-            // Column5
-            // 
-            Column5.DataPropertyName = "FinalPrice";
-            Column5.HeaderText = "مبلغ";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
             // 
             // RestaurantInvoice
             // 

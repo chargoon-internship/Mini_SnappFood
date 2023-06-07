@@ -37,7 +37,7 @@
             // btnRegisterMenu
             // 
             btnRegisterMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegisterMenu.Location = new Point(540, 111);
+            btnRegisterMenu.Location = new Point(540, 153);
             btnRegisterMenu.Margin = new Padding(3, 4, 3, 4);
             btnRegisterMenu.Name = "btnRegisterMenu";
             btnRegisterMenu.Size = new Size(314, 134);
@@ -49,7 +49,7 @@
             // btnEditMenu
             // 
             btnEditMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEditMenu.Location = new Point(540, 294);
+            btnEditMenu.Location = new Point(540, 348);
             btnEditMenu.Name = "btnEditMenu";
             btnEditMenu.Size = new Size(314, 127);
             btnEditMenu.TabIndex = 1;
@@ -60,7 +60,7 @@
             // btnViewInvoices
             // 
             btnViewInvoices.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnViewInvoices.Location = new Point(540, 469);
+            btnViewInvoices.Location = new Point(540, 529);
             btnViewInvoices.Name = "btnViewInvoices";
             btnViewInvoices.Size = new Size(314, 117);
             btnViewInvoices.TabIndex = 2;
