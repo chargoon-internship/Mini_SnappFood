@@ -24,7 +24,7 @@ namespace DataAccessLayes
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Server=.\SQL2019;Database=Snapp;Trusted_Connection=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -35,6 +35,73 @@ namespace DataAccessLayes
             modelBuilder.Entity<User>().HasIndex(n => n.UserName).IsUnique(true);
             modelBuilder.Entity<InvoicesFood>().HasKey(n => n.Id);
             modelBuilder.Entity<Invoice>().HasMany(n=>n.Foods).WithMany(n=>n.Invoices).UsingEntity<InvoicesFood>();
+
+            #region DataSeed
+
+            modelBuilder.Entity<User>().HasData(new User()
+            {
+                FirstName = "Maryam",
+                LastName = "Zarei",
+                UserName = "Mz52",
+                Password = "23456",
+
+                Customer = new Customer()
+                {
+                    Id = 1,
+                    NatioalCode = "0024140695",
+                    HomeAddress = "Iran, Tehran",
+                }
+            });
+
+            modelBuilder.Entity<User>().HasData(new User()
+            {
+                FirstName = "Ali",
+                LastName = "Bahadori",
+                UserName = "ABahadori79",
+                Password = "0024140697",
+
+                Customer = new Customer()
+                {
+                    Id = 2,
+                    NatioalCode = "0024140697",
+                    HomeAddress = "Iran, Tabriz",
+                }
+            });
+
+            modelBuilder.Entity<Food>().HasData(new Food()
+            {
+                Name = "Chicken Barbecue",
+                Exist = true,
+                Price = 200,
+            });
+
+
+            modelBuilder.Entity<Food>().HasData(new Food()
+            {
+                Name = "lasagna",
+                Exist = true,
+                Price = 300,
+            });
+
+            modelBuilder.Entity<Restaurant>().HasData(new Restaurant()
+            {
+                Id = 3,
+                NameOfRestaurant = "Fall",
+                Address = "Iran, Yazd",
+                BeginDate = new TimeSpan(1, 5, 36, 0),
+                EndDate = new TimeSpan(2, 3, 3, 8),
+            });
+
+            modelBuilder.Entity<Restaurant>().HasData(new Restaurant()
+            {
+                Id = 2,
+                NameOfRestaurant = "Green",
+                Address = "Iran, Shiraz",
+                BeginDate = new TimeSpan(1, 5, 7, 2),
+                EndDate = new TimeSpan(2, 4, 3, 0),
+            });
+
+            #endregion
         }
     }
 }
