@@ -13,8 +13,8 @@ namespace BusinessLogicLayer.SignUpAndLoginService
         public string SignUp(User user)
         {
             string validation = UserValidation.Validation(user, false);
-            if (validation == "موفقیت")
-            {
+           /* if (validation == "موفقیت")
+            {*/
                 if (Create(user))
                 {
                     return ("ثبت نام شما با موفقیت انجام شد");
@@ -23,11 +23,11 @@ namespace BusinessLogicLayer.SignUpAndLoginService
                 {
                     return ("مشکلی پیش آمده است");
                 }
-            }
+        /*}
             else
             {
                 return validation;
-            }
+            }*/
         }
 
         public bool Create(User user)

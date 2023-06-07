@@ -198,21 +198,21 @@ namespace SnappFood
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            if(btnDeleteAccount.Text== "حذف حساب")
+            if (btnDeleteAccount.Text == "حذف حساب")
             {
-                string message=profile.DeleteUser(UserId);
+                string message = profile.DeleteUser(UserId);
                 MessageBox.Show(message, "", MessageBoxButtons.OK);
             }
-/*            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Text !="Login")
-                {
-                    form.Close();
-                }
-            }*/
+            /*            foreach (Form form in Application.OpenForms)
+                        {
+                            if (form.Text !="Login")
+                            {
+                                form.Close();
+                            }
+                        }*/
 
-/*            // Bring the first form to the front
-            SnappFood.Login.BringToFront()*/
+            /*            // Bring the first form to the front
+                        SnappFood.Login.BringToFront()*/
 
 
         }
@@ -224,7 +224,7 @@ namespace SnappFood
             else
                 this.Close();
 
-            
+
 
         }
     }

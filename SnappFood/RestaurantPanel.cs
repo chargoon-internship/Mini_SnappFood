@@ -66,7 +66,7 @@ namespace SnappFood
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EditProfile editProfile=new EditProfile();
+            EditProfile editProfile = new EditProfile();
             editProfile.UserId = user!.Id;
             editProfile.ShowDialog();
             

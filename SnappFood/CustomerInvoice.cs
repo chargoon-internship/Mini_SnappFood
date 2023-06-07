@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.InvoiceService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace SnappFood
 {
     public partial class CustomerInvoice : Form
     {
-        ViewInvoice v = new ViewInvoice();
+        ViewInvoiceService v = new ViewInvoiceService();
 
         public CustomerInvoice()
         {

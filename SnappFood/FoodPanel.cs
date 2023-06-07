@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.FoodService;
 using DataAccessLayes;
 using Entities;
 using System;
@@ -26,7 +26,7 @@ namespace SnappFood
         private void FoodPanel_Load(object sender, EventArgs e)
         {
             int top = 10;
-            BuyFood buyFood = new BuyFood();
+            BuyFoodService buyFood = new BuyFoodService();
             foreach (var item in buyFood.GetFoods(Restaurant_owner))
             {
                 panel1.Controls.Add(new FoodItem() { Width = 1335, Height = 120, Top = top, MyFood = item });

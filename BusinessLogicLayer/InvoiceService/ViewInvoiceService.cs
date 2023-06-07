@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer
+namespace BusinessLogicLayer.InvoiceService
 {
-    public class ViewInvoice
+    public class ViewInvoiceService
     {
         UnitOfWork db = new();
 
