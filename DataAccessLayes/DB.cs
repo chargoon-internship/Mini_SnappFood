@@ -40,36 +40,39 @@ namespace DataAccessLayes
 
             modelBuilder.Entity<User>().HasData(new User()
             {
+                Id = 1,
                 FirstName = "Maryam",
                 LastName = "Zarei",
                 UserName = "Mz52",
                 Password = "23456",
 
-                Customer = new Customer()
-                {
-                    Id = 1,
-                    NatioalCode = "0024140695",
-                    HomeAddress = "Iran, Tehran",
-                }
+                //Customer = new Customer()
+                //{
+                //    Id = 1,
+                //    NatioalCode = "0024140695",
+                //    HomeAddress = "Iran, Tehran",
+                //}
             });
 
             modelBuilder.Entity<User>().HasData(new User()
             {
+                Id = 2,
                 FirstName = "Ali",
                 LastName = "Bahadori",
                 UserName = "ABahadori79",
                 Password = "0024140697",
 
-                Customer = new Customer()
-                {
-                    Id = 2,
-                    NatioalCode = "0024140697",
-                    HomeAddress = "Iran, Tabriz",
-                }
+                //Customer = new Customer()
+                //{
+                //    Id = 2,
+                //    NatioalCode = "0024140697",
+                //    HomeAddress = "Iran, Tabriz",
+                //}
             });
 
             modelBuilder.Entity<Food>().HasData(new Food()
             {
+                Id = 1,
                 Name = "Chicken Barbecue",
                 Exist = true,
                 Price = 200,
@@ -78,6 +81,7 @@ namespace DataAccessLayes
 
             modelBuilder.Entity<Food>().HasData(new Food()
             {
+                Id = 2,
                 Name = "lasagna",
                 Exist = true,
                 Price = 300,

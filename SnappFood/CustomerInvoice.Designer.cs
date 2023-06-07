@@ -41,11 +41,11 @@
             // userInvoiceDataGridView
             // 
             userInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userInvoiceDataGridView.Location = new Point(41, 51);
+            userInvoiceDataGridView.Location = new Point(143, 51);
             userInvoiceDataGridView.Name = "userInvoiceDataGridView";
             userInvoiceDataGridView.RowHeadersWidth = 51;
             userInvoiceDataGridView.RowTemplate.Height = 29;
-            userInvoiceDataGridView.Size = new Size(921, 470);
+            userInvoiceDataGridView.Size = new Size(700, 470);
             userInvoiceDataGridView.TabIndex = 0;
             // 
             // groupBox1
@@ -67,7 +67,7 @@
             // 
             lblSum.AutoSize = true;
             lblSum.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSum.Location = new Point(235, 524);
+            lblSum.Location = new Point(316, 524);
             lblSum.Name = "lblSum";
             lblSum.Size = new Size(66, 33);
             lblSum.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             lblAmount.AutoSize = true;
             lblAmount.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAmount.Location = new Point(41, 524);
+            lblAmount.Location = new Point(143, 524);
             lblAmount.Name = "lblAmount";
             lblAmount.RightToLeft = RightToLeft.No;
             lblAmount.Size = new Size(167, 33);
