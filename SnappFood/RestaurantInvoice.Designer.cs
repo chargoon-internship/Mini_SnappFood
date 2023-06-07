@@ -117,6 +117,7 @@
             // 
             // FoodName
             // 
+            FoodName.DataPropertyName = "FoodName";
             FoodName.HeaderText = "نام غذا";
             FoodName.MinimumWidth = 6;
             FoodName.Name = "FoodName";
@@ -167,7 +168,7 @@
             Name = "RestaurantInvoice";
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "فاکتورها";
+            Text = "فاکتور رستوران";
             Load += RestaurantInvoice_Load_1;
             ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).EndInit();
             groupBox1.ResumeLayout(false);

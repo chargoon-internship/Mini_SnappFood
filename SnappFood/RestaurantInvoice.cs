@@ -13,7 +13,7 @@ namespace SnappFood
 {
     public partial class RestaurantInvoice : Form
     {
-        ViewInvoiceService invoiceService = new ViewInvoiceService();
+        ViewInvoiceService v = new ViewInvoiceService();
 
         public RestaurantInvoice()
         {
@@ -22,10 +22,10 @@ namespace SnappFood
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            var orders = invoiceService.PrintRestaurantInvoices(1);
+            var orders = v.PrintRestaurantInvoices(1);
             resInvoiceDataGridView.DataSource = orders;
 
-            var totalAmount = invoiceService.PrintRestaurantInvoices(1).Sum(o => o.FinalPrice);
+            var totalAmount = v.PrintRestaurantInvoices(1).Sum(o => o.FinalPrice);
             lblAmountsSum2.Text = totalAmount.ToString();
 
             resInvoiceDataGridView.Columns["Id"].Visible = false;
