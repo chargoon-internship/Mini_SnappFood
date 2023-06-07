@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;
+using BusinessLogicLayer.CustomerService;
 using Entities;
 
 namespace SnappFood
@@ -15,12 +15,14 @@ namespace SnappFood
     public partial class EditProfile : Form
     {
         EditProfileService profile = new EditProfileService();
-        public User user;
+
+        public User user { get; set; }
 
 
         public EditProfile(User user)
         {
             this.user = user;
+
             InitializeComponent();
 
         }
@@ -200,6 +202,7 @@ namespace SnappFood
 
 
 
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -208,6 +211,8 @@ namespace SnappFood
                 ShowProfilePage();
             else
                 this.Close();
+
+
 
         }
     }

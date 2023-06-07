@@ -10,6 +10,10 @@ namespace Entities
 {
     public class Invoice
     {
+        public Invoice()
+        {
+            Foods= new List<Food>();    
+        }
         [Key]
         public int Id { get; set; }
 
@@ -34,6 +38,8 @@ namespace Entities
         public Customer? Customer { get; set; }
 
         public Restaurant? Restaurant { get; set; }
+
+        public List<Food> Foods { get; set; }
 
 
     }

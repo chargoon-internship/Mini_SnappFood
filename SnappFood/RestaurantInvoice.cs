@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.InvoiceService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +14,11 @@ namespace SnappFood
 {
     public partial class RestaurantInvoice : Form
     {
-        ViewInvoice v = new ViewInvoice();
+        ViewInvoice invoiceService = new ViewInvoice();
         public User user { get; set; }
         public RestaurantInvoice(User user)
+
+
         {
             this.user = user;
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace SnappFood
             resInvoiceDataGridView.DataSource = orders;
 
             var totalAmount = v.PrintRestaurantInvoices(user.Id).Sum(o => o.FinalPrice);
+
             lblAmountsSum2.Text = totalAmount.ToString();
 
             resInvoiceDataGridView.Columns["Id"].Visible = false;

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+using BusinessLogicLayer.SignUpAndLoginService;
 using Entities;
 
 namespace SnappFood
@@ -153,17 +154,11 @@ namespace SnappFood
                     HomeAddress = txtAddress.Text,
 
                 };
+                SignUpService signUpService = new SignUpService();
+                MessageBox.Show(signUpService.SignUp(user));
+                HideCustomerRegister(false);
+                HideLoginPage(true);
 
-                UserValidation db = new UserValidation();
-                if (db.Create(user))
-                {
-                    MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
-                    Clear();
-                }
-                else
-                {
-                    MessageBox.Show("مشکلی پیش آمده است");
-                }
             }
             else
             {
@@ -179,47 +174,46 @@ namespace SnappFood
                     BeginDate=TimeSpan.Parse(TimeBegin.Text),
                     EndDate=TimeSpan.Parse(TimeEnd.Text)
                 };
-                UserValidation db = new UserValidation();
-                if (db.Create(user))
-                {
-                    MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
-                    Clear();
-                }
-                else
-                {
-                    MessageBox.Show("مشکلی پیش آمده است");
-                }
-            }   
+
+
+                SignUpService signUpService = new SignUpService();
+                MessageBox.Show(signUpService.SignUp(user));
+                HideCustomerRegister(false);
+                HideLoginPage(true);
+
+            }
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (txt_userLogin.Text != "" && txt_userPass.Text != "")
+            LoginService loginService = new LoginService();
+            (string Message, bool isCustomer,bool enter) = loginService.Execute(txt_userLogin.Text, txt_userPass.Text);
+
+            MessageBox.Show(Message);
+            if (enter)
             {
-                UserValidation db=new UserValidation();
-                if (db.Login(txt_userLogin.Text, txt_userPass.Text))
+                if (isCustomer)
                 {
-                    MessageBox.Show("شما با موفقیت وارد شدید");
-                    User myUser=db.GetUser(txt_userLogin.Text);
-                    if (myUser.Customer != null)
-                    {
-                        //صفحه مربوط به مشتری باز شود
-                    }
-                    else if(myUser.Restaurant!= null)
-                    {
-                        RestaurantPanel restaurantPanel = new RestaurantPanel(myUser);
-                        restaurantPanel.ShowDialog();
-                    }
+
+                    User user = loginService.GetUser(txt_userLogin.Text);
+                    CustomerPanel customerPanel = new CustomerPanel(user);
+                    customerPanel.user = user;
+                    this.Hide();
+                    customerPanel.ShowDialog();
+                    this.Close();
+
                 }
                 else
                 {
-                    MessageBox.Show("نام کاربری و رمز عبور وارد شده، اشتباه است","خطا",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    User user = loginService.GetUser(txt_userLogin.Text);
+                    RestaurantPanel restaurantPanel = new RestaurantPanel();
+                    restaurantPanel.user = user;
+                    this.Hide();
+                    restaurantPanel.ShowDialog();
+                    this.Close();
                 }
             }
-            else
-            {
-                MessageBox.Show("لطفا فیلد های خالی را پر نمائید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
     }
 }

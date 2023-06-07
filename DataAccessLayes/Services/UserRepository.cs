@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes.Services
 {
-    public class UserRepository:GenericRepository<User>
+    public class UserRepository : GenericRepository<User>
     {
         private DB db;
 
-        public UserRepository(DB db):base(db)
+        public UserRepository(DB db) : base(db)
         {
             this.db = db;
         }
@@ -23,7 +23,7 @@ namespace DataAccessLayes.Services
             var result = db.Users.SingleOrDefault(n => n.UserName == username);
             if (result == null)
             {
-                return true;
+                return false;
             }
             if (result!.Password == password)
             {

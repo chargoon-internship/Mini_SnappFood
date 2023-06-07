@@ -13,10 +13,14 @@ namespace DataAccessLayes.Services
     public class RestaurantRepository:GenericRepository<Restaurant>
     {
 
-        private DB db;
+        private DB _db;
         public RestaurantRepository(DB db):base(db)
         {
-            this.db = db;
+            _db = db;
+        }
+        public List<Restaurant> GetByName(string restaurantName)
+        {
+            return _db.Restaurants.Where(p => p.NameOfRestaurant == restaurantName).ToList();
         }
     }
 }

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;
-
+using BusinessLogicLayer.RestaurantService;
 using Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
@@ -16,7 +15,7 @@ namespace SnappFood
 {
     public partial class EditandAddMenu : Form
     {
-        EditMenu menu = new EditMenu();
+        EditMenuService menu = new EditMenuService();
         public bool isEdit { get; set; }
         public User user { get; set; }
         public EditandAddMenu(bool isEdit,User user)
@@ -46,6 +45,8 @@ namespace SnappFood
         private void BindGrid()
         {
             var foods = menu.PrintAllMenu(user.Restaurant.Id);
+
+
             dgMenu.AutoGenerateColumns = false;
             dgMenu.DataSource = foods;
         }
@@ -73,6 +74,7 @@ namespace SnappFood
 
                     food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
                     result = menu.UpdateMenu(food,user.Restaurant.Id);
+
                     
                 if (result[0] != "موفقیت")
                 {
@@ -91,6 +93,7 @@ namespace SnappFood
             {
                 food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
                 string result=menu.AddMenu(food, isEdit, user.Restaurant.Id);
+
                 if (result!= "موفقیت")
                 {
                     MessageBox.Show(result, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -131,7 +134,7 @@ namespace SnappFood
             {
                 int IdOfFood = (int)dgMenu.CurrentRow.Cells[0].Value;
 
-                string name = dgMenu.CurrentRow.Cells[1].Value.ToString();
+                string name = dgMenu.CurrentRow.Cells[1].Value.ToString()!;
                 if (MessageBox.Show($"اطمینان دارید؟ {name} ایا از حذف ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var result = menu.DeleteMenuById(IdOfFood);

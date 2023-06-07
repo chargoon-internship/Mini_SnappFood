@@ -8,7 +8,7 @@ using DataAccessLayes;
 using Entities;
 namespace BusinessLogicLayer
 {
-    public static class UserValidation2
+    public static class UserValidation
     {
         public static string Validation(User user,bool isEdit) 
         {
@@ -82,7 +82,5 @@ namespace BusinessLogicLayer
             else return "موفقیت";
 
         }
-
- 
     }
 }
