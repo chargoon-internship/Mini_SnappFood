@@ -20,8 +20,7 @@ namespace SnappFood
             this.user = user;
             InitializeComponent();
             CustomerPanelService customerPanel = new CustomerPanelService();
-            List<Restaurant> restaurants = customerPanel.GetRestaurants();
-            List<string> buttonInfo = customerPanel.RestaurantShowData();
+            List<string> buttonInfo = customerPanel.ShowRestaurantsData(Searchtxt.Text);
 
             foreach (string info in buttonInfo)
             {
@@ -81,5 +80,23 @@ namespace SnappFood
             editProfile.ShowDialog();
         }
 
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            CustomerPanelService customerPanel = new CustomerPanelService();
+            List<string> buttonInfo = customerPanel.ShowRestaurantsData(Searchtxt.Text);
+            foreach (string info in buttonInfo)
+            {
+                Button btn = new Button();
+                btn.Width = 450;
+                btn.Height = 200;
+                btn.Name = String.Format(info);
+                btn.Text = String.Format(info);
+                btn.ForeColor = Color.White;
+                btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
+                flowLayoutPanel1.Controls.Add(btn);
+            }
+        }
     }
 }
