@@ -14,9 +14,10 @@ namespace SnappFood
 {
     public partial class CustomerPanel : Form
     {
-        public User? MyUser { get; set; }
-        public CustomerPanel()
+        public User? user { get; set; }
+        public CustomerPanel(User user)
         {
+            this.user = user;
             InitializeComponent();
             CustomerPanelService customerPanel = new CustomerPanelService();
             List<Restaurant> restaurants = customerPanel.GetRestaurants();
@@ -34,7 +35,25 @@ namespace SnappFood
                 btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
                 flowLayoutPanel1.Controls.Add(btn);
             }
+
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            // Confirm user wants to close
+            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -49,5 +68,18 @@ namespace SnappFood
         {
 
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void EditProfileBtn_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile = new EditProfile();
+            editProfile.UserId = user!.Id;
+            editProfile.ShowDialog();
+        }
+
     }
 }

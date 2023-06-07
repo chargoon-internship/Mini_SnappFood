@@ -194,8 +194,12 @@ namespace SnappFood
                 if (isCustomer)
                 {
                     User user = loginService.GetUser(txt_userLogin.Text);
+                    CustomerPanel customerPanel = new CustomerPanel(user);
+                    customerPanel.user = user;
+                    this.Hide();
+                    customerPanel.ShowDialog();
+                    this.Close();
 
-                    //open customer panel
                 }
                 else
                 {

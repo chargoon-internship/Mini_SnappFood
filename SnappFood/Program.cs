@@ -11,16 +11,8 @@ namespace SnappFood
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new EditandAddMenu());
 
-            Application.Run(new RestaurantPanel());
-
-            //Application.Run(new Login());
-            Application.Run(new RestaurantPanel());
-
-            //Application.Run(new Login());
-
-            //Application.Run(new CustomerInvoice());
+            Application.Run(new Login());
         }
     }
 }

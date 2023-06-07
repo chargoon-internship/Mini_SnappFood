@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.InvoiceService
 {
-    public class ViewInvoice
+    public class ViewInvoiceService
     {
         UnitOfWork db = new();
 

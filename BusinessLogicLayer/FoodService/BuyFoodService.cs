@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.FoodService
 {
-    public class BuyFood
+    public class BuyFoodService
     {
         public IEnumerable<Food> GetFoods(int id)
         {
