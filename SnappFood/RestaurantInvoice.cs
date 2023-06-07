@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer;
+﻿using BusinessLogicLayer.InvoiceService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
