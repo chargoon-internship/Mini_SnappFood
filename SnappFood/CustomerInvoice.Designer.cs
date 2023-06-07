@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             userInvoiceDataGridView = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
             label1 = new Label();
             lblSum = new Label();
             lblAmount = new Label();
             btnPayment = new Button();
             btnBack = new Button();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -53,6 +53,38 @@
             userInvoiceDataGridView.RowTemplate.Height = 29;
             userInvoiceDataGridView.Size = new Size(700, 470);
             userInvoiceDataGridView.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "Name";
+            Column1.HeaderText = "نام غذا";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "Number";
+            Column2.HeaderText = "تعداد";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "Description";
+            Column3.HeaderText = "توضیحات";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 230;
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "FinalPrice";
+            Column4.HeaderText = "قیمت";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // groupBox1
             // 
@@ -123,37 +155,6 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
-            // Column1
-            // 
-            Column1.DataPropertyName = "Name";
-            Column1.HeaderText = "نام غذا";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            Column2.DataPropertyName = "Number";
-            Column2.HeaderText = "تعداد";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.DataPropertyName = "Description";
-            Column3.HeaderText = "توضیحات";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 230;
-            // 
-            // Column4
-            // 
-            Column4.DataPropertyName = "FinalPrice";
-            Column4.HeaderText = "قیمت";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
             // CustomerInvoice
             // 
             AutoScaleDimensions = new SizeF(9F, 25F);
@@ -168,6 +169,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "CustomerInvoice";
             RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "فاکتور مشتری";
             Load += CustomerInvoice_Load;
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).EndInit();
