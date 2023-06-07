@@ -34,6 +34,7 @@
             lblAmount = new Label();
             btnPayment = new Button();
             btnBack = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(lblSum);
             groupBox1.Controls.Add(lblAmount);
             groupBox1.Controls.Add(userInvoiceDataGridView);
@@ -106,6 +108,15 @@
             btnBack.Text = "بازگشت به منوی رستوران";
             btnBack.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(388, 524);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 33);
+            label1.TabIndex = 3;
+            label1.Text = "تومان";
+            // 
             // CustomerInvoice
             // 
             AutoScaleDimensions = new SizeF(9F, 25F);
@@ -136,5 +147,6 @@
         private Label lblAmount;
         private Button btnPayment;
         private Button btnBack;
+        private Label label1;
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayes
 {
-    public class DB:DbContext
+    public class DB : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
 
@@ -34,58 +34,44 @@ namespace DataAccessLayes
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<User>().HasIndex(n => n.UserName).IsUnique(true);
             modelBuilder.Entity<InvoicesFood>().HasKey(n => n.Id);
-            modelBuilder.Entity<Invoice>().HasMany(n=>n.Foods).WithMany(n=>n.Invoices).UsingEntity<InvoicesFood>();
+            modelBuilder.Entity<Invoice>().HasMany(n => n.Foods).WithMany(n => n.Invoices).UsingEntity<InvoicesFood>();
 
             #region DataSeed
 
-            modelBuilder.Entity<User>().HasData(new User()
+
+            User u = new User()
             {
-                Id = 1,
                 FirstName = "Maryam",
                 LastName = "Zarei",
                 UserName = "Mz52",
                 Password = "23456",
+            };
 
-                //Customer = new Customer()
-                //{
-                //    Id = 1,
-                //    NatioalCode = "0024140695",
-                //    HomeAddress = "Iran, Tehran",
-                //}
-            });
-
-            modelBuilder.Entity<User>().HasData(new User()
+            u.Customer = new Customer()
             {
-                Id = 2,
+                Id = u.Id,
+                NatioalCode = "0024140695",
+                HomeAddress = "Iran, Tehran",
+            };
+
+            modelBuilder.Entity<User>().HasData(u);
+
+            User s = new User()
+            {
                 FirstName = "Ali",
                 LastName = "Bahadori",
                 UserName = "ABahadori79",
                 Password = "0024140697",
+            };
 
-                //Customer = new Customer()
-                //{
-                //    Id = 2,
-                //    NatioalCode = "0024140697",
-                //    HomeAddress = "Iran, Tabriz",
-                //}
-            });
-
-            modelBuilder.Entity<Food>().HasData(new Food()
+            s.Customer = new Customer()
             {
-                Id = 1,
-                Name = "Chicken Barbecue",
-                Exist = true,
-                Price = 200,
-            });
+                Id = s.Id,
+                NatioalCode = "0024140697",
+                HomeAddress = "Iran, Tabriz",
+            };
 
-
-            modelBuilder.Entity<Food>().HasData(new Food()
-            {
-                Id = 2,
-                Name = "lasagna",
-                Exist = true,
-                Price = 300,
-            });
+            modelBuilder.Entity<User>().HasData(s);
 
             modelBuilder.Entity<Restaurant>().HasData(new Restaurant()
             {
@@ -104,6 +90,30 @@ namespace DataAccessLayes
                 BeginDate = new TimeSpan(1, 5, 7, 2),
                 EndDate = new TimeSpan(2, 4, 3, 0),
             });
+
+            List<Food> foods = new List<Food>()
+            {
+                new Food() { Id = 1,Price = 200, Exist=true, Name="Chicken Barbecue", Restaurant_Id = 1 },
+                new Food() { Id = 2,Price = 300, Exist=true, Name="lasagna", Restaurant_Id = 1 },
+            };
+            Invoice invoice = new Invoice()
+            {
+                Foods = foods,
+            };
+            modelBuilder.Entity<Food>().HasData(foods);
+
+
+            List<Food> f = new List<Food>()
+            {
+                new Food() { Id = 3,Price = 400, Exist=true, Name="Chicken Barbecue", Restaurant_Id = 2 },
+                new Food() { Id = 4,Price = 500, Exist=true, Name="lasagna", Restaurant_Id = 2 },
+            };
+            Invoice i = new Invoice()
+            {
+                Foods = f,
+            };
+            modelBuilder.Entity<Food>().HasData(f);
+
 
             #endregion
         }

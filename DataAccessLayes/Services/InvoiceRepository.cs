@@ -20,9 +20,20 @@ namespace DataAccessLayes.Services
 
         public List<Invoice> GetOrders() => db.Invoices.ToList();
 
+        //public List<Invoice> GetInvoicesRestaurant(int id)
+        //{
+        //    return db.Invoices.Include(n => n.Restaurant.Foods).Where(n => n.Restaurant_Id == id).ToList();
+        //}
+
         public List<Invoice> GetInvoicesRestaurant(int id)
         {
-            return db.Invoices.Include(n => n.Restaurant.Foods).Where(n => n.Restaurant_Id == id).ToList();
+            return db.Invoices.Include(n => n.Restaurant.Foods).Where(n => n.Customer_Id == id).ToList();
         }
+
+        //public List<Invoice> PrintCustomerInvoices(int id)
+        //{
+        //    var invoices = db.GetOrders();
+        //    return invoices.Include(f => f.Foods).Where(i => i.Customer_Id == id).ToList();
+        //}
     }
 }
