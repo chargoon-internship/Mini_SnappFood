@@ -30,11 +30,15 @@
         {
             userInvoiceDataGridView = new DataGridView();
             groupBox1 = new GroupBox();
+            label1 = new Label();
             lblSum = new Label();
             lblAmount = new Label();
             btnPayment = new Button();
             btnBack = new Button();
-            label1 = new Label();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -42,6 +46,7 @@
             // userInvoiceDataGridView
             // 
             userInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            userInvoiceDataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             userInvoiceDataGridView.Location = new Point(143, 51);
             userInvoiceDataGridView.Name = "userInvoiceDataGridView";
             userInvoiceDataGridView.RowHeadersWidth = 51;
@@ -64,6 +69,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "صورتحساب";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(388, 524);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 33);
+            label1.TabIndex = 3;
+            label1.Text = "تومان";
             // 
             // lblSum
             // 
@@ -107,15 +121,38 @@
             btnBack.TabIndex = 3;
             btnBack.Text = "بازگشت به منوی رستوران";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
-            // label1
+            // Column1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(388, 524);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 33);
-            label1.TabIndex = 3;
-            label1.Text = "تومان";
+            Column1.DataPropertyName = "Name";
+            Column1.HeaderText = "نام غذا";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "Number";
+            Column2.HeaderText = "تعداد";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "Description";
+            Column3.HeaderText = "توضیحات";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 230;
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "FinalPrice";
+            Column4.HeaderText = "قیمت";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // CustomerInvoice
             // 
@@ -148,5 +185,9 @@
         private Button btnPayment;
         private Button btnBack;
         private Label label1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
     }
 }

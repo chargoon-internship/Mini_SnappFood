@@ -34,7 +34,7 @@ namespace SnappFood
             userInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
             userInvoiceDataGridView.Columns["Restaurant"].Visible = false;
             userInvoiceDataGridView.Columns["Customer"].Visible = false;
-
+            userInvoiceDataGridView.Columns["Time"].Visible = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -50,6 +50,14 @@ namespace SnappFood
         private void btnPayment_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            RestaurantPanel f = new RestaurantPanel();
+            f.FormClosed += (s, args) => this.Close();
+            f.Show();
+            this.Hide();
         }
     }
 }
