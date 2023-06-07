@@ -36,8 +36,9 @@ namespace DataAccessLayes
             modelBuilder.Entity<InvoicesFood>().HasKey(n => n.Id);
             modelBuilder.Entity<Invoice>().HasMany(n => n.Foods).WithMany(n => n.Invoices).UsingEntity<InvoicesFood>();
 
-            #region DataSeed
 
+
+            #region DataSeed
 
             User u = new User()
             {

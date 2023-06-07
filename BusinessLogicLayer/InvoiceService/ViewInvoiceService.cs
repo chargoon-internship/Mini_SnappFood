@@ -18,6 +18,16 @@ namespace BusinessLogicLayer.InvoiceService
             return invoices.Where(i => i.Restaurant_Id == id).ToList();
         }
 
+        public List<Invoice> PrintCustomerInvoices(int id)
+        {
+            var invoices = db.InvoiceRepository.GetInvoicesRestaurant(id);
+            return invoices;
+        }
+
+
+
+        
+
         //public List<Invoice> PrintCustomerInvoices(int id)
         //{
         //    var invoices = db.InvoiceRepository.GetOrders();
