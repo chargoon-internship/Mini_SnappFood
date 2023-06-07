@@ -22,10 +22,10 @@ namespace SnappFood
 
         private void CustomerInvoice_Load(object sender, EventArgs e)
         {
-            var orders = v.PrintCustomerInvoices(2);
+            var orders = v.PrintCustomerInvoices(1);
             userInvoiceDataGridView.DataSource = orders;
 
-            var totalAmount = v.PrintCustomerInvoices(2).Sum(o => o.FinalPrice);
+            var totalAmount = v.PrintCustomerInvoices(1).Sum(o => o.FinalPrice);
             lblSum.Text = totalAmount.ToString();
 
             userInvoiceDataGridView.Columns["Id"].Visible = false;
