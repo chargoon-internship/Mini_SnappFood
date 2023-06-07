@@ -14,14 +14,14 @@ namespace BusinessLogicLayer.InvoiceService
 
         public List<Invoice> PrintRestaurantInvoices(int id)
         {
-            var invoices = db.InvoiceRepository.GetOrders();
-            return invoices.Where(i => i.Restaurant_Id == id).ToList();
+            var invoices = db.InvoiceRepository.GetRestaurantInvoices(id);
+            return invoices;
         }
 
         public List<Invoice> PrintCustomerInvoices(int id)
         {
-            var invoices = db.InvoiceRepository.GetOrders();
-            return invoices.Where(i => i.Customer_Id == id).ToList();
+            var invoices = db.InvoiceRepository.GetCustomerInvoice(id);
+            return invoices;
         }
     }
 }

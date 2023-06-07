@@ -14,13 +14,12 @@ namespace SnappFood
     public partial class RestaurantPanel : Form
     {
         public User? user { get; set; }
+
         public RestaurantPanel()
         {
             //this.user=_user
             InitializeComponent();
         }
-
-
 
         private void RestaurantPanel_Load(object sender, EventArgs e)
         {
@@ -30,7 +29,7 @@ namespace SnappFood
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
             EditandAddMenu newForm = new EditandAddMenu(false);
-            newForm.user= user!;
+            newForm.user = user!;
             newForm.ShowDialog();
         }
 
@@ -38,7 +37,7 @@ namespace SnappFood
         {
             EditandAddMenu newForm = new EditandAddMenu(true);
             newForm.isEdit = true;
-            newForm.user= user!;
+            newForm.user = user!;
             newForm.ShowDialog();
         }
 
@@ -69,7 +68,7 @@ namespace SnappFood
             EditProfile editProfile = new EditProfile();
             editProfile.UserId = user!.Id;
             editProfile.ShowDialog();
-            
+
         }
     }
 }
