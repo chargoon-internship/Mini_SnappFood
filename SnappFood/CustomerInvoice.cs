@@ -22,7 +22,7 @@ namespace SnappFood
         ViewInvoiceService v = new ViewInvoiceService();
         public User? user { get; set; }
 
-       public CartItemViewModel? CartItem { get; set; }
+        public CartItemViewModel? CartItem { get; set; }
 
         public CustomerInvoice()
         {
@@ -52,14 +52,14 @@ namespace SnappFood
                 FinalPrice = CartItem.GetPrice(),
                 Time = DateTime.Now
             };
-            BuyFoodService buyFoodService=new BuyFoodService();
+            BuyFoodService buyFoodService = new BuyFoodService();
             if (buyFoodService.Create(invoice, CartItem.Foods!))
             {
                 MessageBox.Show("سفارش شما با موفقیت ثبت شد");
                 this.Close();
                 FoodPanel res = (FoodPanel)System.Windows.Forms.Application.OpenForms["FoodPanel"]!;
-                res.isBtn=true;
-                res.Close(); 
+                res.isBtn = true;
+                res.Close();
             }
             else
             {
