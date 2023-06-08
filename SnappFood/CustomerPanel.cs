@@ -15,6 +15,9 @@ namespace SnappFood
     public partial class CustomerPanel : Form
     {
         public User? user { get; set; }
+        public int RestaurantId;
+
+        List<Button> Buttons = new List<Button>();
         public CustomerPanel(User user)
         {
             this.user = user;
@@ -35,11 +38,27 @@ namespace SnappFood
                 btn.ForeColor = Color.White;
                 btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
+                btn.Click += btn_Click;
+                Buttons.Add(btn);
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
         }
+        private void btn_Click(object sender, EventArgs e)
+        {
+            CustomerPanelService customerPanel = new CustomerPanelService();
+            Button pressedButton = (Button) sender;
 
+            foreach (Button btn in Buttons)
+            {
+                if(pressedButton ==  btn)
+                {
+                    RestaurantId = customerPanel.GetRestaurantsIdByInfo(pressedButton.Text);
+                }
+            }
+            FoodPanel foodpanel = new FoodPanel(RestaurantId);
+             foodpanel.ShowDialog();
+        }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
 
@@ -54,6 +73,11 @@ namespace SnappFood
                 default:
                     break;
             }
+        }
+
+        private void Start(object sender, EventArgs e)
+        {
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

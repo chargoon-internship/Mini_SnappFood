@@ -212,13 +212,13 @@ namespace SnappFood
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-/*            if (btnDeleteAccount.Text == "حذف حساب")
-            {
-                var id = user.Id;
-                user = new User();
-                string message = profile.DeleteUser(id);
-                MessageBox.Show(message, "", MessageBoxButtons.OK);
-            }*/
+            /*            if (btnDeleteAccount.Text == "حذف حساب")
+                        {
+                            var id = user.Id;
+                            user = new User();
+                            string message = profile.DeleteUser(id);
+                            MessageBox.Show(message, "", MessageBoxButtons.OK);
+                        }*/
             Application.Restart();
 
 

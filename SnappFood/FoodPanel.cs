@@ -16,12 +16,14 @@ namespace SnappFood
 {
     public partial class FoodPanel : Form
     {
-        public FoodPanel()
+        public int Restaurant_owner;
+
+        public FoodPanel(int restaurantId)
         {
+            Restaurant_owner = restaurantId;
             InitializeComponent();
         }
         public User? MyUser { get; set; }
-        public int Restaurant_owner { get; set; }
         public List<Food>? Foods { get; set; } = new List<Food>();
         private void FoodPanel_Load(object sender, EventArgs e)
         {
