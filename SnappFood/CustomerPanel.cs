@@ -38,7 +38,7 @@ namespace SnappFood
                 btn.ForeColor = Color.White;
                 btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
-                btn.Click += btn_Click;
+                btn.Click += btn_Click!;
                 Buttons.Add(btn);
                 flowLayoutPanel1.Controls.Add(btn);
             }
@@ -47,17 +47,19 @@ namespace SnappFood
         private void btn_Click(object sender, EventArgs e)
         {
             CustomerPanelService customerPanel = new CustomerPanelService();
-            Button pressedButton = (Button) sender;
+            Button pressedButton = (Button)sender;
 
             foreach (Button btn in Buttons)
             {
-                if(pressedButton ==  btn)
+                if (pressedButton == btn)
                 {
                     RestaurantId = customerPanel.GetRestaurantsIdByInfo(pressedButton.Text);
                 }
             }
-            FoodPanel foodpanel = new FoodPanel(RestaurantId);
-             foodpanel.ShowDialog();
+            FoodPanel foodpanel = new FoodPanel();
+            foodpanel.Restaurant_owner = RestaurantId;
+            foodpanel.MyUser = user;
+            foodpanel.ShowDialog();
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -102,7 +104,7 @@ namespace SnappFood
 
         private void EditProfileBtn_Click(object sender, EventArgs e)
         {
-            EditProfile editProfile = new EditProfile(user);
+            EditProfile editProfile = new EditProfile(user!);
             editProfile.ShowDialog();
         }
 

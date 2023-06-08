@@ -34,7 +34,7 @@ namespace DataAccessLayes
             modelBuilder.Entity<Invoice>().HasOne(n => n.Restaurant).WithMany(n => n.Invoices).HasForeignKey(n => n.Restaurant_Id).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<User>().HasIndex(n => n.UserName).IsUnique(true);
             modelBuilder.Entity<InvoicesFood>().HasKey(n => n.Id);
-            modelBuilder.Entity<Invoice>().HasMany(n => n.Foods).WithMany(n => n.Invoices).UsingEntity<InvoicesFood>();
+            modelBuilder.Entity<Invoice>().HasMany(n => n.Foods).WithMany(n => n.Invoices).UsingEntity<InvoicesFood>().HasIndex(n => new {n.FoodId,n.InvoiceId}).IsUnique(true);
 
             #region DataSeed
 
