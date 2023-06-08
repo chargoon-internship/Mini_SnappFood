@@ -81,10 +81,10 @@
             // 
             // RestaurantPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleDimensions = new SizeF(6F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1382, 753);
+            ClientSize = new Size(1370, 749);
             Controls.Add(button1);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
@@ -96,6 +96,7 @@
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "پنل رستوران";
+            Load += RestaurantPanel_Load_1;
             ResumeLayout(false);
         }
 

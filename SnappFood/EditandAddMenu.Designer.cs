@@ -186,7 +186,6 @@
             dgMenu.Name = "dgMenu";
             dgMenu.Size = new Size(893, 408);
             dgMenu.TabIndex = 0;
-            dgMenu.CellContentClick += dgMenu_CellContentClick;
             // 
             // FoodID
             // 

@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace SnappFood
 {
     public partial class RestaurantInvoice : Form
     {
         ViewInvoiceService v = new ViewInvoiceService();
+        public User? user { get; set; }
 
-        public RestaurantInvoice()
+        public RestaurantInvoice(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -37,7 +40,7 @@ namespace SnappFood
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel();
+            RestaurantPanel f = new RestaurantPanel(user);
             f.ShowDialog();
         }
 
@@ -61,8 +64,6 @@ namespace SnappFood
 
         }
 
-        private void RestaurantInvoice_Load_1(object sender, EventArgs e)
-        {
-        }
+ 
     }
 }
