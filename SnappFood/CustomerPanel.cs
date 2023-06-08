@@ -17,6 +17,8 @@ namespace SnappFood
         public User? user { get; set; }
         public int RestaurantId;
 
+        public bool isExit = false;
+
         List<Button> Buttons = new List<Button>();
         public CustomerPanel(User user)
         {
@@ -64,16 +66,23 @@ namespace SnappFood
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
 
-            if (e.CloseReason == CloseReason.WindowsShutDown) return;
-
-            // Confirm user wants to close
-            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            if (!isExit)
             {
-                case DialogResult.No:
-                    e.Cancel = true;
-                    break;
-                default:
-                    break;
+                if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+                // Confirm user wants to close
+                switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+                {
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                base.OnFormClosing(e);
             }
         }
 

@@ -219,9 +219,17 @@ namespace SnappFood
                             string message = profile.DeleteUser(id);
                             MessageBox.Show(message, "", MessageBoxButtons.OK);
                         }*/
+            if(user.Customer!= null)
+            {
+                var res = (CustomerPanel)System.Windows.Forms.Application.OpenForms["CustomerPanel"]!;
+                res.isExit= true;
+            }
+            else
+            {
+                var res = (RestaurantPanel)System.Windows.Forms.Application.OpenForms["RestaurantPanel"]!;
+                res.isExit = true;
+            }
             Application.Restart();
-
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
