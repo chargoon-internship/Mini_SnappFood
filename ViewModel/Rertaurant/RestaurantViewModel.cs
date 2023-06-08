@@ -20,7 +20,7 @@ namespace ViewModel.Rertaurant
         public override string ToString()
         {
             /*return $"{RestaurantName}({Address})\n ({RestaurantScore})\n{RestaurantType}";*/
-            return $"{RestaurantName}({Address})\n";
+            return $"{RestaurantName}({Address})";
         }
     }
 }
