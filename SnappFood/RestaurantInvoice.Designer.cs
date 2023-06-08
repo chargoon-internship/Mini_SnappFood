@@ -173,7 +173,6 @@
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "فاکتور رستوران";
-            Load += RestaurantInvoice_Load_1;
             ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

@@ -9,16 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace SnappFood
 {
     public partial class CustomerInvoice : Form
     {
         ViewInvoiceService v = new ViewInvoiceService();
+        public User? user { get; set; }
 
-        public CustomerInvoice()
+        public CustomerInvoice(User? user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void CustomerInvoice_Load(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace SnappFood
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel();
+            RestaurantPanel f = new RestaurantPanel(user);
             f.FormClosed += (s, args) => this.Close();
             f.Show();
             this.Hide();

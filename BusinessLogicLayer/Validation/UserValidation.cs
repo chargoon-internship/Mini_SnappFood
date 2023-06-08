@@ -10,7 +10,7 @@ namespace BusinessLogicLayer
 {
     public static class UserValidation
     {
-        public static string Validation(User user,bool isEdit) 
+        public static string Validation(User user, bool isEdit)
         {
 
             bool chFirstName = RegexValidation.CheckRegex("Name", user.FirstName);
@@ -34,9 +34,9 @@ namespace BusinessLogicLayer
                 }
             }
 
-            if (user.Customer!=null)
+            if (user.Customer != null)
             {
-               
+
                 bool chNationalCode = RegexValidation.CheckRegex("NationalCode", user.Customer.NatioalCode);
                 bool chAddress = RegexValidation.CheckRegex("Address", user.Customer.HomeAddress);
                 if (!chNationalCode)
@@ -48,27 +48,27 @@ namespace BusinessLogicLayer
             {
                 bool chNameRestaurant = RegexValidation.CheckRegex("UserName", user.Restaurant.NameOfRestaurant);
                 bool chAddress = RegexValidation.CheckRegex("Address", user.Restaurant.Address);
-               if (!chNameRestaurant)
+                if (!chNameRestaurant)
                     return "نام رستوران معتبر نمی باشد";
-               else if (!chAddress)
+                else if (!chAddress)
                     return "آدرس معتبر نمی باشد";
 
             }
-/*
-            if (user.UserName == "" || user.Password == "")
-                return "لطفا نام کاربری و رمز را وارد کنید.";
-            else if (user.Customer != null && user.Customer.HomeAddress == "")
-            {
-                return "لطفا آدرس را وارد کنید";
-            }
-            else if (user.Customer == null && (user.Restaurant.NameOfRestaurant == "" || user.Restaurant.Address == ""))
-            {
-                return "لطفا نام رستوران و آدرس را وارد کنید";
-            }
-            else if (user.Customer == null && (user.Restaurant.NameOfRestaurant == "" || user.Restaurant.Address == ""))
-            {
-                return "لطفا نام رستوران و آدرس را وارد کنید";
-            }*/
+            /*
+                        if (user.UserName == "" || user.Password == "")
+                            return "لطفا نام کاربری و رمز را وارد کنید.";
+                        else if (user.Customer != null && user.Customer.HomeAddress == "")
+                        {
+                            return "لطفا آدرس را وارد کنید";
+                        }
+                        else if (user.Customer == null && (user.Restaurant.NameOfRestaurant == "" || user.Restaurant.Address == ""))
+                        {
+                            return "لطفا نام رستوران و آدرس را وارد کنید";
+                        }
+                        else if (user.Customer == null && (user.Restaurant.NameOfRestaurant == "" || user.Restaurant.Address == ""))
+                        {
+                            return "لطفا نام رستوران و آدرس را وارد کنید";
+                        }*/
             if (!chFirstName)
                 return "نام  ترکیبی از حروف می باشد.";
             else if (!chLastName)
@@ -82,5 +82,7 @@ namespace BusinessLogicLayer
             else return "موفقیت";
 
         }
+
+
     }
 }

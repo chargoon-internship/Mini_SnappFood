@@ -7,7 +7,7 @@ using DataAccessLayes;
 using Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
-namespace BusinessLogicLayer.CustomerService
+namespace BusinessLogicLayer
 {
 
     public class EditProfileService

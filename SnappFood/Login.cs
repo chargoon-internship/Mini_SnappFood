@@ -204,7 +204,7 @@ namespace SnappFood
                 else
                 {
                     User user = loginService.GetUser(txt_userLogin.Text);
-                    RestaurantPanel restaurantPanel = new RestaurantPanel();
+                    RestaurantPanel restaurantPanel = new RestaurantPanel(user);
                     restaurantPanel.user = user;
                     this.Hide();
                     restaurantPanel.ShowDialog();
