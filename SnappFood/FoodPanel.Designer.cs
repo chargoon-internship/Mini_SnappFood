@@ -79,6 +79,7 @@
             this.Controls.Add(this.brnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FoodPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FoodPanel";
             this.Load += new System.EventHandler(this.FoodPanel_Load);
             this.ResumeLayout(false);

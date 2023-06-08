@@ -1,6 +1,7 @@
 ﻿using BusinessLogicLayer.FoodService;
 using DataAccessLayes;
 using Entities;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,17 @@ namespace SnappFood
 {
     public partial class FoodPanel : Form
     {
-        int _restaurantId;
 
-        public FoodPanel(int restaurantId)
+        public FoodPanel()
         {
-            _restaurantId = restaurantId;
             InitializeComponent();
         }
         public User? MyUser { get; set; }
         public int Restaurant_owner { get; set; }
         public List<Food>? Foods { get; set; } = new List<Food>();
+
+        public bool isBtn=false;
+
         private void FoodPanel_Load(object sender, EventArgs e)
         {
             int top = 10;
@@ -42,21 +44,49 @@ namespace SnappFood
         {
             CartItemViewModel cartItem = new CartItemViewModel();
             cartItem.Foods = Foods;
-            Invoice invoice = new Invoice();
-
-            cartItem.Customer = MyUser!.Customer;
+            cartItem.CustomerId = MyUser.Id;
             cartItem.RestaurantId = Restaurant_owner;
-            MessageBox.Show(cartItem.GetPrice().ToString());
-            //صفحه نمایش فاکتور از این نمایش داده می شود
+            if (cartItem.Foods!.Count > 0)
+            {
+                CustomerInvoice customerInvoice = new CustomerInvoice();
+                customerInvoice.CartItem = cartItem;
+                customerInvoice.user = MyUser;
+                customerInvoice.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("شما آیتمی را برای سفارش اضافه نکردید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (isBtn == false)
+            {
+                if (MessageBox.Show("آیا مطمئن هستنید که می خواهید از این صفحه خارج شوید با این کار تمام سبد خرید شما پاک می شود", "اخطار", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    base.OnFormClosing(e);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                base.OnFormClosing(e);
+            }
+
+           
         }
 
         private void brnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("آیا مطمئن هستنید که می خواهید از این صفحه خارج شوید با این کار تمام سبد خرید شما پاک می شود", "اخطار", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                isBtn= true;
                 this.Close();
             }
         }
-
     }
 }
