@@ -27,7 +27,7 @@ namespace BusinessLogicLayer.SignUpAndLoginService
                     {
                         isCustomer = false;
                     }
-                    return ("شما با موفقیت وارد شددید", isCustomer,true);
+                    return ("شما با موفقیت وارد شدید", isCustomer,true);
                 }
                 else
                 {
