@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer.RestaurantService;
+
 using Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
@@ -18,11 +19,12 @@ namespace SnappFood
         EditMenuService menu = new EditMenuService();
         public bool isEdit { get; set; }
         public User user { get; set; }
-        public EditandAddMenu(bool isEdit)
+        public EditandAddMenu(bool isEdit, User user)
         {
-            this.isEdit=isEdit;
-            //this.user=_user
             InitializeComponent();
+
+            this.isEdit = isEdit;
+            this.user = user;
             if (isEdit)
             {
                 ShowButtonForEdit();
@@ -43,7 +45,7 @@ namespace SnappFood
         }
         private void BindGrid()
         {
-            var foods = menu.PrintAllMenu(user.Id);
+            var foods = menu.PrintAllMenu(user.Restaurant.Id);
             dgMenu.AutoGenerateColumns = false;
             dgMenu.DataSource = foods;
         }
@@ -69,9 +71,9 @@ namespace SnappFood
                 var IdOfFood = int.Parse(txtID.Text);
                 List<string> result = new List<string>();
 
-                    food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = user.Id, Exist = isExist };
-                    result = menu.UpdateMenu(food);
-                    
+                food = new Food { Id = IdOfFood, Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
+                result = menu.UpdateMenu(food, user.Restaurant.Id);
+
                 if (result[0] != "موفقیت")
                 {
                     MessageBox.Show(result[0], "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -87,10 +89,9 @@ namespace SnappFood
             }
             else
             {
-                
-                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = user.Id, Exist = isExist };
-                string result=menu.AddMenu(food, isEdit);
-                if (result!= "موفقیت")
+                food = new Food { Price = priceOfFood, Name = name, Restaurant_Id = user.Restaurant.Id, Exist = isExist };
+                string result = menu.AddMenu(food, isEdit, user.Restaurant.Id);
+                if (result != "موفقیت")
                 {
                     MessageBox.Show(result, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -101,7 +102,7 @@ namespace SnappFood
                 }
             }
             BindGrid();
-  
+
         }
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
@@ -122,7 +123,7 @@ namespace SnappFood
             txtFood.Text = food.Name.ToString();
             chBoxExistence.Checked = food.Exist;
             txtID.Text = IdOfFood.ToString();
-            
+
         }
         private void btnDeletMenu_Click(object sender, EventArgs e)
         {
@@ -130,7 +131,7 @@ namespace SnappFood
             {
                 int IdOfFood = (int)dgMenu.CurrentRow.Cells[0].Value;
 
-                string name = dgMenu.CurrentRow.Cells[1].Value.ToString()!;
+                string name = dgMenu.CurrentRow.Cells[1].Value.ToString();
                 if (MessageBox.Show($"اطمینان دارید؟ {name} ایا از حذف ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var result = menu.DeleteMenuById(IdOfFood);
@@ -147,9 +148,6 @@ namespace SnappFood
             this.Close();
         }
 
-        private void dgMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }

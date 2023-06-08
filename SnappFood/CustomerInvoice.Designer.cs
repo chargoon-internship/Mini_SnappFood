@@ -30,10 +30,15 @@
         {
             userInvoiceDataGridView = new DataGridView();
             groupBox1 = new GroupBox();
+            label1 = new Label();
             lblSum = new Label();
             lblAmount = new Label();
             btnPayment = new Button();
             btnBack = new Button();
+            FoodNames = new DataGridViewTextBoxColumn();
+            Number = new DataGridViewTextBoxColumn();
+            Description = new DataGridViewTextBoxColumn();
+            FinalPrice = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -41,15 +46,17 @@
             // userInvoiceDataGridView
             // 
             userInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userInvoiceDataGridView.Location = new Point(41, 51);
+            userInvoiceDataGridView.Columns.AddRange(new DataGridViewColumn[] { FoodNames, Number, Description, FinalPrice });
+            userInvoiceDataGridView.Location = new Point(143, 51);
             userInvoiceDataGridView.Name = "userInvoiceDataGridView";
             userInvoiceDataGridView.RowHeadersWidth = 51;
             userInvoiceDataGridView.RowTemplate.Height = 29;
-            userInvoiceDataGridView.Size = new Size(921, 470);
+            userInvoiceDataGridView.Size = new Size(700, 470);
             userInvoiceDataGridView.TabIndex = 0;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(lblSum);
             groupBox1.Controls.Add(lblAmount);
             groupBox1.Controls.Add(userInvoiceDataGridView);
@@ -63,11 +70,20 @@
             groupBox1.Text = "صورتحساب";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(388, 524);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 33);
+            label1.TabIndex = 3;
+            label1.Text = "تومان";
+            // 
             // lblSum
             // 
             lblSum.AutoSize = true;
             lblSum.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSum.Location = new Point(235, 524);
+            lblSum.Location = new Point(316, 524);
             lblSum.Name = "lblSum";
             lblSum.Size = new Size(66, 33);
             lblSum.TabIndex = 2;
@@ -77,7 +93,7 @@
             // 
             lblAmount.AutoSize = true;
             lblAmount.Font = new Font("IRANSansWeb(FaNum)", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAmount.Location = new Point(41, 524);
+            lblAmount.Location = new Point(143, 524);
             lblAmount.Name = "lblAmount";
             lblAmount.RightToLeft = RightToLeft.No;
             lblAmount.Size = new Size(167, 33);
@@ -105,6 +121,39 @@
             btnBack.TabIndex = 3;
             btnBack.Text = "بازگشت به منوی رستوران";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
+            // FoodNames
+            // 
+            FoodNames.DataPropertyName = "Foods";
+            FoodNames.HeaderText = "نام غذا";
+            FoodNames.MinimumWidth = 6;
+            FoodNames.Name = "FoodNames";
+            FoodNames.Width = 200;
+            // 
+            // Number
+            // 
+            Number.DataPropertyName = "Number";
+            Number.HeaderText = "تعداد";
+            Number.MinimumWidth = 6;
+            Number.Name = "Number";
+            Number.Width = 125;
+            // 
+            // Description
+            // 
+            Description.DataPropertyName = "Description";
+            Description.HeaderText = "توضیحات";
+            Description.MinimumWidth = 6;
+            Description.Name = "Description";
+            Description.Width = 230;
+            // 
+            // FinalPrice
+            // 
+            FinalPrice.DataPropertyName = "FinalPrice";
+            FinalPrice.HeaderText = "قیمت";
+            FinalPrice.MinimumWidth = 6;
+            FinalPrice.Name = "FinalPrice";
+            FinalPrice.Width = 125;
             // 
             // CustomerInvoice
             // 
@@ -120,6 +169,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "CustomerInvoice";
             RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "فاکتور مشتری";
             Load += CustomerInvoice_Load;
             ((System.ComponentModel.ISupportInitialize)userInvoiceDataGridView).EndInit();
@@ -136,5 +186,10 @@
         private Label lblAmount;
         private Button btnPayment;
         private Button btnBack;
+        private Label label1;
+        private DataGridViewTextBoxColumn FoodNames;
+        private DataGridViewTextBoxColumn Number;
+        private DataGridViewTextBoxColumn Description;
+        private DataGridViewTextBoxColumn FinalPrice;
     }
 }

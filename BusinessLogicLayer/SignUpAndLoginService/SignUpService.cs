@@ -1,4 +1,4 @@
-﻿using DataAccessLayes;
+﻿﻿using DataAccessLayes;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -23,12 +23,12 @@ namespace BusinessLogicLayer.SignUpAndLoginService
                 {
                     return ("مشکلی پیش آمده است");
                 }
-            }
+        }
             else
             {
                 return validation;
             }
-        }
+}
 
         public bool Create(User user)
         {

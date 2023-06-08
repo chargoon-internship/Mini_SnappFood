@@ -13,6 +13,8 @@ namespace SnappFood
             ApplicationConfiguration.Initialize();
 
             Application.Run(new Login());
+            //Application.Run(new CustomerInvoice());
+            //Application.Run(new RestaurantInvoice());
         }
     }
 }

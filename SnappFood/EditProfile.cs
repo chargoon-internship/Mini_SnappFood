@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogicLayer;
 using BusinessLogicLayer.CustomerService;
 using Entities;
 
@@ -15,13 +16,12 @@ namespace SnappFood
     public partial class EditProfile : Form
     {
         EditProfileService profile = new EditProfileService();
+        public User user;
 
-        public User user { get; set; }
 
-        bool isCustomer = true;
-        public int UserId;
-        public EditProfile()
+        public EditProfile(User user)
         {
+            this.user = user;
             InitializeComponent();
 
         }
@@ -46,15 +46,15 @@ namespace SnappFood
             lblTime.Visible = false;
             lblNameRestaurant.Visible = false;
             txtNameRestaurant.Visible = false;
+            btnDeleteAccount.Visible = true;
             txtNationalCode.Visible = false;
 
 
         }
         private void ShowEditPage()
         {
-            //ShowInformation();
             lblWelcome.Text = "ویرایش پروفایل";
-            btnDeleteAccount.Text = "حذف حساب";
+            //btnDeleteAccount.Text = "حذف حساب";
             btnEdit.Text = "ثبت اطلاعات";
             btnExit.Text = "بازگشت به حساب";
             txtFirstName.Visible = true;
@@ -63,9 +63,8 @@ namespace SnappFood
             lblLastName.Visible = true;
             txtAddress.Visible = true;
             lblAddress.Visible = true;
-            //if (user.Customer != null)
 
-            if (isCustomer)
+            if (user.Customer != null)
                 ShowCustomerProfile();
             else
                 ShowRestaurantProfile();
@@ -73,28 +72,25 @@ namespace SnappFood
         }
         private void ShowInformation()
         {
-            User user = profile.FindUserById(UserId);
 
             txtUserName.Text = user.UserName;
             txtPassWord.Text = user.Password;
             txtFirstName.Text = user.FirstName;
             txtLastName.Text = user.LastName;
-            //if (user.Customer != null)
-
-            if (isCustomer)
+            if (user.Customer != null)
             {
-                var Customer = profile.FindCustomer(UserId);
-                txtNationalCode.Text = Customer.NatioalCode;
-                txtAddress.Text = Customer.HomeAddress;
+
+                txtNationalCode.Text = user.Customer.NatioalCode;
+                txtAddress.Text = user.Customer.HomeAddress;
 
             }
             else
             {
-                var restaurant = profile.FindRestaurant(UserId);
-                txtNameRestaurant.Text = restaurant.NameOfRestaurant;
-                txtAddress.Text = restaurant.Address;
-                TimeBegin.Text = restaurant.BeginDate.ToString();
-                TimeEnd.Text = restaurant.EndDate.ToString();
+
+                txtNameRestaurant.Text = user.Restaurant.NameOfRestaurant;
+                txtAddress.Text = user.Restaurant.Address;
+                TimeBegin.Text = user.Restaurant.BeginDate.ToString();
+                TimeEnd.Text = user.Restaurant.EndDate.ToString();
             }
         }
         private void ShowCustomerProfile()
@@ -107,9 +103,10 @@ namespace SnappFood
             lblTime.Visible = false;
             lblNameRestaurant.Visible = false;
             txtNameRestaurant.Visible = false;
-            btnExit.Location = new Point(239, 380);
-            btnEdit.Location = new Point(24, 380);
-            btnDeleteAccount.Location = new Point(131, 380);
+            btnExit.Location = new Point(180, 380);
+            btnEdit.Location = new Point(80, 380);
+            //btnDeleteAccount.Location = new Point(131, 380);
+            btnDeleteAccount.Visible = false;
         }
         private void ShowRestaurantProfile()
         {
@@ -122,8 +119,10 @@ namespace SnappFood
             lblNameRestaurant.Visible = true;
             txtNameRestaurant.Visible = true;
             btnDeleteAccount.Location = new Point(131, 407);
-            btnEdit.Location = new Point(24, 407);
-            btnExit.Location = new Point(239, 407);
+            btnEdit.Location = new Point(80, 407);
+            btnExit.Location = new Point(190, 407);
+            btnDeleteAccount.Visible = false;
+
 
         }
 
@@ -140,21 +139,20 @@ namespace SnappFood
                 var firstName = txtFirstName.Text;
                 var lastName = txtLastName.Text;
                 var address = txtAddress.Text;
-                User user = new User
+                User userUpdated = new User
                 {
-                    Id = UserId,
+                    Id = user.Id,
                     UserName = username,
                     Password = password,
                     FirstName = firstName,
                     LastName = lastName,
                 };
-                //if (user.Customer != null)
-                if (isCustomer)
+                if (user.Customer != null)
                 {
                     var nationalCode = txtNationalCode.Text;
-                    user.Customer = new Customer
+                    userUpdated.Customer = new Customer
                     {
-                        Id = UserId,
+                        Id = user.Id,
                         HomeAddress = address,
                         NatioalCode = nationalCode
                     };
@@ -165,16 +163,16 @@ namespace SnappFood
                     var TmBegin = TimeBegin.Text;
                     var TmEnd = TimeEnd.Text;
                     var nameOfRestaurant = txtNameRestaurant.Text;
-                    user.Restaurant = new Restaurant
+                    userUpdated.Restaurant = new Restaurant
                     {
-                        Id = UserId,
+                        Id = user.Id,
                         Address = address,
                         BeginDate = TimeSpan.Parse(TmBegin),
                         EndDate = TimeSpan.Parse(TmEnd),
                         NameOfRestaurant = nameOfRestaurant
                     };
                 }
-                var result = profile.UpdateProfile(user);
+                var result = profile.UpdateProfile(userUpdated);
 
                 if (result[0] != "موفقیت")
                 {
@@ -184,6 +182,22 @@ namespace SnappFood
                 {
                     MessageBox.Show(result[1], "اعلام", MessageBoxButtons.OK);
                     ShowProfilePage();
+                    user.FirstName = userUpdated.FirstName;
+                    user.LastName = userUpdated.LastName;
+                    user.UserName = userUpdated.UserName;
+                    user.Password = userUpdated.Password;
+                    if (user.Customer != null)
+                    {
+                        user.Customer.NatioalCode = userUpdated.Customer.NatioalCode;
+                        user.Customer.HomeAddress = userUpdated.Customer.HomeAddress;
+                    }
+                    else
+                    {
+                        user.Restaurant.Address = userUpdated.Restaurant.Address;
+                        user.Restaurant.NameOfRestaurant = userUpdated.Restaurant.NameOfRestaurant;
+                        user.Restaurant.BeginDate = userUpdated.Restaurant.BeginDate;
+                        user.Restaurant.EndDate = userUpdated.Restaurant.EndDate;
+                    }
                 }
 
             }
@@ -198,21 +212,14 @@ namespace SnappFood
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            if (btnDeleteAccount.Text == "حذف حساب")
-            {
-                string message = profile.DeleteUser(UserId);
-                MessageBox.Show(message, "", MessageBoxButtons.OK);
-            }
-            /*            foreach (Form form in Application.OpenForms)
+            /*            if (btnDeleteAccount.Text == "حذف حساب")
                         {
-                            if (form.Text !="Login")
-                            {
-                                form.Close();
-                            }
+                            var id = user.Id;
+                            user = new User();
+                            string message = profile.DeleteUser(id);
+                            MessageBox.Show(message, "", MessageBoxButtons.OK);
                         }*/
-
-            /*            // Bring the first form to the front
-                        SnappFood.Login.BringToFront()*/
+            Application.Restart();
 
 
         }
@@ -223,8 +230,6 @@ namespace SnappFood
                 ShowProfilePage();
             else
                 this.Close();
-
-
 
         }
     }

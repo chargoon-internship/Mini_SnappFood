@@ -45,5 +45,33 @@ namespace BusinessLogicLayer.CustomerService
             return result;
         }
 
+        public int GetRestaurantsIdByInfo(string restaurantInfo)
+        {
+            string restaurantName = "";
+
+            foreach(char character in restaurantInfo)
+            {
+                if(character != '(')
+                {
+                    restaurantName += character;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            List<Restaurant> restaurants = unitOfWork.RestaurantRepository.GetByName(restaurantName);
+
+            foreach(Restaurant restaurant in restaurants)
+            {
+                if(restaurant.NameOfRestaurant == restaurantName)
+                {
+                    return restaurant.Id;
+                }
+            }
+            return 0;
+        }
+
     }
 }

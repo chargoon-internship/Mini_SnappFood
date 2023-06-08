@@ -32,9 +32,9 @@ namespace BusinessLogicLayer.RestaurantService
             }
 
         }
-        public string AddMenu(Food food, bool isEdit)
+        public string AddMenu(Food food, bool isEdit, int Id)
         {
-            string validation = FoodValidation.Validation(food, isEdit);
+            string validation = FoodValidation.Validation(food, isEdit, Id);
 
             if (validation == "موفقیت")
             {
@@ -47,11 +47,11 @@ namespace BusinessLogicLayer.RestaurantService
 
 
         }
-        public List<string> UpdateMenu(Food food)
+        public List<string> UpdateMenu(Food food, int Id)
         {
             var results = new List<string>();
             bool isEdit = true;
-            string validation = FoodValidation.Validation(food, isEdit);
+            string validation = FoodValidation.Validation(food, isEdit, Id);
             results.Add(validation);
             if (validation == "موفقیت")
             {

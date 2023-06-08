@@ -10,11 +10,11 @@ namespace BusinessLogicLayer.Enum
     public static class RegexValidation
     {
 
-        public const string Name = "^[a-zA-Z]+(?: [a-zA-Z]+)*$";
-        public const string Address = "^[a-zA-Z0-9\\s]+$";
+        public const string Name = "^[\\p{L}\\s]+$|[\\u0600-\\u06FF\\p{L}\\s]+$";
+        public const string Address = "^[\\p{L}\\d\\s]+$|[\\u0600-\\u06FF\\p{L}\\d\\s]+$";
         public const string NationalCode = "^[0-9]{10}$";
         public const string UserName = "^[a-zA-Z0-9_-]{3,16}$";
-        public const string Password = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@])[A-Za-z\\d@]{8,}$";
+        public const string Password = "^(?=.*[a-zA-Z0-9@])(?=.*[a-zA-Z ])[a-zA-Z0-9@ ]{8,}$";
 
         public static bool CheckRegex(string pattern, string target)
         {
@@ -36,6 +36,7 @@ namespace BusinessLogicLayer.Enum
                 case "PassWord":
                     rg = new Regex(Password);
                     break;
+
             }
 
             if (rg != null)

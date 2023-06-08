@@ -16,8 +16,11 @@ namespace SnappFood
 {
     public partial class FoodPanel : Form
     {
-        public FoodPanel()
+        int _restaurantId;
+
+        public FoodPanel(int restaurantId)
         {
+            _restaurantId = restaurantId;
             InitializeComponent();
         }
         public User? MyUser { get; set; }
