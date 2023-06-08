@@ -51,9 +51,9 @@ namespace SnappFood
         {
             if (MessageBox.Show("آیا مطمئن هستنید که می خواهید از این صفحه خارج شوید با این کار تمام سبد خرید شما پاک می شود", "اخطار", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                MessageBox.Show("Clear");
-                //کاربر به صفحه نمایش رستوران ها انتقال داده می شود
+                this.Close();
             }
         }
+
     }
 }

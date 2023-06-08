@@ -32,9 +32,17 @@ namespace SnappFood
                 btn.ForeColor = Color.White;
                 btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
+                btn.Click += Btn_Click;
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
+        }
+
+        private void Btn_Click(object? sender, EventArgs e)
+        {
+            FoodPanel foodPanel = new FoodPanel();
+            foodPanel.MyUser = user;
+            foodPanel.ShowDialog();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
