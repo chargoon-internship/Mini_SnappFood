@@ -19,7 +19,7 @@ namespace SnappFood
         public User user { get; set; }
 
         bool isCustomer = true;
-        public int UserId;
+        public int UserId=2;
         public EditProfile()
         {
             InitializeComponent();
@@ -225,6 +225,11 @@ namespace SnappFood
                 this.Close();
 
 
+
+        }
+
+        private void EditProfile_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
