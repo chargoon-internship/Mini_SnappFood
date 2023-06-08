@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SnappFood
 {
@@ -38,6 +39,8 @@ namespace SnappFood
             userInvoiceDataGridView.Columns["Restaurant"].Visible = false;
             userInvoiceDataGridView.Columns["Customer"].Visible = false;
             userInvoiceDataGridView.Columns["Time"].Visible = false;
+
+            userInvoiceDataGridView.AutoGenerateColumns = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
