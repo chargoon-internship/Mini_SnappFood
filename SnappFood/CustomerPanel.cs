@@ -19,14 +19,17 @@ namespace SnappFood
         {
             this.user = user;
             InitializeComponent();
+
+            UserNamelbl.Text = user.UserName + "عزیز خوش آمدید";
+
             CustomerPanelService customerPanel = new CustomerPanelService();
             List<string> buttonInfo = customerPanel.ShowRestaurantsData(Searchtxt.Text);
 
             foreach (string info in buttonInfo)
             {
                 Button btn = new Button();
-                btn.Width = 450;
-                btn.Height = 200;
+                btn.Width = 655;
+                btn.Height = 300;
                 btn.Name = String.Format(info);
                 btn.Text = String.Format(info);
                 btn.ForeColor = Color.White;
