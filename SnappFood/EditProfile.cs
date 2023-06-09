@@ -28,12 +28,6 @@ namespace SnappFood
         private void ShowProfilePage()
         {
             lblWelcome.Text = "مشاهده پروفایل";
-            btnDeleteAccount.Text = "خروج از حساب";
-            btnEdit.Text = "ویرایش اطلاعات";
-            btnExit.Text = "بازگشت";
-            btnDeleteAccount.Location = new Point(131, 250);
-            btnEdit.Location = new Point(24, 250);
-            btnExit.Location = new Point(239, 250);
             txtFirstName.Visible = false;
             txtLastName.Visible = false;
             lblFirstName.Visible = false;
@@ -48,21 +42,26 @@ namespace SnappFood
             txtNameRestaurant.Visible = false;
             btnDeleteAccount.Visible = true;
             txtNationalCode.Visible = false;
+            btnExit.Visible = true;
+            btnEdit.Visible = true;
+            btnSubmit.Visible = false;
+            lblCode.Visible = false;
 
 
         }
         private void ShowEditPage()
         {
             lblWelcome.Text = "ویرایش پروفایل";
-            //btnDeleteAccount.Text = "حذف حساب";
-            btnEdit.Text = "ثبت اطلاعات";
-            btnExit.Text = "بازگشت به حساب";
             txtFirstName.Visible = true;
             txtLastName.Visible = true;
             lblFirstName.Visible = true;
             lblLastName.Visible = true;
             txtAddress.Visible = true;
             lblAddress.Visible = true;
+            btnExit.Visible = false;
+            btnEdit.Visible = false;
+            btnSubmit.Visible = true;
+            btnDeleteAccount.Visible = false;
 
             if (user.Customer != null)
                 ShowCustomerProfile();
@@ -103,10 +102,6 @@ namespace SnappFood
             lblTime.Visible = false;
             lblNameRestaurant.Visible = false;
             txtNameRestaurant.Visible = false;
-            btnExit.Location = new Point(180, 380);
-            btnEdit.Location = new Point(80, 380);
-            //btnDeleteAccount.Location = new Point(131, 380);
-            btnDeleteAccount.Visible = false;
         }
         private void ShowRestaurantProfile()
         {
@@ -118,89 +113,14 @@ namespace SnappFood
             lblTime.Visible = true;
             lblNameRestaurant.Visible = true;
             txtNameRestaurant.Visible = true;
-            btnDeleteAccount.Location = new Point(131, 407);
-            btnEdit.Location = new Point(80, 407);
-            btnExit.Location = new Point(190, 407);
-            btnDeleteAccount.Visible = false;
 
 
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Text == "ویرایش اطلاعات")
-            {
-                ShowEditPage();
-            }
-            else
-            {
-                var username = txtUserName.Text;
-                var password = txtPassWord.Text;
-                var firstName = txtFirstName.Text;
-                var lastName = txtLastName.Text;
-                var address = txtAddress.Text;
-                User userUpdated = new User
-                {
-                    Id = user.Id,
-                    UserName = username,
-                    Password = password,
-                    FirstName = firstName,
-                    LastName = lastName,
-                };
-                if (user.Customer != null)
-                {
-                    var nationalCode = txtNationalCode.Text;
-                    userUpdated.Customer = new Customer
-                    {
-                        Id = user.Id,
-                        HomeAddress = address,
-                        NatioalCode = nationalCode
-                    };
 
-                }
-                else
-                {
-                    var TmBegin = TimeBegin.Text;
-                    var TmEnd = TimeEnd.Text;
-                    var nameOfRestaurant = txtNameRestaurant.Text;
-                    userUpdated.Restaurant = new Restaurant
-                    {
-                        Id = user.Id,
-                        Address = address,
-                        BeginDate = TimeSpan.Parse(TmBegin),
-                        EndDate = TimeSpan.Parse(TmEnd),
-                        NameOfRestaurant = nameOfRestaurant
-                    };
-                }
-                var result = profile.UpdateProfile(userUpdated);
-
-                if (result[0] != "موفقیت")
-                {
-                    MessageBox.Show(result[0], "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show(result[1], "اعلام", MessageBoxButtons.OK);
-                    ShowProfilePage();
-                    user.FirstName = userUpdated.FirstName;
-                    user.LastName = userUpdated.LastName;
-                    user.UserName = userUpdated.UserName;
-                    user.Password = userUpdated.Password;
-                    if (user.Customer != null)
-                    {
-                        user.Customer.NatioalCode = userUpdated.Customer.NatioalCode;
-                        user.Customer.HomeAddress = userUpdated.Customer.HomeAddress;
-                    }
-                    else
-                    {
-                        user.Restaurant.Address = userUpdated.Restaurant.Address;
-                        user.Restaurant.NameOfRestaurant = userUpdated.Restaurant.NameOfRestaurant;
-                        user.Restaurant.BeginDate = userUpdated.Restaurant.BeginDate;
-                        user.Restaurant.EndDate = userUpdated.Restaurant.EndDate;
-                    }
-                }
-
-            }
+            ShowEditPage();
         }
 
         private void EditProfile_Load(object sender, EventArgs e)
@@ -219,10 +139,10 @@ namespace SnappFood
                             string message = profile.DeleteUser(id);
                             MessageBox.Show(message, "", MessageBoxButtons.OK);
                         }*/
-            if(user.Customer!= null)
+            if (user.Customer != null)
             {
                 var res = (CustomerPanel)System.Windows.Forms.Application.OpenForms["CustomerPanel"]!;
-                res.isExit= true;
+                res.isExit = true;
             }
             else
             {
@@ -239,6 +159,81 @@ namespace SnappFood
             else
                 this.Close();
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var username = txtUserName.Text;
+            var password = txtPassWord.Text;
+            var firstName = txtFirstName.Text;
+            var lastName = txtLastName.Text;
+            var address = txtAddress.Text;
+            User userUpdated = new User
+            {
+                Id = user.Id,
+                UserName = username,
+                Password = password,
+                FirstName = firstName,
+                LastName = lastName,
+            };
+            if (user.Customer != null)
+            {
+                var nationalCode = txtNationalCode.Text;
+                userUpdated.Customer = new Customer
+                {
+                    Id = user.Id,
+                    HomeAddress = address,
+                    NatioalCode = nationalCode
+                };
+
+            }
+            else
+            {
+                var TmBegin = TimeBegin.Text;
+                var TmEnd = TimeEnd.Text;
+                TimeSpan beginDate;
+                TimeSpan endDate;
+                TimeSpan.TryParse(TmBegin,out beginDate);
+                TimeSpan.TryParse(TmEnd,out endDate);
+
+                var nameOfRestaurant = txtNameRestaurant.Text;
+                userUpdated.Restaurant = new Restaurant
+                {
+         
+                    Id = user.Id,
+                    Address = address,
+                    BeginDate=beginDate,
+                    EndDate=endDate,
+                    NameOfRestaurant = nameOfRestaurant
+                };
+            }
+            var result = profile.UpdateProfile(userUpdated);
+
+            if (result[0] != "موفقیت")
+            {
+                MessageBox.Show(result[0], "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show(result[1], "اعلام", MessageBoxButtons.OK);
+                ShowProfilePage();
+                user.FirstName = userUpdated.FirstName;
+                user.LastName = userUpdated.LastName;
+                user.UserName = userUpdated.UserName;
+                user.Password = userUpdated.Password;
+                if (user.Customer != null)
+                {
+                    user.Customer.NatioalCode = userUpdated.Customer.NatioalCode;
+                    user.Customer.HomeAddress = userUpdated.Customer.HomeAddress;
+                }
+                else
+                {
+                    user.Restaurant.Address = userUpdated.Restaurant.Address;
+                    user.Restaurant.NameOfRestaurant = userUpdated.Restaurant.NameOfRestaurant;
+                    user.Restaurant.BeginDate = userUpdated.Restaurant.BeginDate;
+                    user.Restaurant.EndDate = userUpdated.Restaurant.EndDate;
+                }
+            }
         }
     }
 }
