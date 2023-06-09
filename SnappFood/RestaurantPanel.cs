@@ -15,7 +15,7 @@ namespace SnappFood
     {
         public User? user { get; set; }
 
-        public bool isExit=false;
+        public bool isExit = false;
         public RestaurantPanel(User user)
         {
             this.user = user;
