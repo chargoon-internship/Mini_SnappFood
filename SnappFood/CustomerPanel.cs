@@ -65,7 +65,7 @@ namespace SnappFood
                 flowLayoutPanel1.Controls.Add(btn);
             }
         }
-            private void btn_Click(object sender, EventArgs e)
+       private void btn_Click(object sender, EventArgs e)
         {
             CustomerPanelService customerPanel = new CustomerPanelService();
             Button pressedButton = (Button) sender;
@@ -80,6 +80,7 @@ namespace SnappFood
             FoodPanel foodpanel = new FoodPanel(RestaurantId);
              foodpanel.ShowDialog();
         }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
 

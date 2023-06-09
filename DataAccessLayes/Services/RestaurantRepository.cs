@@ -20,7 +20,7 @@ namespace DataAccessLayes.Services
         }
         public List<Restaurant> GetByName(string restaurantName)
         {
-            return _db.Restaurants.Where(p => p.NameOfRestaurant == restaurantName).ToList();
+            return _db.Restaurants.Where(p => p.NameOfRestaurant.Contains(restaurantName)).ToList();
         }
     }
 }
