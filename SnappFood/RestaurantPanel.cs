@@ -15,6 +15,7 @@ namespace SnappFood
     {
         public User? user { get; set; }
 
+        public bool isExit = false;
         public RestaurantPanel(User user)
         {
             this.user = user;
@@ -28,48 +29,53 @@ namespace SnappFood
 
         private void btnRegisterMenu_Click(object sender, EventArgs e)
         {
-            EditandAddMenu addMenu = new EditandAddMenu(false, user);
+            EditandAddMenu addMenu = new EditandAddMenu(false, user!);
             addMenu.ShowDialog();
         }
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-            EditandAddMenu editMenu = new EditandAddMenu(true, user);
+            EditandAddMenu editMenu = new EditandAddMenu(true, user!);
             editMenu.ShowDialog();
         }
 
-        private void btnViewInvoices_Click(object sender, EventArgs e)
+        private void btnViewInvoices_Click_1(object sender, EventArgs e)
         {
-            RestaurantInvoice newForm = new RestaurantInvoice(user);
+            RestaurantInvoice newForm = new RestaurantInvoice(user!);
             newForm.ShowDialog();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-
-            if (e.CloseReason == CloseReason.WindowsShutDown) return;
-
-            // Confirm user wants to close
-            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            if (!isExit)
             {
-                case DialogResult.No:
-                    e.Cancel = true;
-                    break;
-                default:
-                    break;
+                if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+                // Confirm user wants to close
+                switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+                {
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                    default:
+                        break;
+                }
             }
+            else
+            {
+                base.OnFormClosing(e);
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EditProfile editProfile = new EditProfile(user);
+            EditProfile editProfile = new EditProfile(user!);
             editProfile.ShowDialog();
 
         }
 
-        private void RestaurantPanel_Load_1(object sender, EventArgs e)
-        {
 
-        }
     }
 }

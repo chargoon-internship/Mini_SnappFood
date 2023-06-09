@@ -10,18 +10,13 @@ namespace BusinessLogicLayer.InvoiceService
 {
     public class ViewInvoiceService
     {
-        UnitOfWork db = new();
-
         public List<Invoice> PrintRestaurantInvoices(int id)
         {
-            var invoices = db.InvoiceRepository.GetRestaurantInvoices(id);
-            return invoices;
-        }
-
-        public List<Invoice> PrintCustomerInvoices(int id)
-        {
-            var invoices = db.InvoiceRepository.GetCustomerInvoice(id);
-            return invoices;
+            using (UnitOfWork db=new UnitOfWork())
+            {
+                var invoices = db.InvoiceRepository.GetRestaurantInvoices(id);
+                return invoices;
+            }
         }
     }
 }

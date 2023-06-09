@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ViewModel.CartItem;
+using BusinessLogicLayer.FoodService;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SnappFood
 {
@@ -19,51 +22,49 @@ namespace SnappFood
         ViewInvoiceService v = new ViewInvoiceService();
         public User? user { get; set; }
 
-        public CustomerInvoice(User? user)
+        public CartItemViewModel? CartItem { get; set; }
+
+        public CustomerInvoice()
         {
             InitializeComponent();
-            this.user = user;
-        }
-
-        private void CustomerInvoice_Load(object sender, EventArgs e)
-        {
-            var orders = v.PrintCustomerInvoices(1);
-            userInvoiceDataGridView.DataSource = orders;
-
-            var totalAmount = v.PrintCustomerInvoices(1).Sum(o => o.FinalPrice);
-            lblSum.Text = totalAmount.ToString();
-
-            userInvoiceDataGridView.Columns["Id"].Visible = false;
-            userInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
-            userInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
-            userInvoiceDataGridView.Columns["Restaurant"].Visible = false;
-            userInvoiceDataGridView.Columns["Customer"].Visible = false;
-            userInvoiceDataGridView.Columns["Time"].Visible = false;
-
             userInvoiceDataGridView.AutoGenerateColumns = false;
+            userInvoiceDataGridView.DefaultCellStyle.ForeColor = Color.Black;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void CustomerInvoice_Load_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblAmount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-
+            lblSum.Text = CartItem!.GetPrice().ToString();
+            userInvoiceDataGridView.DataSource = CartItem.Foods;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel(user);
-            f.FormClosed += (s, args) => this.Close();
-            f.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            Invoice invoice = new Invoice()
+            {
+                Customer_Id = CartItem!.CustomerId,
+                Restaurant_Id = CartItem!.RestaurantId,
+                Description = richTextBox1.Text,
+                FinalPrice = CartItem.GetPrice(),
+                Time = DateTime.Now
+            };
+            BuyFoodService buyFoodService = new BuyFoodService();
+            if (buyFoodService.Create(invoice, CartItem.Foods!))
+            {
+                MessageBox.Show("سفارش شما با موفقیت ثبت شد");
+                this.Close();
+                FoodPanel res = (FoodPanel)System.Windows.Forms.Application.OpenForms["FoodPanel"]!;
+                res.isBtn = true;
+                res.Close();
+            }
+            else
+            {
+                MessageBox.Show("مشکلی در ثبت سفارش شما پیش آماده است");
+            }
         }
     }
 }

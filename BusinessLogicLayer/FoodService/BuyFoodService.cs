@@ -17,5 +17,23 @@ namespace BusinessLogicLayer.FoodService
                 return db.FoodRepository.GetByRestaurantID(id);
             }
         }
+
+        public Restaurant GetRestaurantById(int id)
+        {
+            using(UnitOfWork db=new UnitOfWork())
+            {
+                return db.RestaurantRepository.GetById(id);
+            }
+        }
+
+        public bool Create(Invoice invoice,List<Food> foods)
+        {
+            Random random=new Random();
+            invoice.Number = random.Next(1000000).ToString();
+            using (UnitOfWork db=new UnitOfWork())
+            {
+                return db.InvoiceRepository.Create(invoice, foods);
+            }
+        }
     }
 }

@@ -25,10 +25,10 @@ namespace SnappFood
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            var orders = v.PrintRestaurantInvoices(1);
+            var orders = v.PrintRestaurantInvoices(user!.Id!);
             resInvoiceDataGridView.DataSource = orders;
 
-            var totalAmount = v.PrintRestaurantInvoices(1).Sum(o => o.FinalPrice);
+            var totalAmount = v.PrintRestaurantInvoices(user!.Id!).Sum(o => o.FinalPrice);
             lblAmountsSum2.Text = totalAmount.ToString();
 
             resInvoiceDataGridView.Columns["Id"].Visible = false;
@@ -42,7 +42,7 @@ namespace SnappFood
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel(user);
+            RestaurantPanel f = new RestaurantPanel(user!);
             f.ShowDialog();
         }
 

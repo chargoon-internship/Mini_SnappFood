@@ -84,7 +84,7 @@ namespace DataAccessLayes.Repositories
             return dbSet.Find(id)!;
         }
 
-        public void Save()
+        public virtual void Save()
         {
             db.SaveChanges();
         }

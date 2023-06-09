@@ -58,6 +58,9 @@ namespace SnappFood
             if (!MyFood.Exist)
             {
                 lbl_exist.Visible = true;
+                addButton.Enabled= false;
+                removeButton.Enabled= false;
+                counter.Enabled= false;
             }
         }
 

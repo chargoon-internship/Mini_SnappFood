@@ -11,6 +11,7 @@ namespace DataAccessLayes.Repositories
     {
         public bool Insert(Tentity entity);
 
+
         public bool Update(Tentity entity);
 
         public bool Delete(Tentity entity);
