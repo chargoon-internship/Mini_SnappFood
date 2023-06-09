@@ -113,6 +113,7 @@
             this.EditProfileBtn.TabIndex = 4;
             this.EditProfileBtn.Text = "مشاهده پروفایل";
             this.EditProfileBtn.UseVisualStyleBackColor = true;
+            this.EditProfileBtn.Click += new System.EventHandler(this.EditProfileBtn_Click);
             // 
             // UserNamelbl
             // 
