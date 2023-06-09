@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="1">
+      <DT Ref="2" type="DataTableSource" isKey="true">
+        <Alias>DT</Alias>
+        <Columns isList="true" count="3">
+          <value>Name,System.String</value>
+          <value>Quantity,System.Int32</value>
+          <value>Price,System.Double</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <IsCloud>False</IsCloud>
+        <Name>DT</Name>
+        <NameInSource>DT</NameInSource>
+      </DT>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="6">
+      <value>,Number,Number,System.String,,False,False</value>
+      <value>,Time,Time,System.String,,False,False</value>
+      <value>,CutomerName,CutomerName,System.String,,False,False</value>
+      <value>,RestaurantName,RestaurantName,System.String,,False,False</value>
+      <value>,Price,Price,System.String,,False,False</value>
+      <value>,Description,Description,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <Panel1 Ref="4" type="Panel" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0,7.7,2.7</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,0.1,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>شماره فاکتور</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,0.5,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>2f4e48276ce7470fa47553f6920158a9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>تاریخ ثبت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text5 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,1,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>22876746b28d4a22af9c504d0fb412b4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>قیمت نهایی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.7,0,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),15</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>مشخصات فاکتور</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.1,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>4158bc801bc649099cabded843380c13</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Number}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.5,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>917dd6e600524425a0817280a07d66b9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text11 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,1,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>c0f2b781fc4b485c8737b1ffa805fb48</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Price}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Image1 Ref="12" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.1,0,1.9,1.9</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <HorAlignment>Center</HorAlignment>
+              <Image>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDQAACw0B7QfALAAAAqlJREFUeF7t2k3oTFEcxvHxmrKykCiJpSVLSVjaCHnZ2COlZMFGirJRlIWNtbJQWPwXFspKKIVEJEneEyLy/n0Wp0635/+vmbnn/KTz1Gd1p/mdeZq5c+fMHbS0tLS0tLS0jJhFOIEJXAm0GikLcACnsQdzUSSL8RZ/gj3AdCgr8A758cdYiN5zBvmgKEeRchvuMefQe27ADattJ5T5cMdF74recwduWG1boSyHO57MQK+5BzeotrAC7sMNqi2sAJ193aDawgp4iHzAb+i8cGsIfbyLwgp4hHzAQYySU8ifZ1hhBegCIx+wF6PkGPLnGVZYAU+QD/iOq3CXqpO5hl/In2dYYQU8hRtUW1gBz+AG1RZWwHO4QbWFFfACblBtYQW8hBtUW1gBr5EP+AGd1d3Zflz6dvmMfF4SVsAb5AP2oWQ2IJ+XhBXQ3XnRNlTJbEQ+Lwkr4D3yAbqguQ73Fh6XPlrfkM9Lwgr4ADeotlTAHKycwjT0mk9wC6otFVA9k52Vawsr4AvcgmoLK+Ar3IJqCyuge1ZWIRdxvoAL6H7rJGEF6Pd/vpBdKJn1yOclYQX8RL6QwyiZHcjnJWEFuJ0c7RS7zc9x3UW38CSkAF1UuMVECClA/8a6xUQIKWAm3GIihBQwG24xEUIK0A8Pt5gIIQXMwvFCTqK72zSVkAJKZxvci3X+ywLWwr1Yp0gB2j3RtXdtq6D8EwW4YaWtgdIKgDvutALQe3Spqzs+3MCS1kHRnZ/uuLMJRfIKbmBJ26EsgTvuaMe3SM7CDSxJ9x2n3IR7TE73KKTbZHvPUtTe+9cL0lWmoo+B/m90j0s2o2i0iGEuS/uQb61twUd0H6P9yN2oknnYD21Mur+t+qaNVc1M0Z3eh3AJl3EEy9DS0tLS0tLSMkYGg79T0TMl/O5zcQAAAABJRU5ErkJggg==</Image>
+              <Name>Image1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <VertAlignment>Center</VertAlignment>
+            </Image1>
+            <Text3 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,1.6,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>36e43fdeb2ce43d2bc846f491334f551</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>توضیحات</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.1,1.6,4.3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>IRANSansWeb(FaNum),12</Font>
+              <Guid>04ebf470aa2d4f7bbe395dd1424f5fce</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Description}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Panel1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </Panel1>
+        <Panel2 Ref="15" type="Panel" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.7,7.7,7.5</ClientRectangle>
+          <Components isList="true" count="2">
+            <HeaderDT Ref="16" type="HeaderBand" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,7.7,0.3</ClientRectangle>
+              <Components isList="true" count="3">
+                <HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0 Ref="17" type="Text" isKey="true">
+                  <Border>Top, Right, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>[255:195:192]</Brush>
+                  <ClientRectangle>5.3,0,2.4,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Header1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="16" />
+                  <Text>نام غذا</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0>
+                <HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02 Ref="18" type="Text" isKey="true">
+                  <Border>Top, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>[255:195:192]</Brush>
+                  <ClientRectangle>2.6,0,2.7,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Header1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="16" />
+                  <Text>تعداد</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02>
+                <HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03 Ref="19" type="Text" isKey="true">
+                  <Border>Top, Left, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>[255:195:192]</Brush>
+                  <ClientRectangle>0,0,2.6,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Header1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="16" />
+                  <Text>قیمت</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </HeaderStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Name>HeaderDT</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+            </HeaderDT>
+            <DataDT Ref="20" type="DataBand" isKey="true">
+              <Brush>Transparent</Brush>
+              <BusinessObjectGuid isNull="true" />
+              <ClientRectangle>0,0.9,7.7,0.3</ClientRectangle>
+              <Components isList="true" count="3">
+                <DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02 Ref="21" type="Text" isKey="true">
+                  <Border>Top, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>Transparent</Brush>
+                  <CanGrow>True</CanGrow>
+                  <ClientRectangle>2.6,0,2.6,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Data1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="20" />
+                  <Text>{DT.Quantity}</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <VertAlignment>Center</VertAlignment>
+                </DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_02>
+                <DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03 Ref="22" type="Text" isKey="true">
+                  <Border>Top, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>Transparent</Brush>
+                  <CanGrow>True</CanGrow>
+                  <ClientRectangle>0.1,0,2.5,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Data1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="20" />
+                  <Text>{DT.Price}</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <VertAlignment>Center</VertAlignment>
+                </DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_03>
+                <DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0 Ref="23" type="Text" isKey="true">
+                  <Border>Top, Right, Bottom;[155:95:92];1;Solid;False;4;Black;True</Border>
+                  <Brush>Transparent</Brush>
+                  <CanGrow>True</CanGrow>
+                  <ClientRectangle>5.2,0,2.6,0.3</ClientRectangle>
+                  <ComponentStyle>Red 25%_Data1</ComponentStyle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,8</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0</Name>
+                  <Page isRef="3" />
+                  <Parent isRef="20" />
+                  <Text>{DT.Name}</Text>
+                  <TextBrush>[55:0:0]</TextBrush>
+                  <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                  <VertAlignment>Center</VertAlignment>
+                </DataStimulsoft_Report_Wpf_NodeTreeViewItem_Header__Items_Count_0>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataSourceName>DT</DataSourceName>
+              <EvenStyle>Red 25%_Data1_Even Style</EvenStyle>
+              <Filters isList="true" count="0" />
+              <Name>DataDT</Name>
+              <OddStyle>Red 25%_Data1_Odd Style</OddStyle>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Sort isList="true" count="0" />
+            </DataDT>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Panel2</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </Panel2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>c750ad705521484d80a89488751d2f01</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="24" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="25" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/10/2023 12:43:17 AM</ReportChanged>
+  <ReportCreated>6/9/2023 11:18:18 PM</ReportCreated>
+  <ReportFile>E:\New folder\Seem\OrderFood\SnappFood\bin\Debug\net7.0-windows\Report.mrt</ReportFile>
+  <ReportGuid>72c9a40689f143029b0f171af096162d</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2014.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="13">
+    <Red_x0020_25_x0025__Report_Title1 Ref="26" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item24 Ref="27" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item24>
+      </Conditions>
+      <Description />
+      <Font>Arial,14,Bold</Font>
+      <Name>Red 25%_Report_Title1</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Report_Title1>
+    <Red_x0020_25_x0025__Report_Title2 Ref="28" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item26 Ref="29" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item26>
+      </Conditions>
+      <Description />
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 25%_Report_Title2</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Report_Title2>
+    <Red_x0020_25_x0025__Report_Summary1 Ref="30" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item28 Ref="31" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item28>
+      </Conditions>
+      <Description />
+      <Font>Arial,12,Bold</Font>
+      <Name>Red 25%_Report_Summary1</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Report_Summary1>
+    <Red_x0020_25_x0025__Report_Summary2 Ref="32" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item30 Ref="33" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportSummary</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item30>
+      </Conditions>
+      <Description />
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 25%_Report_Summary2</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Report_Summary2>
+    <Red_x0020_25_x0025__Page_Header Ref="34" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item32 Ref="35" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item32>
+      </Conditions>
+      <Description />
+      <Font>Arial,10</Font>
+      <Name>Red 25%_Page_Header</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Page_Header>
+    <Red_x0020_25_x0025__Page_Footer Ref="36" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item34 Ref="37" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item34>
+      </Conditions>
+      <Description />
+      <Font>Arial,10</Font>
+      <Name>Red 25%_Page_Footer</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Page_Footer>
+    <Red_x0020_25_x0025__Group_Header1 Ref="38" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item36 Ref="39" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item36>
+      </Conditions>
+      <Description />
+      <Font>Arial,13,Bold</Font>
+      <Name>Red 25%_Group_Header1</Name>
+      <TextBrush>[105:45:42]</TextBrush>
+    </Red_x0020_25_x0025__Group_Header1>
+    <Red_x0020_25_x0025__Group_Footer1 Ref="40" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item38 Ref="41" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item38>
+      </Conditions>
+      <Description />
+      <Font>Arial,13,Bold</Font>
+      <Name>Red 25%_Group_Footer1</Name>
+      <TextBrush>[105:45:42]</TextBrush>
+    </Red_x0020_25_x0025__Group_Footer1>
+    <Red_x0020_25_x0025__Header1 Ref="42" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:195:192]</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item40 Ref="43" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item40>
+      </Conditions>
+      <Description />
+      <Font>Arial,8,Bold</Font>
+      <Name>Red 25%_Header1</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Header1>
+    <Red_x0020_25_x0025__Data1 Ref="44" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item42 Ref="45" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item42>
+      </Conditions>
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Red 25%_Data1</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Data1>
+    <Red_x0020_25_x0025__Data1_Odd_x0020_Style Ref="46" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item44 Ref="47" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item44>
+      </Conditions>
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Red 25%_Data1_Odd Style</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Data1_Odd_x0020_Style>
+    <Red_x0020_25_x0025__Data1_Even_x0020_Style Ref="48" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item46 Ref="49" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item46>
+      </Conditions>
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Red 25%_Data1_Even Style</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Data1_Even_x0020_Style>
+    <Red_x0020_25_x0025__Footer1 Ref="50" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[155:95:92];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:215:212]</Brush>
+      <CollectionName>Red 25%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item48 Ref="51" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item48>
+      </Conditions>
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Red 25%_Footer1</Name>
+      <TextBrush>[55:0:0]</TextBrush>
+    </Red_x0020_25_x0025__Footer1>
+  </Styles>
+</StiSerializer>
