@@ -45,11 +45,11 @@
             SearchGroupBox.Controls.Add(label1);
             SearchGroupBox.Controls.Add(SearchBtn);
             SearchGroupBox.Controls.Add(Searchtxt);
-            SearchGroupBox.Location = new Point(192, 100);
+            SearchGroupBox.Location = new Point(30, 64);
             SearchGroupBox.Margin = new Padding(3, 4, 3, 4);
             SearchGroupBox.Name = "SearchGroupBox";
             SearchGroupBox.Padding = new Padding(3, 4, 3, 4);
-            SearchGroupBox.Size = new Size(1174, 157);
+            SearchGroupBox.Size = new Size(1369, 135);
             SearchGroupBox.TabIndex = 0;
             SearchGroupBox.TabStop = false;
             SearchGroupBox.Enter += groupBox1_Enter;
@@ -59,9 +59,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.BlanchedAlmond;
-            label1.Location = new Point(868, 30);
+            label1.Location = new Point(1014, 44);
             label1.Name = "label1";
-            label1.Size = new Size(275, 27);
+            label1.Size = new Size(330, 33);
             label1.TabIndex = 2;
             label1.Text = "رستوران مورد نظر را جست و جوکنید";
             // 
@@ -69,10 +69,10 @@
             // 
             SearchBtn.Font = new Font("IRANSansWeb(FaNum)", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             SearchBtn.ForeColor = Color.Black;
-            SearchBtn.Location = new Point(31, 91);
+            SearchBtn.Location = new Point(213, 86);
             SearchBtn.Margin = new Padding(3, 4, 3, 4);
             SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(123, 38);
+            SearchBtn.Size = new Size(123, 33);
             SearchBtn.TabIndex = 1;
             SearchBtn.Text = "جستجو";
             SearchBtn.UseVisualStyleBackColor = true;
@@ -82,10 +82,10 @@
             // 
             Searchtxt.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Searchtxt.ForeColor = Color.Silver;
-            Searchtxt.Location = new Point(186, 91);
+            Searchtxt.Location = new Point(374, 91);
             Searchtxt.Margin = new Padding(3, 4, 3, 4);
             Searchtxt.Name = "Searchtxt";
-            Searchtxt.Size = new Size(970, 24);
+            Searchtxt.Size = new Size(970, 28);
             Searchtxt.TabIndex = 0;
             Searchtxt.TabStop = false;
             Searchtxt.TextAlign = HorizontalAlignment.Center;
@@ -95,12 +95,12 @@
             // 
             RestaurantGroupBox.Controls.Add(flowLayoutPanel1);
             RestaurantGroupBox.Font = new Font("IRANSansWeb(FaNum)", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            RestaurantGroupBox.Location = new Point(27, 308);
+            RestaurantGroupBox.Location = new Point(30, 217);
             RestaurantGroupBox.Margin = new Padding(21, 30, 21, 30);
             RestaurantGroupBox.Name = "RestaurantGroupBox";
             RestaurantGroupBox.Padding = new Padding(3, 4, 3, 4);
             RestaurantGroupBox.RightToLeft = RightToLeft.Yes;
-            RestaurantGroupBox.Size = new Size(1343, 749);
+            RestaurantGroupBox.Size = new Size(1372, 749);
             RestaurantGroupBox.TabIndex = 1;
             RestaurantGroupBox.TabStop = false;
             RestaurantGroupBox.Enter += RestaurantGroupBox_Enter;
@@ -111,10 +111,10 @@
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = Color.IndianRed;
-            flowLayoutPanel1.Location = new Point(3, 26);
+            flowLayoutPanel1.Location = new Point(3, 31);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1337, 719);
+            flowLayoutPanel1.Size = new Size(1366, 714);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -122,11 +122,11 @@
             // 
             EditProfileBtn.Font = new Font("IRANSansWeb(FaNum)", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             EditProfileBtn.ForeColor = Color.Black;
-            EditProfileBtn.Location = new Point(12, 146);
+            EditProfileBtn.Location = new Point(30, 11);
             EditProfileBtn.Margin = new Padding(3, 4, 3, 4);
             EditProfileBtn.Name = "EditProfileBtn";
             EditProfileBtn.RightToLeft = RightToLeft.Yes;
-            EditProfileBtn.Size = new Size(153, 69);
+            EditProfileBtn.Size = new Size(153, 43);
             EditProfileBtn.TabIndex = 4;
             EditProfileBtn.Text = "مشاهده پروفایل";
             EditProfileBtn.UseVisualStyleBackColor = true;
@@ -136,18 +136,18 @@
             // 
             UserNamelbl.AutoSize = true;
             UserNamelbl.Font = new Font("IRANSansWeb(FaNum)", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            UserNamelbl.Location = new Point(614, 36);
+            UserNamelbl.Location = new Point(607, 9);
             UserNamelbl.Name = "UserNamelbl";
-            UserNamelbl.Size = new Size(111, 35);
+            UserNamelbl.Size = new Size(142, 44);
             UserNamelbl.TabIndex = 5;
             UserNamelbl.Text = "wellcome";
             // 
             // CustomerPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleDimensions = new SizeF(10F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1432, 853);
             Controls.Add(UserNamelbl);
             Controls.Add(EditProfileBtn);
             Controls.Add(RestaurantGroupBox);

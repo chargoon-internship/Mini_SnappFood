@@ -28,7 +28,7 @@ namespace SnappFood
             var orders = v.PrintRestaurantInvoices(user!.Id!);
             resInvoiceDataGridView.DataSource = orders;
 
-            var totalAmount = v.PrintRestaurantInvoices(1).Sum(o => o.FinalPrice);
+            var totalAmount = v.PrintRestaurantInvoices(user!.Id!).Sum(o => o.FinalPrice);
             lblAmountsSum2.Text = totalAmount.ToString();
 
             resInvoiceDataGridView.Columns["Id"].Visible = false;
