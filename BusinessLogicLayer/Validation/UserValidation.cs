@@ -52,6 +52,8 @@ namespace BusinessLogicLayer
                     return "نام رستوران معتبر نمی باشد";
                 else if (!chAddress)
                     return "آدرس معتبر نمی باشد";
+/*                else if (user.Restaurant.BeginDate.ToString()== "00:00:00" || user.Restaurant.EndDate.ToString()== "00:00:00")
+                    return "ساعت کاری رستوران را به درستی وارد کنید";*/
 
             }
             /*
