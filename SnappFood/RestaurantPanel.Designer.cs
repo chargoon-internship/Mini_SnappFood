@@ -37,10 +37,10 @@
             // btnRegisterMenu
             // 
             btnRegisterMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegisterMenu.Location = new Point(540, 153);
+            btnRegisterMenu.Location = new Point(549, 141);
             btnRegisterMenu.Margin = new Padding(3, 4, 3, 4);
             btnRegisterMenu.Name = "btnRegisterMenu";
-            btnRegisterMenu.Size = new Size(314, 134);
+            btnRegisterMenu.Size = new Size(300, 130);
             btnRegisterMenu.TabIndex = 0;
             btnRegisterMenu.Text = "ثبت منوی جدید";
             btnRegisterMenu.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // btnEditMenu
             // 
             btnEditMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEditMenu.Location = new Point(540, 348);
+            btnEditMenu.Location = new Point(549, 321);
             btnEditMenu.Name = "btnEditMenu";
-            btnEditMenu.Size = new Size(314, 127);
+            btnEditMenu.Size = new Size(300, 130);
             btnEditMenu.TabIndex = 1;
             btnEditMenu.Text = "ویرایش منو";
             btnEditMenu.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // btnViewInvoices
             // 
             btnViewInvoices.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnViewInvoices.Location = new Point(540, 529);
+            btnViewInvoices.Location = new Point(549, 502);
             btnViewInvoices.Name = "btnViewInvoices";
-            btnViewInvoices.Size = new Size(314, 117);
+            btnViewInvoices.Size = new Size(300, 130);
             btnViewInvoices.TabIndex = 2;
             btnViewInvoices.Text = "مشاهده فاکتورها";
             btnViewInvoices.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // button1
             // 
             button1.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(34, 12);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
             button1.RightToLeft = RightToLeft.Yes;
             button1.Size = new Size(153, 45);
@@ -82,10 +82,10 @@
             // 
             // RestaurantPanel
             // 
-            AutoScaleDimensions = new SizeF(6F, 16F);
+            AutoScaleDimensions = new SizeF(8F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1382, 753);
             Controls.Add(button1);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
