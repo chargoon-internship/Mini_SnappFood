@@ -23,10 +23,6 @@ namespace Entities
         [Required]
         [StringLength(150)]
         public string Address { get; set; } = "";
-/*
-        public string RestaurantType { get; set; }
-
-        public string RestaurantScore { get; set; }*/
 
         [Required]
         [StringLength(150)]
