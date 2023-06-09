@@ -19,6 +19,8 @@ namespace Entities
 
         public int FoodId { get; set; }
 
+        public int Quantity { get; set; }
+
         public Invoice? Invoice { get; set; }
 
         public Food? Food { get; set; }

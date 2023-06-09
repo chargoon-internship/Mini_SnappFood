@@ -17,54 +17,30 @@ namespace SnappFood
         ViewInvoiceService v = new ViewInvoiceService();
         public User? user { get; set; }
 
-        public RestaurantInvoice(User user)
+        public RestaurantInvoice()
         {
-            this.user = user;
             InitializeComponent();
+            resInvoiceDataGridView.AutoGenerateColumns = false;
+            resInvoiceDataGridView.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            var orders = v.PrintRestaurantInvoices(user!.Id!);
-            resInvoiceDataGridView.DataSource = orders;
+            MessageBox.Show("ok");
+            bind();
 
-            var totalAmount = v.PrintRestaurantInvoices(user!.Id!).Sum(o => o.FinalPrice);
-            lblAmountsSum2.Text = totalAmount.ToString();
+        }
 
-            resInvoiceDataGridView.Columns["Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Restaurant"].Visible = false;
-            resInvoiceDataGridView.Columns["Customer"].Visible = false;
-
-            resInvoiceDataGridView.AutoGenerateColumns = false;
+        void bind()
+        {
+            resInvoiceDataGridView.DataSource = v.PrintRestaurantInvoices(user!.Id);
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel(user!);
-            f.ShowDialog();
+            this.Close();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void resInvoiceDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblAmountsSum2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
     }

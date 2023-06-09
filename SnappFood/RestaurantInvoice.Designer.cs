@@ -28,175 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            resInvoiceDataGridView = new DataGridView();
-            lblAmountsSum1 = new Label();
-            lblAmountsSum2 = new Label();
-            btnBack = new Button();
-            groupBox1 = new GroupBox();
-            label1 = new Label();
-            FoodNames = new DataGridViewTextBoxColumn();
-            Number = new DataGridViewTextBoxColumn();
-            Description = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            FinalPrice = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).BeginInit();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.resInvoiceDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FinalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.resInvoiceDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // resInvoiceDataGridView
             // 
-            resInvoiceDataGridView.AllowUserToAddRows = false;
-            resInvoiceDataGridView.AllowUserToDeleteRows = false;
-            resInvoiceDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            resInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resInvoiceDataGridView.Columns.AddRange(new DataGridViewColumn[] { FoodNames, Number, Description, Time, FinalPrice });
-            resInvoiceDataGridView.Dock = DockStyle.Fill;
-            resInvoiceDataGridView.Location = new Point(3, 38);
-            resInvoiceDataGridView.Margin = new Padding(3, 5, 3, 5);
-            resInvoiceDataGridView.Name = "resInvoiceDataGridView";
-            resInvoiceDataGridView.ReadOnly = true;
-            resInvoiceDataGridView.RowHeadersWidth = 51;
-            resInvoiceDataGridView.RowTemplate.Height = 24;
-            resInvoiceDataGridView.Size = new Size(897, 522);
-            resInvoiceDataGridView.TabIndex = 0;
-            // 
-            // lblAmountsSum1
-            // 
-            lblAmountsSum1.AutoSize = true;
-            lblAmountsSum1.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAmountsSum1.ForeColor = Color.White;
-            lblAmountsSum1.Location = new Point(95, 590);
-            lblAmountsSum1.Name = "lblAmountsSum1";
-            lblAmountsSum1.RightToLeft = RightToLeft.No;
-            lblAmountsSum1.Size = new Size(187, 33);
-            lblAmountsSum1.TabIndex = 1;
-            lblAmountsSum1.Text = "جمع مبالغ فاکتور ها : ";
-            // 
-            // lblAmountsSum2
-            // 
-            lblAmountsSum2.AutoSize = true;
-            lblAmountsSum2.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAmountsSum2.ForeColor = Color.White;
-            lblAmountsSum2.Location = new Point(288, 590);
-            lblAmountsSum2.Name = "lblAmountsSum2";
-            lblAmountsSum2.Size = new Size(24, 33);
-            lblAmountsSum2.TabIndex = 2;
-            lblAmountsSum2.Text = "0";
+            this.resInvoiceDataGridView.AllowUserToAddRows = false;
+            this.resInvoiceDataGridView.AllowUserToDeleteRows = false;
+            this.resInvoiceDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.resInvoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resInvoiceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.Time,
+            this.FinalPrice,
+            this.Description});
+            this.resInvoiceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resInvoiceDataGridView.Location = new System.Drawing.Point(3, 38);
+            this.resInvoiceDataGridView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.resInvoiceDataGridView.Name = "resInvoiceDataGridView";
+            this.resInvoiceDataGridView.ReadOnly = true;
+            this.resInvoiceDataGridView.RowHeadersWidth = 51;
+            this.resInvoiceDataGridView.RowTemplate.Height = 24;
+            this.resInvoiceDataGridView.Size = new System.Drawing.Size(897, 522);
+            this.resInvoiceDataGridView.TabIndex = 0;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBack.ForeColor = Color.Black;
-            btnBack.Location = new Point(737, 590);
-            btnBack.Margin = new Padding(3, 4, 3, 4);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(258, 38);
-            btnBack.TabIndex = 3;
-            btnBack.Text = "بازگشت به پنل رستوران";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click_1;
+            this.btnBack.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.Location = new System.Drawing.Point(737, 590);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(258, 38);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "بازگشت به پنل رستوران";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(resInvoiceDataGridView);
-            groupBox1.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(92, 13);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(903, 564);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "سفارشات";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(318, 595);
-            label1.Name = "label1";
-            label1.Size = new Size(44, 25);
-            label1.TabIndex = 3;
-            label1.Text = "تومان";
-            label1.Click += label1_Click;
-            // 
-            // FoodNames
-            // 
-            FoodNames.DataPropertyName = "Name";
-            FoodNames.HeaderText = "نام غذا";
-            FoodNames.MinimumWidth = 6;
-            FoodNames.Name = "FoodNames";
-            FoodNames.ReadOnly = true;
+            this.groupBox1.Controls.Add(this.resInvoiceDataGridView);
+            this.groupBox1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(92, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(903, 564);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "سفارشات";
             // 
             // Number
             // 
-            Number.DataPropertyName = "Quantity";
-            Number.HeaderText = "تعداد";
-            Number.MinimumWidth = 6;
-            Number.Name = "Number";
-            Number.ReadOnly = true;
-            // 
-            // Description
-            // 
-            Description.DataPropertyName = "Description";
-            Description.HeaderText = "توضیحات";
-            Description.MinimumWidth = 6;
-            Description.Name = "Description";
-            Description.ReadOnly = true;
+            this.Number.DataPropertyName = "Number";
+            this.Number.HeaderText = "شماره فاکتور";
+            this.Number.MinimumWidth = 6;
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
             // 
             // Time
             // 
-            Time.DataPropertyName = "Time";
-            Time.HeaderText = "زمان ثبت سفارش";
-            Time.MinimumWidth = 6;
-            Time.Name = "Time";
-            Time.ReadOnly = true;
+            this.Time.DataPropertyName = "Time";
+            this.Time.HeaderText = "زمان ثبت سفارش";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
             // 
             // FinalPrice
             // 
-            FinalPrice.DataPropertyName = "Price";
-            FinalPrice.HeaderText = "مبلغ";
-            FinalPrice.MinimumWidth = 6;
-            FinalPrice.Name = "FinalPrice";
-            FinalPrice.ReadOnly = true;
+            this.FinalPrice.DataPropertyName = "FinalPrice";
+            this.FinalPrice.HeaderText = "مبلغ";
+            this.FinalPrice.MinimumWidth = 6;
+            this.FinalPrice.Name = "FinalPrice";
+            this.FinalPrice.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "توضیحات";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
             // RestaurantInvoice
             // 
-            AutoScaleDimensions = new SizeF(9F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1082, 653);
-            Controls.Add(label1);
-            Controls.Add(groupBox1);
-            Controls.Add(btnBack);
-            Controls.Add(lblAmountsSum1);
-            Controls.Add(lblAmountsSum2);
-            Font = new Font("IRANSansWeb(FaNum)", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Margin = new Padding(3, 5, 3, 5);
-            Name = "RestaurantInvoice";
-            RightToLeft = RightToLeft.Yes;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "فاکتور رستوران";
-            ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).EndInit();
-            groupBox1.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(79)))));
+            this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnBack);
+            this.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Name = "RestaurantInvoice";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "فاکتور رستوران";
+            this.Load += new System.EventHandler(this.RestaurantInvoice_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.resInvoiceDataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private DataGridView resInvoiceDataGridView;
-        private Label lblAmountsSum1;
-        private Label lblAmountsSum2;
         private Button btnBack;
         private GroupBox groupBox1;
-        private Label label1;
-        private DataGridViewTextBoxColumn FoodNames;
         private DataGridViewTextBoxColumn Number;
-        private DataGridViewTextBoxColumn Description;
         private DataGridViewTextBoxColumn Time;
         private DataGridViewTextBoxColumn FinalPrice;
+        private DataGridViewTextBoxColumn Description;
     }
 }

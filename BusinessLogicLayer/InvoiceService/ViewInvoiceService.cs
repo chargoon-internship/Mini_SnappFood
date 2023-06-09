@@ -12,11 +12,24 @@ namespace BusinessLogicLayer.InvoiceService
     {
         public List<Invoice> PrintRestaurantInvoices(int id)
         {
+            List<Invoice> invoices;
+            List<InvoicesFood> invoicesFood;
             using (UnitOfWork db=new UnitOfWork())
             {
-                var invoices = db.InvoiceRepository.GetRestaurantInvoices(id);
-                return invoices;
+                invoices = db.InvoiceRepository.GetRestaurantInvoices(id);
+                invoicesFood = db.InvoiceRepository.invoicesFoodsById(id);
             }
+            foreach (var item in invoices)
+            {
+                foreach (var x in item.Foods)
+                {
+                    foreach (var v in invoicesFood)
+                    {
+                        x.Quantity = v.Quantity;
+                    }
+                }
+            }
+            return invoices;
         }
     }
 }
