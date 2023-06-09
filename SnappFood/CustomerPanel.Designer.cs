@@ -61,7 +61,7 @@
             label1.ForeColor = Color.BlanchedAlmond;
             label1.Location = new Point(1014, 44);
             label1.Name = "label1";
-            label1.Size = new Size(330, 33);
+            label1.Size = new Size(275, 27);
             label1.TabIndex = 2;
             label1.Text = "رستوران مورد نظر را جست و جوکنید";
             // 
@@ -85,7 +85,7 @@
             Searchtxt.Location = new Point(374, 91);
             Searchtxt.Margin = new Padding(3, 4, 3, 4);
             Searchtxt.Name = "Searchtxt";
-            Searchtxt.Size = new Size(970, 28);
+            Searchtxt.Size = new Size(970, 24);
             Searchtxt.TabIndex = 0;
             Searchtxt.TabStop = false;
             Searchtxt.TextAlign = HorizontalAlignment.Center;
@@ -111,10 +111,10 @@
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = Color.IndianRed;
-            flowLayoutPanel1.Location = new Point(3, 31);
+            flowLayoutPanel1.Location = new Point(3, 26);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1366, 714);
+            flowLayoutPanel1.Size = new Size(1366, 719);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -138,16 +138,16 @@
             UserNamelbl.Font = new Font("IRANSansWeb(FaNum)", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             UserNamelbl.Location = new Point(607, 9);
             UserNamelbl.Name = "UserNamelbl";
-            UserNamelbl.Size = new Size(142, 44);
+            UserNamelbl.Size = new Size(111, 35);
             UserNamelbl.TabIndex = 5;
             UserNamelbl.Text = "wellcome";
             // 
             // CustomerPanel
             // 
-            AutoScaleDimensions = new SizeF(10F, 27F);
+            AutoScaleDimensions = new SizeF(8F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1432, 853);
+            ClientSize = new Size(1370, 749);
             Controls.Add(UserNamelbl);
             Controls.Add(EditProfileBtn);
             Controls.Add(RestaurantGroupBox);

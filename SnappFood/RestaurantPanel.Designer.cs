@@ -71,7 +71,7 @@
             // button1
             // 
             button1.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(29, 24);
             button1.Name = "button1";
             button1.RightToLeft = RightToLeft.Yes;
             button1.Size = new Size(153, 45);
@@ -82,10 +82,10 @@
             // 
             // RestaurantPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleDimensions = new SizeF(6F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1382, 753);
+            ClientSize = new Size(1370, 749);
             Controls.Add(button1);
             Controls.Add(btnViewInvoices);
             Controls.Add(btnEditMenu);
