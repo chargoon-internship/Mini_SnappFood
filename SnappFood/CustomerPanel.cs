@@ -33,7 +33,7 @@ namespace SnappFood
             foreach (string info in buttonInfo)
             {
                 Button btn = new Button();
-                btn.Width = 655;
+                btn.Width = 645;
                 btn.Height = 300;
                 btn.Name = String.Format(info);
                 btn.Text = String.Format(info);
@@ -47,27 +47,7 @@ namespace SnappFood
 
         }
 
-        private void SearchBtn_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Controls.Clear();
-            CustomerPanelService customerPanel = new CustomerPanelService();
-            List<string> buttonInfo = customerPanel.ShowRestaurantsData(Searchtxt.Text);
-            foreach (string info in buttonInfo)
-            {
-                Button btn = new Button();
-                btn.Width = 450;
-                btn.Height = 200;
-                btn.Name = String.Format(info);
-                btn.Text = String.Format(info);
-                btn.ForeColor = Color.White;
-                btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
-                Buttons.Add(btn);
-                btn.Click += btn_Click;
-                flowLayoutPanel1.Controls.Add(btn);
-            }
-        }
-       private void btn_Click(object sender, EventArgs e)
+        private void btn_Click(object sender, EventArgs e)
         {
             CustomerPanelService customerPanel = new CustomerPanelService();
             Button pressedButton = (Button)sender;
@@ -138,6 +118,26 @@ namespace SnappFood
             EditProfile editProfile = new EditProfile(user!);
             editProfile.ShowDialog();
         }
-        
+
+        private void Searchtxt_TextChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            CustomerPanelService customerPanel = new CustomerPanelService();
+            List<string> buttonInfo = customerPanel.ShowRestaurantsData(Searchtxt.Text);
+            foreach (string info in buttonInfo)
+            {
+                Button btn = new Button();
+                btn.Width = 645;
+                btn.Height = 300;
+                btn.Name = String.Format(info);
+                btn.Text = String.Format(info);
+                btn.ForeColor = Color.White;
+                btn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                btn.BackgroundImage = SnappFood.Properties.Resources.rest_image;
+                Buttons.Add(btn);
+                btn.Click += btn_Click;
+                flowLayoutPanel1.Controls.Add(btn);
+            }
+        }
     }
 }
