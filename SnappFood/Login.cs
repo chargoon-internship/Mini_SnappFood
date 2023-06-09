@@ -26,6 +26,7 @@ namespace SnappFood
         {
             HideLoginPage(false);
             HideRegisterButton(true);
+            Clear();
         }
 
         void HideLoginPage(bool show, int a = 0)
@@ -155,10 +156,14 @@ namespace SnappFood
 
                 };
                 SignUpService signUpService = new SignUpService();
-                MessageBox.Show(signUpService.SignUp(user));
-                HideCustomerRegister(false);
-                HideLoginPage(true);
-
+                string result=signUpService.SignUp(user);
+                MessageBox.Show(result);
+                if(result== "ثبت نام شما با موفقیت انجام شد")
+                {
+                    HideCustomerRegister(false);
+                    HideLoginPage(true);
+                    Clear();
+                }
             }
             else
             {
@@ -166,20 +171,28 @@ namespace SnappFood
                 user.LastName = txtLastName.Text;
                 user.UserName = txt_userLogin.Text;
                 user.Password = txt_userPass.Text;
+                TimeSpan start;
+                TimeSpan end;
+                TimeSpan.TryParse(TimeBegin.Text, out start);
+                TimeSpan.TryParse(TimeEnd.Text,out end);
                 user.Restaurant = new Restaurant()
                 {
                     Id = user.Id,
                     NameOfRestaurant = txtCode.Text,
                     Address = txtAddress.Text,
-                    BeginDate=TimeSpan.Parse(TimeBegin.Text),
-                    EndDate=TimeSpan.Parse(TimeEnd.Text)
+                    BeginDate=start,
+                    EndDate=end
                 };
-
                 SignUpService signUpService = new SignUpService();
-                MessageBox.Show(signUpService.SignUp(user));
-                HideCustomerRegister(false);
-                HideLoginPage(true);
-
+                string result = signUpService.SignUp(user);
+                MessageBox.Show(result);
+                if (result == "ثبت نام شما با موفقیت انجام شد")
+                {
+                    lblCode.Text = "کد ملی";
+                    HideCustomerRegister(false);
+                    HideLoginPage(true);
+                    Clear();
+                }
             }
         }
 

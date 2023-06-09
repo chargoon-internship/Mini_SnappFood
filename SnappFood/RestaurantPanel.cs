@@ -41,7 +41,8 @@ namespace SnappFood
 
         private void btnViewInvoices_Click_1(object sender, EventArgs e)
         {
-            RestaurantInvoice newForm = new RestaurantInvoice(user!);
+            RestaurantInvoice newForm = new RestaurantInvoice();
+            newForm.user = user;
             newForm.ShowDialog();
         }
 

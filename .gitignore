@@ -10,8 +10,7 @@
 **/obj/
 **/.vs/
 /.vs*
-
-ss.txt
+*
 
 # Build results
 [Dd]ebug*/
@@ -173,7 +172,3 @@ _NCrunch*
 **/.vs/
 
 # Visual Studio / .NET
-
-**/bin/
-**/obj/
-**/Migrations/

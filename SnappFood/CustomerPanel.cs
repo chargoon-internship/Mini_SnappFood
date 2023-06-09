@@ -139,5 +139,14 @@ namespace SnappFood
                 flowLayoutPanel1.Controls.Add(btn);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RestaurantInvoice restaurantInvoice = new RestaurantInvoice();
+            restaurantInvoice.user = user;
+            restaurantInvoice.Name = "فاکتور ها";
+            restaurantInvoice.ShowDialog();
+
+        }
     }
 }

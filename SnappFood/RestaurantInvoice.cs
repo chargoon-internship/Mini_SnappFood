@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
+using Stimulsoft.Report;
+using ViewModel;
 
 namespace SnappFood
 {
@@ -17,55 +19,63 @@ namespace SnappFood
         ViewInvoiceService v = new ViewInvoiceService();
         public User? user { get; set; }
 
-        public RestaurantInvoice(User user)
+        public RestaurantInvoice()
         {
-            this.user = user;
             InitializeComponent();
+            resInvoiceDataGridView.AutoGenerateColumns = false;
+            resInvoiceDataGridView.DefaultCellStyle.ForeColor = Color.Black;
+            resInvoiceDataGridView.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void RestaurantInvoice_Load(object sender, EventArgs e)
         {
-            var orders = v.PrintRestaurantInvoices(user!.Id!);
-            resInvoiceDataGridView.DataSource = orders;
+            if (user!.Customer != null)
+            {
+                bindCustomer();
+            }
+            else
+            {
+                bindRestaurant();
+            }
+           
+        }
 
-            var totalAmount = v.PrintRestaurantInvoices(user!.Id!).Sum(o => o.FinalPrice);
-            lblAmountsSum2.Text = totalAmount.ToString();
+        void bindRestaurant()
+        {
+            resInvoiceDataGridView.DataSource = v.PrintRestaurantInvoices(user!.Id);
+        }
 
-            resInvoiceDataGridView.Columns["Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Customer_Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Restaurant_Id"].Visible = false;
-            resInvoiceDataGridView.Columns["Restaurant"].Visible = false;
-            resInvoiceDataGridView.Columns["Customer"].Visible = false;
-
-            resInvoiceDataGridView.AutoGenerateColumns = false;
+        void bindCustomer()
+        {
+            resInvoiceDataGridView.DataSource = v.PrintCustomerInvoices(user!.Id);
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            RestaurantPanel f = new RestaurantPanel(user!);
-            f.ShowDialog();
+            this.Close();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (resInvoiceDataGridView.CurrentRow != null)
+            {
+                ViewInvoiceService invoiceService=new ViewInvoiceService();
+                int id = int.Parse(resInvoiceDataGridView.CurrentRow.Cells[0].Value.ToString()!);
+                Invoice invoice=invoiceService.GetInvoiceById(id);
+                string path = Directory.GetCurrentDirectory() + "/Report.mrt";
+                StiReport stiReport=new StiReport();
+                stiReport.Load(path);
+                stiReport.Dictionary.Variables["Number"].Value = invoice.Number;
+                stiReport.Dictionary.Variables["Time"].Value = invoice.Time.ToShamsi();
+                stiReport.Dictionary.Variables["Description"].Value = invoice.Description;
+                stiReport.Dictionary.Variables["Price"].Value = invoice.FinalPrice.ToString();
+                stiReport.RegData("DT", invoiceService.MyTable(id));
+                stiReport.Show();
+            }
+            else
+            {
+                MessageBox.Show("لطفا یک آیتم را انتخاب نمائید");
+            }
         }
-
-        private void resInvoiceDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblAmountsSum2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

@@ -33,7 +33,7 @@ namespace SnappFood
 
         private void CustomerInvoice_Load_1(object sender, EventArgs e)
         {
-            lblSum.Text = CartItem!.GetPrice().ToString();
+            lblSum.Text = CartItem!.GetPrice().ToString("000,000");
             userInvoiceDataGridView.DataSource = CartItem.Foods;
         }
 
