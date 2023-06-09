@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             resInvoiceDataGridView = new DataGridView();
-            FoodNames = new DataGridViewTextBoxColumn();
-            Number = new DataGridViewTextBoxColumn();
-            Description = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            FinalPrice = new DataGridViewTextBoxColumn();
             lblAmountsSum1 = new Label();
             lblAmountsSum2 = new Label();
             btnBack = new Button();
             groupBox1 = new GroupBox();
             label1 = new Label();
+            FoodNames = new DataGridViewTextBoxColumn();
+            Number = new DataGridViewTextBoxColumn();
+            Description = new DataGridViewTextBoxColumn();
+            Time = new DataGridViewTextBoxColumn();
+            FinalPrice = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)resInvoiceDataGridView).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // resInvoiceDataGridView
             // 
+            resInvoiceDataGridView.AllowUserToAddRows = false;
+            resInvoiceDataGridView.AllowUserToDeleteRows = false;
             resInvoiceDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             resInvoiceDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resInvoiceDataGridView.Columns.AddRange(new DataGridViewColumn[] { FoodNames, Number, Description, Time, FinalPrice });
@@ -52,45 +54,11 @@
             resInvoiceDataGridView.Location = new Point(3, 38);
             resInvoiceDataGridView.Margin = new Padding(3, 5, 3, 5);
             resInvoiceDataGridView.Name = "resInvoiceDataGridView";
+            resInvoiceDataGridView.ReadOnly = true;
             resInvoiceDataGridView.RowHeadersWidth = 51;
             resInvoiceDataGridView.RowTemplate.Height = 24;
             resInvoiceDataGridView.Size = new Size(897, 522);
             resInvoiceDataGridView.TabIndex = 0;
-            // 
-            // FoodNames
-            // 
-            FoodNames.DataPropertyName = "Foods";
-            FoodNames.HeaderText = "نام غذا";
-            FoodNames.MinimumWidth = 6;
-            FoodNames.Name = "FoodNames";
-            // 
-            // Number
-            // 
-            Number.DataPropertyName = "Number";
-            Number.HeaderText = "تعداد";
-            Number.MinimumWidth = 6;
-            Number.Name = "Number";
-            // 
-            // Description
-            // 
-            Description.DataPropertyName = "Description";
-            Description.HeaderText = "توضیحات";
-            Description.MinimumWidth = 6;
-            Description.Name = "Description";
-            // 
-            // Time
-            // 
-            Time.DataPropertyName = "Time";
-            Time.HeaderText = "زمان ثبت سفارش";
-            Time.MinimumWidth = 6;
-            Time.Name = "Time";
-            // 
-            // FinalPrice
-            // 
-            FinalPrice.DataPropertyName = "FinalPrice";
-            FinalPrice.HeaderText = "مبلغ";
-            FinalPrice.MinimumWidth = 6;
-            FinalPrice.Name = "FinalPrice";
             // 
             // lblAmountsSum1
             // 
@@ -152,6 +120,46 @@
             label1.TabIndex = 3;
             label1.Text = "تومان";
             label1.Click += label1_Click;
+            // 
+            // FoodNames
+            // 
+            FoodNames.DataPropertyName = "Name";
+            FoodNames.HeaderText = "نام غذا";
+            FoodNames.MinimumWidth = 6;
+            FoodNames.Name = "FoodNames";
+            FoodNames.ReadOnly = true;
+            // 
+            // Number
+            // 
+            Number.DataPropertyName = "Quantity";
+            Number.HeaderText = "تعداد";
+            Number.MinimumWidth = 6;
+            Number.Name = "Number";
+            Number.ReadOnly = true;
+            // 
+            // Description
+            // 
+            Description.DataPropertyName = "Description";
+            Description.HeaderText = "توضیحات";
+            Description.MinimumWidth = 6;
+            Description.Name = "Description";
+            Description.ReadOnly = true;
+            // 
+            // Time
+            // 
+            Time.DataPropertyName = "Time";
+            Time.HeaderText = "زمان ثبت سفارش";
+            Time.MinimumWidth = 6;
+            Time.Name = "Time";
+            Time.ReadOnly = true;
+            // 
+            // FinalPrice
+            // 
+            FinalPrice.DataPropertyName = "Price";
+            FinalPrice.HeaderText = "مبلغ";
+            FinalPrice.MinimumWidth = 6;
+            FinalPrice.Name = "FinalPrice";
+            FinalPrice.ReadOnly = true;
             // 
             // RestaurantInvoice
             // 

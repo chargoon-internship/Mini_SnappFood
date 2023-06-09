@@ -133,16 +133,16 @@
             label2.AutoSize = true;
             label2.Location = new Point(849, 457);
             label2.Name = "label2";
-            label2.Size = new Size(74, 27);
+            label2.Size = new Size(91, 33);
             label2.TabIndex = 4;
             label2.Text = "توضیحات";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(388, 402);
+            label1.Location = new Point(346, 402);
             label1.Name = "label1";
-            label1.Size = new Size(47, 27);
+            label1.Size = new Size(58, 33);
             label1.TabIndex = 3;
             label1.Text = "تومان";
             // 
@@ -152,7 +152,7 @@
             lblSum.Font = new Font("IRANSansWeb(FaNum)", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSum.Location = new Point(316, 402);
             lblSum.Name = "lblSum";
-            lblSum.Size = new Size(20, 27);
+            lblSum.Size = new Size(24, 33);
             lblSum.TabIndex = 2;
             lblSum.Text = "0";
             // 
@@ -163,7 +163,7 @@
             lblAmount.Location = new Point(143, 402);
             lblAmount.Name = "lblAmount";
             lblAmount.RightToLeft = RightToLeft.No;
-            lblAmount.Size = new Size(135, 27);
+            lblAmount.Size = new Size(167, 33);
             lblAmount.TabIndex = 1;
             lblAmount.Text = "مبلغ قابل پرداخت :";
             // 
@@ -191,7 +191,7 @@
             // 
             // CustomerInvoice
             // 
-            AutoScaleDimensions = new SizeF(7F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
             ClientSize = new Size(1082, 653);
