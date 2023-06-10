@@ -5,44 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
-# Visual Studio / .NET
-**/bin/
-**/obj/
-**/.vs/
-/.vs*
-*
 
-# Build results
-[Dd]ebug*/
-[Rr]elease*/
-x64/
-x86/
-[AnyCasing][Aa]ny[Bb]uild*/
-
-# Visual Studio code coverage results
-*.coverage
-*.coveragexml
-
-# MSTest test Results
-[TestResults]/
-
-# Resharper cache/temp folders
-_resharper*
-
-# NuGet Packages Directory
-*/packages/*
-
-# MSTest Test Files
-*.trx
-
-# Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
-dlldata.c
-
-# .NET Core
-project.lock.json
-project.fragment.lock.json
 # Build results
 
 [Dd]ebug/
@@ -50,6 +13,10 @@ project.fragment.lock.json
 x64/
 [Bb]in/
 [Oo]bj/
+
+**/bin/
+**/obj/
+**/.vs/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -168,7 +135,3 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
-
-**/.vs/
-
-# Visual Studio / .NET

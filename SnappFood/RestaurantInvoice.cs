@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities;
 using Stimulsoft.Report;
-using ViewModel;
+using ViewModel.Invoice;
 
 namespace SnappFood
 {
