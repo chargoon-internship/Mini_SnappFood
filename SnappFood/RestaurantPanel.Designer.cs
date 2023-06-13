@@ -28,77 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegisterMenu = new System.Windows.Forms.Button();
-            this.btnEditMenu = new System.Windows.Forms.Button();
-            this.btnViewInvoices = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnRegisterMenu = new Button();
+            btnEditMenu = new Button();
+            btnViewInvoices = new Button();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // btnRegisterMenu
             // 
-            this.btnRegisterMenu.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegisterMenu.Location = new System.Drawing.Point(522, 86);
-            this.btnRegisterMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRegisterMenu.Name = "btnRegisterMenu";
-            this.btnRegisterMenu.Size = new System.Drawing.Size(314, 134);
-            this.btnRegisterMenu.TabIndex = 0;
-            this.btnRegisterMenu.Text = "ثبت منوی جدید";
-            this.btnRegisterMenu.UseVisualStyleBackColor = true;
-            this.btnRegisterMenu.Click += new System.EventHandler(this.btnRegisterMenu_Click);
+            btnRegisterMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegisterMenu.Location = new Point(522, 86);
+            btnRegisterMenu.Margin = new Padding(3, 4, 3, 4);
+            btnRegisterMenu.Name = "btnRegisterMenu";
+            btnRegisterMenu.Size = new Size(314, 134);
+            btnRegisterMenu.TabIndex = 0;
+            btnRegisterMenu.Text = "ثبت منوی جدید";
+            btnRegisterMenu.UseVisualStyleBackColor = true;
+            btnRegisterMenu.Click += btnRegisterMenu_Click;
             // 
             // btnEditMenu
             // 
-            this.btnEditMenu.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditMenu.Location = new System.Drawing.Point(522, 282);
-            this.btnEditMenu.Name = "btnEditMenu";
-            this.btnEditMenu.Size = new System.Drawing.Size(314, 127);
-            this.btnEditMenu.TabIndex = 1;
-            this.btnEditMenu.Text = "ویرایش منو";
-            this.btnEditMenu.UseVisualStyleBackColor = true;
-            this.btnEditMenu.Click += new System.EventHandler(this.btnEditMenu_Click);
+            btnEditMenu.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEditMenu.Location = new Point(522, 282);
+            btnEditMenu.Name = "btnEditMenu";
+            btnEditMenu.Size = new Size(314, 127);
+            btnEditMenu.TabIndex = 1;
+            btnEditMenu.Text = "ویرایش منو";
+            btnEditMenu.UseVisualStyleBackColor = true;
+            btnEditMenu.Click += btnEditMenu_Click;
             // 
             // btnViewInvoices
             // 
-            this.btnViewInvoices.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnViewInvoices.Location = new System.Drawing.Point(522, 462);
-            this.btnViewInvoices.Name = "btnViewInvoices";
-            this.btnViewInvoices.Size = new System.Drawing.Size(314, 117);
-            this.btnViewInvoices.TabIndex = 2;
-            this.btnViewInvoices.Text = "مشاهده فاکتورها";
-            this.btnViewInvoices.UseVisualStyleBackColor = true;
-            this.btnViewInvoices.Click += new System.EventHandler(this.btnViewInvoices_Click_1);
+            btnViewInvoices.Font = new Font("IRANSansWeb(FaNum)", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnViewInvoices.Location = new Point(522, 462);
+            btnViewInvoices.Name = "btnViewInvoices";
+            btnViewInvoices.Size = new Size(314, 117);
+            btnViewInvoices.TabIndex = 2;
+            btnViewInvoices.Text = "مشاهده فاکتورها";
+            btnViewInvoices.UseVisualStyleBackColor = true;
+            btnViewInvoices.Click += btnViewInvoices_Click_1;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(153, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "مشاهده پروفایل";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("IRANSansWeb(FaNum)", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.RightToLeft = RightToLeft.Yes;
+            button1.Size = new Size(159, 43);
+            button1.TabIndex = 3;
+            button1.Text = "مشاهده پروفایل";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // RestaurantPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1400, 800);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnViewInvoices);
-            this.Controls.Add(this.btnEditMenu);
-            this.Controls.Add(this.btnRegisterMenu);
-            this.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "RestaurantPanel";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "پنل رستوران";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 22F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(217, 0, 79);
+            ClientSize = new Size(1400, 800);
+            Controls.Add(button1);
+            Controls.Add(btnViewInvoices);
+            Controls.Add(btnEditMenu);
+            Controls.Add(btnRegisterMenu);
+            Font = new Font("IRANSansWeb(FaNum)", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "RestaurantPanel";
+            RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "پنل رستوران";
+            ResumeLayout(false);
         }
 
         #endregion
