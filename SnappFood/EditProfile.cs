@@ -193,17 +193,17 @@ namespace SnappFood
                 var TmEnd = TimeEnd.Text;
                 TimeSpan beginDate;
                 TimeSpan endDate;
-                TimeSpan.TryParse(TmBegin,out beginDate);
-                TimeSpan.TryParse(TmEnd,out endDate);
+                TimeSpan.TryParse(TmBegin, out beginDate);
+                TimeSpan.TryParse(TmEnd, out endDate);
 
                 var nameOfRestaurant = txtNameRestaurant.Text;
                 userUpdated.Restaurant = new Restaurant
                 {
-         
+
                     Id = user.Id,
                     Address = address,
-                    BeginDate=beginDate,
-                    EndDate=endDate,
+                    BeginDate = beginDate,
+                    EndDate = endDate,
                     NameOfRestaurant = nameOfRestaurant
                 };
             }

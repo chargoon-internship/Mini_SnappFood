@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewModel.Food
+namespace ViewModel.CartItem.Food
 {
     public class FoodViewModel
     {

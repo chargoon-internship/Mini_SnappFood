@@ -48,7 +48,7 @@
             SearchGroupBox.Margin = new Padding(3, 4, 3, 4);
             SearchGroupBox.Name = "SearchGroupBox";
             SearchGroupBox.Padding = new Padding(3, 4, 3, 4);
-            SearchGroupBox.Size = new Size(1197, 104);
+            SearchGroupBox.Size = new Size(1181, 104);
             SearchGroupBox.TabIndex = 0;
             SearchGroupBox.TabStop = false;
             // 
@@ -85,7 +85,7 @@
             RestaurantGroupBox.Name = "RestaurantGroupBox";
             RestaurantGroupBox.Padding = new Padding(3, 4, 3, 4);
             RestaurantGroupBox.RightToLeft = RightToLeft.Yes;
-            RestaurantGroupBox.Size = new Size(1376, 489);
+            RestaurantGroupBox.Size = new Size(1357, 489);
             RestaurantGroupBox.TabIndex = 1;
             RestaurantGroupBox.TabStop = false;
             // 
@@ -98,7 +98,7 @@
             flowLayoutPanel1.Location = new Point(3, 23);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1370, 462);
+            flowLayoutPanel1.Size = new Size(1351, 462);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // EditProfileBtn
@@ -142,7 +142,7 @@
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(217, 0, 79);
-            ClientSize = new Size(1400, 800);
+            ClientSize = new Size(1382, 753);
             Controls.Add(button1);
             Controls.Add(UserNamelbl);
             Controls.Add(EditProfileBtn);
@@ -156,6 +156,7 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPanel";
+            Load += CustomerPanel_Load_1;
             SearchGroupBox.ResumeLayout(false);
             SearchGroupBox.PerformLayout();
             RestaurantGroupBox.ResumeLayout(false);

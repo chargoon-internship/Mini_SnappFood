@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataAccessLayes;
 using Entities;
 using ViewModel;
-using ViewModel.Food;
+using ViewModel.CartItem.Food;
 
 namespace BusinessLogicLayer.RestaurantService
 {
